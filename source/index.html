@@ -2,87 +2,79 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
-    integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/style.css">
-  <title>Bicycle Express</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+        integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Bicycle Express</title>
 </head>
 
 <body>
-    <header id="header" class="mt-2 bg-white">
-        <div class="container">
-            <div class="row">
-                <div class="col-7">
-                    <picture class="d-inline-block">
-                        <source media="(min-width: 768px)" srcset="img/logo-tablet.jpg">
-                        <img class="header__logo-image" src="img/logo-mobile.jpg" width="49" height="42"
-                            alt="Bicycle Express local repair shop">
-                    </picture>
-                    <p class="d-inline-block text-uppercase pl-1 brand-name">Bicycle Express</p>
-                </div>
-                <div class="col-5 pt-1">
-                    <p class="text-left brand-direction">
-                        131 E Williams St. San Jose, CA 95112<br><a class="brand-mail"
-                            href="mailto:shop@bicycleexpress.net">shop@bicycleexpress.net</a>
-                        <br>(408) 998-1618
-                    </p>
-                </div>
+    <header id="header" class="mt-2 bg-white text-danger">
+        <div class="container d-flex justify-content-between">
+            <div class="header-logo d-inline-block">
+                <img class="header__logo-image" src="img/logo-mobile.jpg" width="49" height="42"
+                    alt="Bicycle Express local repair shop">
+                <p class="text-uppercase d-inline-block pl-1 header-name">Bicycle Express</p>
             </div>
+            <p class="text-left header-info pt-2">
+                131 E Williams St. San Jose, CA 95112<br><a class="header-mail text-danger"
+                    href="mailto:shop@bicycleexpress.net">shop@bicycleexpress.net</a>
+                <br>(408) 998-1618
+            </p>
         </div>
     </header>
-
-    <nav class="navbar navbar-expand-sm bg-danger">
-        <div class="container d-flex">
-                <div class="">
-                    <button class="navbar-toggler " data-toggle="collapse" data-target="#navbarCollapse">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarCollapse">
-                        <ul class="navbar-nav ml-auto">
-                            <li class="nav-item">
-                                <a href="services.html" class="nav-link">Services</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="shop.html" class="nav-link">Shop</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="demo.html" class="nav-link">Demo</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="contact.html" class="nav-link">Contact Us</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="events.html" class="nav-link">Events</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-
-            </div>                <div class="search-absolute">
-                    <div class="input-group">
-                        <input class="form-control" type="text" placeholder="Search"><i class="fas fa-search pt-3"></i>
-                    </div>
-                </div>
+    <nav class="navbar navbar-expand-md bg-danger d-md-flex" id="navigation">
+        <div class="container">
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <form class="form-inline my-1 order-md-3">
+                <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+        </form>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav pt-3 pt-md-0">
+                <li class="nav-item">
+                    <a href="services.html" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="shop.html" class="nav-link">Shop</a>
+                </li>
+                <li class="nav-item">
+                    <a href="demo.html" class="nav-link">Demo</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="events.html" class="nav-link">Events</a>
+                </li>
+            </ul>
         </div>
+        </div>
+    </div>
     </nav>
-  <script src="http://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
-  </script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
-    integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous">
-  </script>
+    <main>
+        <section id="heading">
+            <h1 class="visually-hidden heading-text">Your Local Repair Shop</h1>
+            <img class="img-fluid" src="img/index-heading-mobile.png" alt="Your Local Repair Shop" width="" height="">
+        </section>
+    </main>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+        integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous">
+    </script>
 
-  <script>
-    // Get the current year for the copyright
-    $('#year').text(new Date().getFullYear());
-
-  </script>
+    <script>
+        // Get the current year for the copyright
+        $('#year').text(new Date().getFullYear());
+    </script>
 </body>
 
 </html>
