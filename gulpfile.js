@@ -8,21 +8,21 @@ var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var server = require("browser-sync").create();
 
-gulp.task("bootstrap", function () {
-  return gulp.src("source/sass/bootstrap.scss")
-    .pipe(plumber())
-    .pipe(sourcemap.init())
-    .pipe(sass())
-    .pipe(postcss([
-      autoprefixer()
-    ]))
-    .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("source/css"))
-    .pipe(server.stream());
-});
+// gulp.task("bootstrap", function () {
+//   return gulp.src("node_modules/bootstrap/scss/bootstrap.scss")
+//     .pipe(plumber())
+//     .pipe(sourcemap.init())
+//     .pipe(sass())
+//     .pipe(postcss([
+//       autoprefixer()
+//     ]))
+//     .pipe(sourcemap.write("."))
+//     .pipe(gulp.dest("source/css"))
+//     .pipe(server.stream());
+// });
 
 gulp.task("css", function () {
-    return gulp.src("source/sass/style.scss")
+    return gulp.src("source/scss/style.scss")
       .pipe(plumber())
       .pipe(sourcemap.init())
       .pipe(sass())
@@ -48,4 +48,4 @@ gulp.task("server", function () {
   gulp.watch("source/*.html").on("change", server.reload);
 });
 
-gulp.task("start", gulp.series("bootstrap", "css", "server"));
+gulp.task("start", gulp.series("css", "server"));

@@ -1,0 +1,38 @@
+
+$danger: #8a0001;
+$success: #70ab81;
+$warning: #eacb86;
+$secondary: #fbf6eb;
+$dark: #333333;
+$input-placeholder-color:  #aaaaaa;
+$link-color:  #ffffff;
+$font-family-sans-serif: "Roboto Slab", "Open Sans", serif;
+$box-shadow:  0 3px 7px 0;
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+@font-face {
+    font-weight: 400;
+    font-family: "Roboto Slab";
+    font-style: normal;
+    font-display: swap;
+    src: local("Roboto Slab"), local("Roboto Slab Regular"), url("../fonts/robotoslabregular.woff2") format("woff2"), url("../fonts/robotoslabregular.woff") format("woff");
+  }
+  
+  @font-face {
+    font-weight: 900;
+    font-family: "Roboto Slab";
+    font-style: normal;
+    font-display: swap;
+    src: local("Roboto Slab Bold"), local("Roboto Slab-Bold"), url("../fonts/robotoslabbold.woff2") format("woff2"), url("../fonts/robotoslabbold.woff") format("woff");
+  }
+
+body {
+    font-size: 15px;
+}
+
+@media (min-width: 767.98px) {
+    body {
+      font-size: 17px;
+    }
+  }
