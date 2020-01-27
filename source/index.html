@@ -34,8 +34,8 @@
             <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <form class="form-inline my-1 order-md-3">
-                <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+            <form class="form-inline d-block my-1 order-md-3">
+                <input class="form-control h-auto w-100" type="text" placeholder="Search" aria-label="Search">
             </form>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav pt-3 pt-md-0">
@@ -70,6 +70,42 @@
                         alt="Your Local Repair Shop">
                 </picture>
             </div>
+        </section>
+        <section class="about-us bg-secondary text-danger d-md-flex">
+            <div class="container about-us__text-block py-5">
+                <h2 class="text-center h2 pb-2">About us</h2>
+                <p class="text-left mx-auto pb-2 about-us__text">We are a family owned and operated business that spans three generations worth of
+                    quality service and have helped multiple generations of families and athletes to get the right bike for
+                    heir needs. Over the years, the brands and equipment have changed, but our commitment to our customers
+                    hasn’t.</p>
+                <table class="mx-auto">
+                    <caption class="visually-hidden">Facts and figures</caption>
+                    <tbody class="row-md text-center">
+                      <tr class="col d-flex flex-column">
+                        <th class="">Years in Business</th>
+                        <td class="">30
+                        </td>
+                      </tr>
+                      <tr class="col d-flex flex-column">
+                        <th class="statistics-table__header">Full Time Techs</th>
+                        <td class="statistics-table__cell">4
+                        </td>
+                      </tr>
+                      <tr class="col d-flex flex-column">
+                        <th class="statistics-table__header">Yelp Reviews</th>
+                        <td class="statistics-table__cell">311
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  </div>
+                  <div class="about-us__img d-none d-md-inline w-50">
+                    <picture>
+                      <source media="(min-width: 1199.98px)" srcset="img/BE-shop-desktop.jpg">
+                      <img class="w-100 img-fluid about-us__img" src="img/BE-shop-tablet.jpg" width="320" height="428" alt="Repair shop 'Bicycle
+                            Express'">
+                    </picture>
+                    </div>
         </section>
     </main>
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"

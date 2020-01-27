@@ -126,7 +126,7 @@ $font-family-sans-serif: "Roboto Slab",
 "Open Sans",
 serif;
 
-$navbar-toggler-padding-y:0;
+$navbar-toggler-padding-y: 0.1rem;
 $navbar-toggler-padding-x: 0.4rem;
 $navbar-dark-color: $white;
 $navbar-dark-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='#{$navbar-dark-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
@@ -136,7 +136,12 @@ $input-border-radius: 0;
 $input-border-radius-lg: 0;
 $input-border-radius-sm: 0;
 $border-width: 0;
-$border-color: transparent;
+
+$grid-breakpoints: (xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px);
 
 @import "../../node_modules/bootstrap/scss/functions";
 @import "../../node_modules/bootstrap/scss/variables";
@@ -180,18 +185,6 @@ body {
   font-size: $font-size-sm;
 }
 
-@media (min-width: 767.98px) {
-  body {
-    font-size: $font-size-md;
-  }
-}
-
-@media (min-width: 1199.98px) {
-  body {
-    font-size: $font-size-lg;
-  }
-}
-
 .visually-hidden,
 .visually-hidden:not(:focus):not(:active) {
   position: absolute;
@@ -206,48 +199,27 @@ body {
   overflow: hidden;
 }
 
-.header {
-  & .header-name {
-    font-size: 9px;
-    font-weight: 800;
-  }
-
-  & .header-info {
-    font-size: 7px;
-  }
+.header .header-name {
+  font-size: 9px;
+  font-weight: 800;
 }
 
-.navigation {
-  & .navbar-toggler {
-    border-color: transparent;
-  }
-
-  & .form-inline {
-    width: 35%;
-  }
-
-  & .form-control {
-    height: 25px;
-    width: 100%;
-    font-size: 0.75rem;
-  }
+.header .header-info {
+  font-size: 7px;
+  width: 35%;
 }
 
-@media (min-width: 767.98px) {
-  .navigation {
+.navigation .navbar-toggler {
+  border-color: transparent;
+}
 
-    & .navbar-nav {
-      font-size: $display4-size;
-    }
-    & .form-inline {
-      display: block;
-      width: 25%;
-    }
+.navigation .form-inline {
+  width: 35%;
+}
 
-    & .form-control {
-      font-size: $font-size-base;
-    }
-  }
+.navigation .form-control {
+  padding: 0.1rem;
+  font-size: 0.75rem;
 }
 
 .heading {
@@ -256,31 +228,85 @@ body {
   background-image: url("../img/heading-photo-mobile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-
-  & .heading-block {
-    background-color: rgba($success, 0.5);
-  }
-
-  & .img-fluid {
-    max-width: 80%;
-    height: 20px;
-  }
 }
 
-@media (min-width: 767.98px) {
+.heading .heading-block {
+  background-color: rgba($success, 0.5);
+}
+
+.heading .img-fluid {
+  max-width: 80%;
+  height: 20px;
+}
+
+.about-us__text-block h2 {
+  font-weight: 800;
+}
+
+.about-us__text {
+  font-size: 14px;
+  width: 95%;
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: $font-size-md;
+  }
+
+  .header .header-info,
+  .navigation .form-inline {
+    width: 30%;
+  }
+
+  .header .header-name {
+    font-size: 20px;
+    font-weight: 800;
+  }
+
+  .header .header-info {
+    font-size: 12px;
+  }
+
   .heading {
     padding-top: 185px;
     min-height: 455px;
     background-image: url("../img/heading-photo-tablet.jpg");
-
-    & .img-fluid {
-      max-width: 100%;
-      height: 30px;
-    }
   }
+
+  .heading .img-fluid {
+    max-width: 100%;
+    height: 30px;
+  }
+
 }
 
 @media (min-width: 1199.98px) {
+  body {
+    font-size: $font-size-lg;
+  }
+
+  .header .header-name {
+    font-size: 24px;
+    font-weight: 800;
+  }
+
+  .header .header-info {
+    font-size: 14px;
+    width: 23%;
+  }
+
+  .navigation .navbar-nav {
+    font-size: $display4-size;
+  }
+
+  .navigation .form-control {
+    font-size: $font-size-base;
+  }
+
+  .navigation .form-inline {
+    width: 20%;
+  }
+
   .heading {
     padding-top: 300px;
     min-height: 600px;
