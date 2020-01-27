@@ -12,11 +12,14 @@
 </head>
 
 <body>
-    <header id="header" class="mt-2 bg-white text-danger">
+    <header class="mt-2 bg-white text-danger header">
         <div class="container d-flex justify-content-between">
             <div class="header-logo d-inline-block">
-                <img class="header__logo-image" src="img/logo-mobile.jpg" width="49" height="42"
-                    alt="Bicycle Express local repair shop">
+                <picture>
+                    <source media="(min-width: 768px)" srcset="img/logo-tablet.jpg" width="60" height="58">
+                    <img class="header__logo-image img-fluid" src="img/logo-mobile.jpg" width="49" height="42"
+                        alt="Bicycle Express local repair shop">
+                </picture>
                 <p class="text-uppercase d-inline-block pl-1 header-name">Bicycle Express</p>
             </div>
             <p class="text-left header-info pt-2">
@@ -26,40 +29,47 @@
             </p>
         </div>
     </header>
-    <nav class="navbar navbar-expand-md bg-danger d-md-flex" id="navigation">
+    <nav class="navbar navbar-expand-md navbar-dark bg-danger d-md-flex navigation">
         <div class="container">
-        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <form class="form-inline my-1 order-md-3">
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <form class="form-inline my-1 order-md-3">
                 <input class="form-control" type="text" placeholder="Search" aria-label="Search">
-        </form>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav pt-3 pt-md-0">
-                <li class="nav-item">
-                    <a href="services.html" class="nav-link">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a href="shop.html" class="nav-link">Shop</a>
-                </li>
-                <li class="nav-item">
-                    <a href="demo.html" class="nav-link">Demo</a>
-                </li>
-                <li class="nav-item">
-                    <a href="contact.html" class="nav-link">Contact Us</a>
-                </li>
-                <li class="nav-item">
-                    <a href="events.html" class="nav-link">Events</a>
-                </li>
-            </ul>
+            </form>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav pt-3 pt-md-0">
+                    <li class="nav-item pr-lg-3">
+                        <a href="services.html" class="nav-link">Services</a>
+                    </li>
+                    <li class="nav-item pr-lg-3">
+                        <a href="shop.html" class="nav-link">Shop</a>
+                    </li>
+                    <li class="nav-item pr-lg-3">
+                        <a href="demo.html" class="nav-link">Demo</a>
+                    </li>
+                    <li class="nav-item pr-lg-3">
+                        <a href="contact.html" class="nav-link">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="events.html" class="nav-link">Events</a>
+                    </li>
+                </ul>
+            </div>
         </div>
         </div>
-    </div>
     </nav>
     <main>
-        <section id="heading">
+        <section class="heading d-block mx-auto bg-success">
             <h1 class="visually-hidden heading-text">Your Local Repair Shop</h1>
-            <img class="img-fluid" src="img/index-heading-mobile.png" alt="Your Local Repair Shop" width="" height="">
+            <div class="d-block heading-block py-3 py-md-4">
+                <picture>
+                        <source media="(min-width: 1200px)" srcset="img/index-heading-desktop.png">
+                    <source media="(min-width: 500px)" srcset="img/index-heading-tablet.png">
+                    <img class="img-fluid d-block mx-auto" src="img/index-heading-mobile.png" 
+                        alt="Your Local Repair Shop">
+                </picture>
+            </div>
         </section>
     </main>
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"
