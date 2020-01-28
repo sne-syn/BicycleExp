@@ -107,7 +107,7 @@ $dark: #333333;
 $input-placeholder-color: #aaaaaa;
 $white: #ffffff;
 $link-color: $white;
-$input-height: 20px;
+$input-height: 25px;
 $box-shadow: 0 3px 7px 0;
 
 $font-size-base: 1rem; // Assumes the browser default, typically `16px`
@@ -157,7 +157,6 @@ $grid-breakpoints: (xs: 0,
 @import "../../node_modules/bootstrap/scss/dropdown";
 @import "../../node_modules/bootstrap/scss/forms";
 @import "../../node_modules/bootstrap/scss/input-group";
-@import "../../node_modules/bootstrap/scss/input-group";
 @import "../../node_modules/bootstrap/scss/modal";
 @import "../../node_modules/bootstrap/scss/nav";
 @import "../../node_modules/bootstrap/scss/navbar";
@@ -199,6 +198,11 @@ body {
   overflow: hidden;
 }
 
+.custom-container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
 .header .header-name {
   font-size: 9px;
   font-weight: 800;
@@ -218,8 +222,10 @@ body {
 }
 
 .navigation .form-control {
-  padding: 0.1rem;
-  font-size: 0.75rem;
+  padding: 3px;
+  padding-left: 6px;
+  padding-right: 20px;
+  font-size: 12px;
 }
 
 .heading {
@@ -239,18 +245,73 @@ body {
   height: 20px;
 }
 
+.about-us__text-block {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 .about-us__text-block h2 {
   font-weight: 800;
+  padding-bottom: 20px;
 }
 
 .about-us__text {
   font-size: 14px;
-  width: 95%;
 }
 
-@media (min-width: 768px) {
+.statistics {
+  width: 100%;
+}
+
+.subscribe .subscribe__heading {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.subscribe .form-control {
+  width: 70%;
+  font-size: 13px;
+}
+
+.subscribe .btn {
+  width: 30%;
+  line-height: 1.1;
+  padding-top: 6px;
+  padding-bottom: 5px;
+  font-size: 13px;
+}
+
+.subscribe .subscribe__text {
+  font-size: 13px;
+}
+
+.footer {
+  font-size: 10px;
+}
+
+.social {
+  margin-bottom: 10px;
+}
+
+.social-item a {
+  font-size: 0;
+}
+
+@media (min-width: 575.98px) {
+  .custom-container {
+    padding-right: calc(50vw - 270px);
+    padding-left: calc(50vw - 270px);
+  }
+}
+
+@media (min-width: 767.98) {
   body {
     font-size: $font-size-md;
+  }
+
+  .custom-container {
+    padding-right: calc(50vw - 340px);
+    padding-left: calc(50vw - 340px);
   }
 
   .header .header-info,
@@ -278,11 +339,85 @@ body {
     height: 30px;
   }
 
+  .about-us__text-block {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .about-us__text-block h2 {
+    padding-bottom: 15px;
+  }
+
+  .about-us__text {
+    font-size: 17px;
+    width: 100%;
+  }
+
+  .statistics {
+    margin: 0 auto;
+    font-size: 16px;
+  }
+
+  .subscribe .subscribe__heading {
+    font-size: 18px;
+    font-weight: 800;
+  }
+
+  .subscribe .form-inline {
+    width: 100%;
+  }
+
+  .subscribe .form-control {
+    width: 40%;
+    font-size: 13px;
+  }
+
+  .subscribe .btn {
+    width: 20%;
+    line-height: 1.1;
+    padding-top: 6px;
+    padding-bottom: 5px;
+    font-size: 13px;
+  }
+
+  .subscribe .subscribe__text {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 991.98) {
+  .custom-container {
+    padding-right: calc(50vw - 480px);
+    padding-left: calc(50vw - 480px);
+  }
+
+  .about-us__text-block h2 {
+    font-size: 25px;
+    padding-bottom: 25px;
+  }
+
+  .about-us__text {
+    width: 100%;
+    font-size: 19px;
+  }
+
+  .about-us__img-block {
+    width: 45%;
+  }
+
+  .statistics {
+    font-size: 18px;
+  }
 }
 
 @media (min-width: 1199.98px) {
   body {
     font-size: $font-size-lg;
+  }
+
+  .custom-container {
+    padding-right: calc(50vw - 580px);
+    padding-left: calc(50vw - 580px);
   }
 
   .header .header-name {
@@ -313,5 +448,31 @@ body {
     background-size: cover;
     background-position-y: -185px;
     background-image: url("../img/heading-photo-desktop.jpg");
+  }
+
+  .about-us__text-block {
+    padding-top: 6%;
+    padding-bottom: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 37%;
+  }
+
+  .about-us__text-block h2 {
+    font-size: 30px;
+    padding-bottom: 30px;
+  }
+
+  .about-us__text {
+    width: 100%;
+    font-size: 22px;
+  }
+
+  .about-us__img-block {
+    width: 28%;
+  }
+
+  .statistics {
+    font-size: 20px;
   }
 }
