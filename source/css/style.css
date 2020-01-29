@@ -6378,6 +6378,16 @@ a.text-dark:hover, a.text-dark:focus {
   font-display: swap;
   src: local("Roboto Slab Bold"), local("Roboto Slab-Bold"), url("../fonts/robotoslabbold.woff2") format("woff2"), url("../fonts/robotoslabbold.woff") format("woff"); }
 
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit; }
+
 body {
   font-size: 0.9375rem; }
 
@@ -6399,25 +6409,43 @@ body {
   padding-right: 15px;
   padding-left: 15px; }
 
-.header .header-name {
+.header .header__name {
   font-size: 9px;
   font-weight: 800; }
 
-.header .header-info {
+.header .header__info {
   font-size: 7px;
   width: 35%; }
+
+.header__img-container {
+  width: 50px; }
+
+.header__logo-image {
+  width: 100%; }
 
 .navigation .navbar-toggler {
   border-color: transparent; }
 
 .navigation .form-inline {
-  width: 35%; }
+  width: 35%;
+  position: relative; }
 
 .navigation .form-control {
-  padding: 3px;
+  padding: 2px;
   padding-left: 6px;
   padding-right: 20px;
   font-size: 12px; }
+
+.navigation .form-inline::before {
+  position: absolute;
+  content: "";
+  top: 6px;
+  right: 1px;
+  width: 15px;
+  height: 11px;
+  opacity: 0.6;
+  background-image: url(../img/search.svg);
+  background-repeat: no-repeat; }
 
 .heading {
   padding-top: 115px;
@@ -6430,12 +6458,12 @@ body {
   background-color: rgba(112, 171, 129, 0.5); }
 
 .heading .img-fluid {
-  max-width: 80%;
+  max-width: 90%;
   height: 20px; }
 
-.about-us__text-block {
-  padding-top: 20px;
-  padding-bottom: 20px; }
+.about-us {
+  padding-right: 15px;
+  padding-left: 15px; }
 
 .about-us__text-block h2 {
   font-weight: 800;
@@ -6443,9 +6471,6 @@ body {
 
 .about-us__text {
   font-size: 14px; }
-
-.statistics {
-  width: 100%; }
 
 .subscribe .subscribe__heading {
   font-size: 18px;
@@ -6475,24 +6500,37 @@ body {
   font-size: 0; }
 
 @media (min-width: 575.98px) {
-  .custom-container {
+  .custom-container,
+  .about-us {
     padding-right: calc(50vw - 270px);
     padding-left: calc(50vw - 270px); } }
 
-@media (min-width: 767.98) {
+@media (min-width: 767.98px) {
   body {
     font-size: 1.0625rem; }
   .custom-container {
     padding-right: calc(50vw - 340px);
     padding-left: calc(50vw - 340px); }
-  .header .header-info,
+  .header .header__info,
   .navigation .form-inline {
-    width: 30%; }
-  .header .header-name {
+    width: 33%; }
+  .header__img-container {
+    width: 80px; }
+  .header__logo-image {
+    width: 100%; }
+  .header .header__name {
     font-size: 20px;
-    font-weight: 800; }
-  .header .header-info {
+    font-weight: 800;
+    padding-top: 29px;
+    padding-left: 20px; }
+  .header .header__info {
+    padding-top: 10px;
     font-size: 12px; }
+  .navigation .form-inline::before {
+    top: 9px;
+    right: 3px; }
+  .navigation .form-control {
+    padding: 3px; }
   .heading {
     padding-top: 185px;
     min-height: 455px;
@@ -6500,6 +6538,9 @@ body {
   .heading .img-fluid {
     max-width: 100%;
     height: 30px; }
+  .about-us {
+    padding-right: calc(50vw - 340px);
+    padding-left: calc(50vw - 340px); }
   .about-us__text-block {
     padding-top: 40px;
     padding-bottom: 40px; }
@@ -6509,7 +6550,7 @@ body {
     font-size: 17px;
     width: 100%; }
   .statistics {
-    margin: 0 auto;
+    margin: 0;
     font-size: 16px; }
   .subscribe .subscribe__heading {
     font-size: 18px;
@@ -6528,10 +6569,23 @@ body {
   .subscribe .subscribe__text {
     font-size: 13px; } }
 
-@media (min-width: 991.98) {
+@media (min-width: 991.98px) {
   .custom-container {
     padding-right: calc(50vw - 480px);
     padding-left: calc(50vw - 480px); }
+  .navigation .form-control {
+    padding-left: 12px;
+    font-size: 15px; }
+  .heading {
+    padding-top: 224px;
+    min-height: 594px; }
+  .about-us {
+    padding-right: 0;
+    padding-left: calc(50vw - 480px); }
+  .about-us__text-block {
+    padding-top: 50px;
+    padding-right: 40px;
+    width: 76%; }
   .about-us__text-block h2 {
     font-size: 25px;
     padding-bottom: 25px; }

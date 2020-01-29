@@ -137,6 +137,8 @@ $input-border-radius-lg: 0;
 $input-border-radius-sm: 0;
 $border-width: 0;
 
+
+$padding-value: calc(50% - var(--container-width) / 2);
 $grid-breakpoints: (xs: 0,
   sm: 576px,
   md: 768px,
@@ -180,6 +182,16 @@ $grid-breakpoints: (xs: 0,
   src: local("Roboto Slab Bold"), local("Roboto Slab-Bold"), url("../fonts/robotoslabbold.woff2") format("woff2"), url("../fonts/robotoslabbold.woff") format("woff");
 }
 
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
   font-size: $font-size-sm;
 }
@@ -203,14 +215,22 @@ body {
   padding-left: 15px;
 }
 
-.header .header-name {
+.header .header__name {
   font-size: 9px;
   font-weight: 800;
 }
 
-.header .header-info {
+.header .header__info {
   font-size: 7px;
   width: 35%;
+}
+
+.header__img-container {
+  width: 50px;
+}
+
+.header__logo-image {
+  width: 100%;
 }
 
 .navigation .navbar-toggler {
@@ -218,14 +238,27 @@ body {
 }
 
 .navigation .form-inline {
-  width: 35%;
+  width: 35%;  
+  position: relative;
 }
 
 .navigation .form-control {
-  padding: 3px;
+  padding: 2px;
   padding-left: 6px;
   padding-right: 20px;
   font-size: 12px;
+}
+
+.navigation .form-inline::before {
+  position: absolute;
+  content: "";
+  top: 6px;
+  right: 1px;
+  width: 15px;
+  height: 11px;
+  opacity: 0.6;
+  background-image: url(../img/search.svg);
+  background-repeat: no-repeat;
 }
 
 .heading {
@@ -241,13 +274,13 @@ body {
 }
 
 .heading .img-fluid {
-  max-width: 80%;
+  max-width: 90%;
   height: 20px;
 }
 
-.about-us__text-block {
-  padding-top: 20px;
-  padding-bottom: 20px;
+.about-us {
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 .about-us__text-block h2 {
@@ -257,10 +290,6 @@ body {
 
 .about-us__text {
   font-size: 14px;
-}
-
-.statistics {
-  width: 100%;
 }
 
 .subscribe .subscribe__heading {
@@ -298,13 +327,14 @@ body {
 }
 
 @media (min-width: 575.98px) {
-  .custom-container {
+  .custom-container,
+  .about-us {
     padding-right: calc(50vw - 270px);
     padding-left: calc(50vw - 270px);
   }
 }
 
-@media (min-width: 767.98) {
+@media (min-width: 767.98px) {
   body {
     font-size: $font-size-md;
   }
@@ -314,18 +344,38 @@ body {
     padding-left: calc(50vw - 340px);
   }
 
-  .header .header-info,
+  .header .header__info,
   .navigation .form-inline {
-    width: 30%;
+    width: 33%;
   }
 
-  .header .header-name {
+  .header__img-container {
+    width: 80px;
+  }
+
+  .header__logo-image {
+    width: 100%;
+  }
+
+  .header .header__name {
     font-size: 20px;
     font-weight: 800;
+    padding-top: 29px;
+    padding-left: 20px;
   }
 
-  .header .header-info {
+  .header .header__info {
+    padding-top: 10px;
     font-size: 12px;
+  }
+
+  .navigation .form-inline::before {
+    top: 9px;
+    right: 3px;
+  }
+
+  .navigation .form-control {
+    padding: 3px;
   }
 
   .heading {
@@ -337,6 +387,11 @@ body {
   .heading .img-fluid {
     max-width: 100%;
     height: 30px;
+  }
+
+  .about-us {
+    padding-right:  calc(50vw - 340px);;
+    padding-left: calc(50vw - 340px);
   }
 
   .about-us__text-block {
@@ -354,7 +409,7 @@ body {
   }
 
   .statistics {
-    margin: 0 auto;
+    margin: 0;
     font-size: 16px;
   }
 
@@ -385,10 +440,31 @@ body {
   }
 }
 
-@media (min-width: 991.98) {
+@media (min-width: 991.98px) {
   .custom-container {
     padding-right: calc(50vw - 480px);
     padding-left: calc(50vw - 480px);
+  }
+
+  .navigation .form-control {
+    padding-left: 12px;
+    font-size: 15px;
+  }
+
+  .heading {
+  padding-top: 224px;
+  min-height: 594px;
+  }
+
+  .about-us {
+    padding-right: 0;
+    padding-left: calc(50vw - 480px);
+  }
+
+  .about-us__text-block  {
+    padding-top: 50px;
+    padding-right: 40px;
+    width: 76%;
   }
 
   .about-us__text-block h2 {

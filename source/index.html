@@ -34,18 +34,20 @@
         </svg>
 
     </svg>
-    <header class="custom-container mt-2 bg-white text-danger header">
+    <header class="custom-container bg-white text-danger py-2 header">
         <div class="d-flex justify-content-between">
-            <div class="header-logo d-inline-block">
+            <div class="header-logo d-inline-flex align-items-bottom">
+                <div class="header__img-container">
                 <picture>
-                    <source media="(min-width: 768px)" srcset="img/logo-tablet.jpg" width="60" height="58">
-                    <img class="header__logo-image img-fluid" src="img/logo-mobile.jpg" width="49" height="42"
-                        alt="Bicycle Express local repair shop">
+                    <source media="(min-width: 768px)" srcset="img/logo-tablet.jpg">
+                    <img class="header__logo-image img-fluid" src="img/logo-mobile.jpg" 
+                        alt="Bicycle Express local repair shop" width="50" height="45">
                 </picture>
-                <p class="text-uppercase d-inline-block pl-1 header-name">Bicycle Express</p>
             </div>
-            <p class="text-left header-info pt-2">
-                131 E Williams St. San Jose, CA 95112<br><a class="header-mail text-danger"
+                <p class="text-uppercase header__name">Bicycle Express</p>
+            </div>
+            <p class="text-left header__info m-0">
+                131 E Williams St. San Jose, CA 95112<br><a class="header__mail text-danger"
                     href="mailto:shop@bicycleexpress.net">shop@bicycleexpress.net</a>
                 <br>(408) 998-1618
             </p>
@@ -94,14 +96,14 @@
         <section class="about-us bg-secondary text-danger d-md-flex">
             <div class="about-us__text-block">
                 <h2 class="text-center h2">About Us</h2>
-                <p class="text-left mx-auto mb-4 about-us__text">We are a family owned and operated business that spans
+                <p class="text-left mx-autoabout-us__text">We are a family owned and operated business that spans
                     three generations worth of
                     quality service and have helped multiple generations of families and athletes to get the right bike
                     for
                     heir needs. Over the years, the brands and equipment have changed, but our commitment to our
                     customers
                     hasn’t.</p>
-                <table class="statistics">
+                <table class="statistics w-100">
                     <caption class="visually-hidden">Facts and figures</caption>
                     <tbody class="text-center row">
                         <tr class="col-sm-4 d-flex flex-column-reverse pb-3">
