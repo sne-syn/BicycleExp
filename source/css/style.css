@@ -273,7 +273,7 @@ h1, .h1 {
   font-size: 2.5rem; }
 
 h2, .h2 {
-  font-size: 1.5rem; }
+  font-size: 2rem; }
 
 h3, .h3 {
   font-size: 1.75rem; }
@@ -3530,7 +3530,7 @@ h1, .h1 {
   font-size: 2.5rem; }
 
 h2, .h2 {
-  font-size: 1.5rem; }
+  font-size: 2rem; }
 
 h3, .h3 {
   font-size: 1.75rem; }
@@ -6364,6 +6364,129 @@ a.text-dark:hover, a.text-dark:focus {
       -webkit-transition: none;
       transition: none; } }
 
+.modal__overlay {
+  position: absolute;
+  overflow: auto;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(51, 51, 51, 0.8);
+  z-index: 300; }
+
+.modal__position {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-left: -160px;
+  margin-top: -175px;
+  z-index: 400; }
+
+.modal__wrapper {
+  position: relative;
+  width: 320px;
+  padding: 30px 25px;
+  text-align: center;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 5px 10px 0 rgba(0, 1, 1, 0.25);
+          box-shadow: 0 5px 10px 0 rgba(0, 1, 1, 0.25); }
+
+.modal {
+  display: none; }
+
+.modal--show {
+  display: block; }
+
+.modal__text-heading {
+  padding-bottom: 10px;
+  font-size: 18px;
+  font-weight: 800;
+  color: #70ab81; }
+
+.modal__text {
+  color: #70ab81; }
+
+.modal__close {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 15px;
+  height: 15px;
+  font-size: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 30; }
+  .modal__close::before, .modal__close::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 0;
+    width: 15px;
+    height: 2px;
+    background-color: #70ab81; }
+  .modal__close::before {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg); }
+  .modal__close::after {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg); }
+
+.modal__close:hover::before,
+.modal__close:hover::after {
+  background-color: #70ab81; }
+
+.modal__close:active {
+  outline: none; }
+  .modal__close:active::before, .modal__close:active::after {
+    background-color: #70ab81; }
+
+@media (min-width: 991.98px) {
+  .modal__position {
+    margin-left: -280px; }
+  .modal__wrapper {
+    width: 400px;
+    padding: 70px 50px 80px; }
+  .modal__text-heading {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    line-height: 57px;
+    font-weight: bold;
+    text-align: center; }
+  .modal__text {
+    font-size: 16px; }
+  .modal__close {
+    top: 12px;
+    right: 12px; }
+    .modal__close::before, .modal__close::after {
+      width: 18px;
+      height: 3px; } }
+
+@media (min-width: 1199.98px) {
+  .modal__position {
+    margin-left: -280px; }
+  .modal__wrapper {
+    width: 486px;
+    padding: 110px 100px 130px; }
+  .modal__text-heading {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 22px;
+    line-height: 57px;
+    font-weight: bold;
+    text-align: center; }
+  .modal__text {
+    font-size: 18px; }
+  .modal__close {
+    top: 15px;
+    right: 15px; }
+    .modal__close::before, .modal__close::after {
+      width: 18px;
+      height: 3px; } }
+
 @font-face {
   font-weight: 400;
   font-family: "Roboto Slab";
@@ -6389,7 +6512,8 @@ html {
           box-sizing: inherit; }
 
 body {
-  font-size: 0.9375rem; }
+  font-size: 0.9375rem;
+  overflow-x: hidden; }
 
 .visually-hidden,
 .visually-hidden:not(:focus):not(:active) {
@@ -6410,10 +6534,14 @@ body {
   padding-left: 15px; }
 
 .header .header__name {
+  margin-top: 15px;
+  padding-left: 10px;
   font-size: 9px;
   font-weight: 800; }
 
 .header .header__info {
+  margin-top: 10px;
+  margin-bottom: 0;
   font-size: 7px;
   width: 35%; }
 
@@ -6422,6 +6550,13 @@ body {
 
 .header__logo-image {
   width: 100%; }
+
+a.header__mail {
+  color: #8a0001; }
+  a.header__mail:hover {
+    color: #640001; }
+  a.header__mail:active, a.header__mail:focus {
+    color: #570001; }
 
 .navigation .navbar-toggler {
   border-color: transparent; }
@@ -6465,7 +6600,12 @@ body {
   padding-right: 15px;
   padding-left: 15px; }
 
+.about-us__text-block {
+  padding-top: 40px;
+  padding-bottom: 20px; }
+
 .about-us__text-block h2 {
+  font-size: 25px;
   font-weight: 800;
   padding-bottom: 20px; }
 
@@ -6488,13 +6628,15 @@ body {
   font-size: 13px; }
 
 .subscribe .subscribe__text {
+  padding-top: 10px;
   font-size: 13px; }
 
 .footer {
   font-size: 10px; }
 
 .social {
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  width: 25%; }
 
 .social-item a {
   font-size: 0; }
@@ -6521,16 +6663,17 @@ body {
   .header .header__name {
     font-size: 20px;
     font-weight: 800;
+    margin-top: 0;
     padding-top: 29px;
     padding-left: 20px; }
   .header .header__info {
-    padding-top: 10px;
     font-size: 12px; }
   .navigation .form-inline::before {
     top: 9px;
     right: 3px; }
   .navigation .form-control {
-    padding: 3px; }
+    padding: 3px;
+    padding-right: 20px; }
   .heading {
     padding-top: 185px;
     min-height: 455px;
@@ -6553,26 +6696,40 @@ body {
     margin: 0;
     font-size: 16px; }
   .subscribe .subscribe__heading {
-    font-size: 18px;
+    font-size: 25px;
     font-weight: 800; }
-  .subscribe .form-inline {
-    width: 100%; }
+  .subscribe form {
+    width: 60%; }
   .subscribe .form-control {
-    width: 40%;
-    font-size: 13px; }
-  .subscribe .btn {
-    width: 20%;
-    line-height: 1.1;
-    padding-top: 6px;
+    width: 70%;
+    height: auto;
+    padding-top: 7px;
     padding-bottom: 5px;
-    font-size: 13px; }
+    font-size: 15px; }
+  .subscribe .btn {
+    width: 30%;
+    line-height: 1.1;
+    padding-top: 10px;
+    padding-bottom: 8px;
+    font-size: 15px; }
   .subscribe .subscribe__text {
+    padding-top: 20px;
+    font-size: 15px; }
+  .social {
+    margin-bottom: 50px;
+    width: 25%; }
+  .footer__copyright {
+    font-size: 13px; }
+  .footer__timetable {
     font-size: 13px; } }
 
 @media (min-width: 991.98px) {
   .custom-container {
     padding-right: calc(50vw - 480px);
     padding-left: calc(50vw - 480px); }
+  .header .header__info {
+    margin-top: 5px;
+    font-size: 14px; }
   .navigation .form-control {
     padding-left: 12px;
     font-size: 15px; }
@@ -6583,6 +6740,8 @@ body {
     padding-right: 0;
     padding-left: calc(50vw - 480px); }
   .about-us__text-block {
+    -ms-flex-item-align: center;
+        align-self: center;
     padding-top: 50px;
     padding-right: 40px;
     width: 76%; }
@@ -6595,7 +6754,13 @@ body {
   .about-us__img-block {
     width: 45%; }
   .statistics {
-    font-size: 18px; } }
+    font-size: 18px; }
+  .subscribe form {
+    width: 50%; }
+  .subscribe .btn {
+    width: 25%; }
+  .social {
+    width: 22%; } }
 
 @media (min-width: 1199.98px) {
   body {
@@ -6603,39 +6768,55 @@ body {
   .custom-container {
     padding-right: calc(50vw - 580px);
     padding-left: calc(50vw - 580px); }
-  .header .header-name {
+  .header__img-container {
+    width: 100px; }
+  .header .header__name {
     font-size: 24px;
     font-weight: 800; }
-  .header .header-info {
+  .header .header__info {
     font-size: 14px;
     width: 23%; }
   .navigation .navbar-nav {
     font-size: 1.3rem; }
   .navigation .form-control {
-    font-size: 1rem; }
+    font-size: 1rem;
+    padding-right: 30px; }
   .navigation .form-inline {
     width: 20%; }
+  .navigation .form-inline::before {
+    top: 8px;
+    right: 4px;
+    width: 20px;
+    height: 20px; }
   .heading {
     padding-top: 300px;
     min-height: 600px;
     background-size: cover;
     background-position-y: -185px;
     background-image: url("../img/heading-photo-desktop.jpg"); }
+  .heading .img-fluid {
+    max-width: 100%;
+    height: 41px; }
   .about-us__text-block {
-    padding-top: 6%;
-    padding-bottom: 0;
-    padding-left: 15px;
-    padding-right: 15px;
-    width: 37%; }
+    padding-right: 90px; }
   .about-us__text-block h2 {
     font-size: 30px;
     padding-bottom: 30px; }
   .about-us__text {
     width: 100%;
-    font-size: 22px; }
+    margin-bottom: 30px; }
   .about-us__img-block {
-    width: 28%; }
+    width: 40%; }
   .statistics {
-    font-size: 20px; } }
+    font-size: 20px; }
+  .subscribe form {
+    width: 40%; }
+  .contact__heading {
+    font-size: 18px; }
+  .contact__text {
+    font-size: 13px; }
+  .footer__timetable caption {
+    font-size: 17px;
+    padding-bottom: 0; } }
 
 /*# sourceMappingURL=style.css.map */

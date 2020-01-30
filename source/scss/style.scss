@@ -100,6 +100,8 @@
 
 
 $danger: #8a0001;
+$danger-hover: #640001;
+$danger-active: #570001;
 $success: #70ab81;
 $warning: #eacb86;
 $secondary: #fbf6eb;
@@ -110,6 +112,8 @@ $link-color: $white;
 $input-height: 25px;
 $box-shadow: 0 3px 7px 0;
 
+
+
 $font-size-base: 1rem; // Assumes the browser default, typically `16px`
 $font-size-lg: 1.125rem;
 $font-size-md: 1.0625rem;
@@ -118,7 +122,6 @@ $font-size-sm: 0.9375rem;
 // intro
 $display4-size: 1.3rem;
 $display5-size: 1.5rem;
-$h2-font-size: 1.5rem;
 
 // Body
 $body-color: $dark;
@@ -165,6 +168,7 @@ $grid-breakpoints: (xs: 0,
 @import "../../node_modules/bootstrap/scss/type";
 @import "../../node_modules/bootstrap/scss/utilities";
 @import "../../node_modules/bootstrap/scss/transitions";
+@import "modal-style";
 
 @font-face {
   font-weight: 400;
@@ -194,6 +198,7 @@ html {
 
 body {
   font-size: $font-size-sm;
+  overflow-x: hidden;
 }
 
 .visually-hidden,
@@ -216,11 +221,15 @@ body {
 }
 
 .header .header__name {
+  margin-top: 15px;
+  padding-left: 10px;
   font-size: 9px;
   font-weight: 800;
 }
 
 .header .header__info {
+  margin-top: 10px;
+  margin-bottom: 0;
   font-size: 7px;
   width: 35%;
 }
@@ -233,12 +242,25 @@ body {
   width: 100%;
 }
 
+a.header__mail {
+  color: $danger;
+
+  &:hover {
+    color: $danger-hover;
+  }
+
+  &:active,
+  &:focus {
+    color: $danger-active;
+  }
+}
+
 .navigation .navbar-toggler {
   border-color: transparent;
 }
 
 .navigation .form-inline {
-  width: 35%;  
+  width: 35%;
   position: relative;
 }
 
@@ -283,7 +305,13 @@ body {
   padding-left: 15px;
 }
 
+.about-us__text-block {
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
 .about-us__text-block h2 {
+  font-size: 25px;
   font-weight: 800;
   padding-bottom: 20px;
 }
@@ -311,6 +339,7 @@ body {
 }
 
 .subscribe .subscribe__text {
+  padding-top: 10px;
   font-size: 13px;
 }
 
@@ -320,13 +349,16 @@ body {
 
 .social {
   margin-bottom: 10px;
+  width: 25%;
 }
 
 .social-item a {
   font-size: 0;
 }
 
+
 @media (min-width: 575.98px) {
+
   .custom-container,
   .about-us {
     padding-right: calc(50vw - 270px);
@@ -360,12 +392,12 @@ body {
   .header .header__name {
     font-size: 20px;
     font-weight: 800;
+    margin-top: 0;
     padding-top: 29px;
     padding-left: 20px;
   }
 
   .header .header__info {
-    padding-top: 10px;
     font-size: 12px;
   }
 
@@ -376,6 +408,7 @@ body {
 
   .navigation .form-control {
     padding: 3px;
+    padding-right: 20px;
   }
 
   .heading {
@@ -390,7 +423,8 @@ body {
   }
 
   .about-us {
-    padding-right:  calc(50vw - 340px);;
+    padding-right: calc(50vw - 340px);
+    ;
     padding-left: calc(50vw - 340px);
   }
 
@@ -414,28 +448,45 @@ body {
   }
 
   .subscribe .subscribe__heading {
-    font-size: 18px;
+    font-size: 25px;
     font-weight: 800;
   }
 
-  .subscribe .form-inline {
-    width: 100%;
+  .subscribe form {
+    width: 60%;
   }
 
   .subscribe .form-control {
-    width: 40%;
-    font-size: 13px;
+    width: 70%;
+    height: auto;
+    padding-top: 7px;
+    padding-bottom: 5px;
+    font-size: 15px;
   }
 
   .subscribe .btn {
-    width: 20%;
+    width: 30%;
     line-height: 1.1;
-    padding-top: 6px;
-    padding-bottom: 5px;
-    font-size: 13px;
+    padding-top: 10px;
+    padding-bottom: 8px;
+    font-size: 15px;
   }
 
   .subscribe .subscribe__text {
+    padding-top: 20px;
+    font-size: 15px;
+  }
+
+  .social {
+    margin-bottom: 50px;
+    width: 25%;
+  }
+
+  .footer__copyright {
+    font-size: 13px;
+  }
+
+  .footer__timetable {
     font-size: 13px;
   }
 }
@@ -446,14 +497,19 @@ body {
     padding-left: calc(50vw - 480px);
   }
 
+  .header .header__info {
+    margin-top: 5px;
+    font-size: 14px;
+}
+
   .navigation .form-control {
     padding-left: 12px;
     font-size: 15px;
   }
 
   .heading {
-  padding-top: 224px;
-  min-height: 594px;
+    padding-top: 224px;
+    min-height: 594px;
   }
 
   .about-us {
@@ -461,7 +517,8 @@ body {
     padding-left: calc(50vw - 480px);
   }
 
-  .about-us__text-block  {
+  .about-us__text-block {
+    align-self: center;
     padding-top: 50px;
     padding-right: 40px;
     width: 76%;
@@ -484,6 +541,18 @@ body {
   .statistics {
     font-size: 18px;
   }
+
+  .subscribe form {
+    width: 50%;
+  }
+
+  .subscribe .btn {
+    width: 25%;
+  }
+
+  .social {
+    width: 22%;
+}
 }
 
 @media (min-width: 1199.98px) {
@@ -496,12 +565,16 @@ body {
     padding-left: calc(50vw - 580px);
   }
 
-  .header .header-name {
+  .header__img-container {
+    width: 100px;
+  }
+
+  .header .header__name {
     font-size: 24px;
     font-weight: 800;
   }
 
-  .header .header-info {
+  .header .header__info {
     font-size: 14px;
     width: 23%;
   }
@@ -511,11 +584,19 @@ body {
   }
 
   .navigation .form-control {
-    font-size: $font-size-base;
+    font-size: $font-size-base;    
+    padding-right: 30px;
   }
 
   .navigation .form-inline {
     width: 20%;
+  }
+  
+  .navigation .form-inline::before {
+    top: 8px;
+    right: 4px;
+    width: 20px;
+    height: 20px;
   }
 
   .heading {
@@ -526,12 +607,13 @@ body {
     background-image: url("../img/heading-photo-desktop.jpg");
   }
 
+  .heading .img-fluid {
+    max-width: 100%;
+    height: 41px;
+}
+
   .about-us__text-block {
-    padding-top: 6%;
-    padding-bottom: 0;
-    padding-left: 15px;
-    padding-right: 15px;
-    width: 37%;
+    padding-right: 90px;
   }
 
   .about-us__text-block h2 {
@@ -541,14 +623,32 @@ body {
 
   .about-us__text {
     width: 100%;
-    font-size: 22px;
+    margin-bottom: 30px;
   }
 
   .about-us__img-block {
-    width: 28%;
+    width: 40%;
   }
 
   .statistics {
     font-size: 20px;
   }
+
+  .subscribe form {
+    width: 40%;
+  }
+
+  .contact__heading {
+    font-size: 18px;
+  }
+
+  .contact__text {
+    font-size: 13px;
+  }
+
+  .footer__timetable caption {
+    font-size: 17px;
+    padding-bottom: 0;
+  }
+
 }
