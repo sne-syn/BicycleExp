@@ -108,6 +108,7 @@ $secondary: #fbf6eb;
 $dark: #333333;
 $input-placeholder-color: #aaaaaa;
 $white: #ffffff;
+$black: #000000;
 $link-color: $white;
 $input-height: 25px;
 $box-shadow: 0 3px 7px 0;
@@ -168,6 +169,9 @@ $grid-breakpoints: (xs: 0,
 @import "../../node_modules/bootstrap/scss/type";
 @import "../../node_modules/bootstrap/scss/utilities";
 @import "../../node_modules/bootstrap/scss/transitions";
+@import "blog";
+@import "card";
+@import "intro";
 @import "modal-style";
 
 @font-face {
@@ -194,11 +198,17 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+  // outline: 1px dashed red;
 }
 
 body {
   font-size: $font-size-sm;
   overflow-x: hidden;
+}
+
+.row {
+  margin-right: 0;
+  margin-left: 0;
 }
 
 .visually-hidden,
@@ -281,6 +291,16 @@ a.header__mail {
   opacity: 0.6;
   background-image: url(../img/search.svg);
   background-repeat: no-repeat;
+}
+
+.navbar-dark .navbar-nav .nav-link--active {
+  color: $warning;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $warning;
+  }
 }
 
 .heading {
@@ -500,7 +520,7 @@ a.header__mail {
   .header .header__info {
     margin-top: 5px;
     font-size: 14px;
-}
+  }
 
   .navigation .form-control {
     padding-left: 12px;
@@ -552,7 +572,7 @@ a.header__mail {
 
   .social {
     width: 22%;
-}
+  }
 }
 
 @media (min-width: 1199.98px) {
@@ -584,14 +604,14 @@ a.header__mail {
   }
 
   .navigation .form-control {
-    font-size: $font-size-base;    
+    font-size: $font-size-base;
     padding-right: 30px;
   }
 
   .navigation .form-inline {
     width: 20%;
   }
-  
+
   .navigation .form-inline::before {
     top: 8px;
     right: 4px;
@@ -610,7 +630,7 @@ a.header__mail {
   .heading .img-fluid {
     max-width: 100%;
     height: 41px;
-}
+  }
 
   .about-us__text-block {
     padding-right: 90px;

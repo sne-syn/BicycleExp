@@ -37,13 +37,13 @@
     <header class="custom-container text-left  bg-white text-danger py-2 header">
         <div class="d-flex justify-content-between">
             <div class="header-logo d-inline-flex align-items-bottom">
-                <div class="header__img-container">
+                <a href="index.html" class="header__img-container">
                     <picture>
                         <source media="(min-width: 768px)" srcset="img/logo-tablet.jpg">
                         <img class="header__logo-image img-fluid" src="img/logo-mobile.jpg"
                             alt="Bicycle Express local repair shop" width="50" height="45">
                     </picture>
-                </div>
+                </a>
                 <p class="text-uppercase header__name">Bicycle Express</p>
             </div>
             <p class="header__info">
@@ -63,7 +63,7 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav pt-3 pt-md-0">
                 <li class="nav-item pr-lg-3">
-                    <a href="services.html" class="nav-link">Services</a>
+                    <a href="services.html" class="nav-link nav-link--active">Services</a>
                 </li>
                 <li class="nav-item pr-lg-3">
                     <a href="shop.html" class="nav-link">Shop</a>
@@ -82,96 +82,99 @@
         </div>
     </nav>
     <main>
-        
-        </main>
-        <footer class="custom-container bg-danger text-white row py-2 py-md-3 footer">
-            <div class="footer-social col-md-7 col-lg-9 col-xl-5">
-                <ul class="social list-unstyled d-inline-flex justify-content-between">
-                    <li class="social-item"><a href="https://www.facebook.com/BicycleExpress">
-                            <svg class="social-icon" role="img" width="16" height="16">
-                                <title>Facebook</title>
-                                <use xlink:href="#icon-facebook"></use>
-                            </svg>Facebook
-                        </a>
-                    </li>
-                    <li class="social-item"><a href="https://www.yelp.com/biz/bicycle-express-san-jose">
-                            <svg class="social-icon" role="img" width="16" height="16">
-                                <title>Yelp</title>
-                                <use xlink:href="#icon-yelp"></use>
-                            </svg>Yelp
-                        </a>
-                    </li>
-                    <li class="social-item"><a href="https://twitter.com/BicycleExpress">
-                            <svg class="social-icon" role="img" width="16" height="16">
-                                <title>Twitter</title>
-                                <use xlink:href="#icon-twitter"></use>
-                            </svg>Twitter
-                        </a>
-                    </li>
-                    <li class="social-item"><a href="https://www.instagram.com/bikexpres">
-                            <svg class="social-icon" role="img" width="16" height="16">
-                                <title>Instagram</title>
-                                <use xlink:href="#icon-instagram"></use>
-                            </svg>Instagram
-                        </a>
-                    </li>
-                </ul>
-                <div class="footer__copyright">©<span id="year"></span> by Bicycle Express.</div>
-            </div>
-            <section class="d-none d-xl-block col-xl-4 footer__contact">
-                <h4 class="contact__heading">Contact</h4>
-                <p class="contact__text">
-                    131 E Williams St. San Jose, CA 95112<br> <a class="contact__mail"
-                        href="mailto:shop@bicycleexpress.net">shop@bicycleexpress.net</a><br>
-                    (408) 998-1618
-                </p>
-            </section>
-            <table class="d-none d-md-block col-md-5 col-lg-3 col-xl-3 footer__timetable">
-                <caption class="d-block text-white pt-0 pb-2 pb-xl-0">Hours</caption>
-                <tr class="timetable__row">
-                    <th class="pr-2 pr-xl-3">Tuesday - Friday</th>
-                    <td>10:30 am - 7 pm
-                    </td>
-                </tr>
-                <tr class="timetable__row ">
-                    <th class="pr-2 pr-xl-3">Saturday</th>
-                    <td>11am - 6 pm
-                    </td>
-                </tr>
-                <tr class="timetable__row">
-                    <th class="pr-2 pr-xl-3">Sunday</th>
-                    <td>11 am - 5 pm
-                    </td>
-                </tr>
-            </table>
-        </footer>
-    
-        <section aria-label="modal" class="modal">
-            <div class="modal__position">
-                <div class="modal__wrapper">
-                    <h3 class="modal__text-heading">Thank You for Subscribing!</h3>
-                    <p class="modal__text">You will be the first to know about new inventory, give aways and special
-                        projects!</p>
-                    <button class="modal__close" title="Close" type="button">Close modal</button>
-                </div>
-            </div>
-            <div class="modal__overlay"></div>
+        <section class="intro custom-container bg-success text-white py-3 py-lg-4 align-items-center row">
+            <h1 class="intro__heading text-left col-md-2">Get Fixed:</h1>
+            <p class="intro__text text-left col-md-10 pl-md-5">Need your bike looked at and fixed? Bicycle Express offers free estimates and diagnosis. Simply walk in at any time, and we will give you an inspection at no cost. Can’t come in any time soon? Feel free to use the diagram and labor items list below to zero in your bike problems, and get an idea of how much it will cost to fix it.</p>
         </section>
-    
-        <script src="js/modal.js"></script>
-        <script src="http://code.jquery.com/jquery-3.3.1.min.js"
-            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
-        </script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
-            integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous">
-        </script>
-    
-        <script>
-            // Get the current year for the copyright
-            $('#year').text(new Date().getFullYear());
-        </script>
-    </body>
-    
-    </html>
+    </main>
+    <footer class="custom-container bg-danger text-white row py-2 py-md-3 footer">
+        <div class="footer-social col-md-7 col-lg-9 col-xl-5">
+            <ul class="social list-unstyled d-inline-flex justify-content-between">
+                <li class="social-item"><a href="https://www.facebook.com/BicycleExpress">
+                        <svg class="social-icon" role="img" width="16" height="16">
+                            <title>Facebook</title>
+                            <use xlink:href="#icon-facebook"></use>
+                        </svg>Facebook
+                    </a>
+                </li>
+                <li class="social-item"><a href="https://www.yelp.com/biz/bicycle-express-san-jose">
+                        <svg class="social-icon" role="img" width="16" height="16">
+                            <title>Yelp</title>
+                            <use xlink:href="#icon-yelp"></use>
+                        </svg>Yelp
+                    </a>
+                </li>
+                <li class="social-item"><a href="https://twitter.com/BicycleExpress">
+                        <svg class="social-icon" role="img" width="16" height="16">
+                            <title>Twitter</title>
+                            <use xlink:href="#icon-twitter"></use>
+                        </svg>Twitter
+                    </a>
+                </li>
+                <li class="social-item"><a href="https://www.instagram.com/bikexpres">
+                        <svg class="social-icon" role="img" width="16" height="16">
+                            <title>Instagram</title>
+                            <use xlink:href="#icon-instagram"></use>
+                        </svg>Instagram
+                    </a>
+                </li>
+            </ul>
+            <div class="footer__copyright">©<span id="year"></span> by Bicycle Express.</div>
+        </div>
+        <section class="d-none d-xl-block col-xl-4 footer__contact">
+            <h4 class="contact__heading">Contact</h4>
+            <p class="contact__text">
+                131 E Williams St. San Jose, CA 95112<br> <a class="contact__mail"
+                    href="mailto:shop@bicycleexpress.net">shop@bicycleexpress.net</a><br>
+                (408) 998-1618
+            </p>
+        </section>
+        <table class="d-none d-md-block col-md-5 col-lg-3 col-xl-3 footer__timetable">
+            <caption class="d-block text-white pt-0 pb-2 pb-xl-0">Hours</caption>
+            <tr class="timetable__row">
+                <th class="pr-2 pr-xl-3">Tuesday - Friday</th>
+                <td>10:30 am - 7 pm
+                </td>
+            </tr>
+            <tr class="timetable__row ">
+                <th class="pr-2 pr-xl-3">Saturday</th>
+                <td>11am - 6 pm
+                </td>
+            </tr>
+            <tr class="timetable__row">
+                <th class="pr-2 pr-xl-3">Sunday</th>
+                <td>11 am - 5 pm
+                </td>
+            </tr>
+        </table>
+    </footer>
+
+    <section aria-label="modal" class="modal">
+        <div class="modal__position">
+            <div class="modal__wrapper">
+                <h3 class="modal__text-heading">Thank You for Subscribing!</h3>
+                <p class="modal__text">You will be the first to know about new inventory, give aways and special
+                    projects!</p>
+                <button class="modal__close" title="Close" type="button">Close modal</button>
+            </div>
+        </div>
+        <div class="modal__overlay"></div>
+    </section>
+
+    <script src="js/modal.js"></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+        integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous">
+    </script>
+
+    <script>
+        // Get the current year for the copyright
+        $('#year').text(new Date().getFullYear());
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+.intro__heading {
+    font-size: 18px;
+    font-weight: 800;
+    padding-bottom: 20px;
+}
+
+.intro__text {
+    font-size: 16px;
+    margin-bottom: 0;
+    font-weight: 300;
+}
+
+.intro__text-strong {
+    font-weight: 800;
+}
+
+@media (min-width: 991.98px) {
+    .intro__heading {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1199.98px) {
+    .intro__heading {
+        font-size: 25px;
+    }
+
+    .intro__text {
+        font-size: 20px;
+    }
+}

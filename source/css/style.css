@@ -2116,11 +2116,11 @@ input[type="button"].btn-block {
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 1;
-  color: #000;
+  color: #000000;
   text-shadow: 0 1px 0 #ffffff;
   opacity: .5; }
   .close:hover {
-    color: #000;
+    color: #000000;
     text-decoration: none; }
   .close:not(:disabled):not(.disabled):hover, .close:not(:disabled):not(.disabled):focus {
     opacity: .75; }
@@ -3021,7 +3021,7 @@ textarea.form-control {
   z-index: 1040;
   width: 100vw;
   height: 100vh;
-  background-color: #000; }
+  background-color: #000000; }
   .modal-backdrop.fade {
     opacity: 0; }
   .modal-backdrop.show {
@@ -6364,6 +6364,35 @@ a.text-dark:hover, a.text-dark:focus {
       -webkit-transition: none;
       transition: none; } }
 
+.blog-direction {
+  color: #000000; }
+
+.card-img {
+  border-radius: none; }
+
+.intro__heading {
+  font-size: 18px;
+  font-weight: 800;
+  padding-bottom: 20px; }
+
+.intro__text {
+  font-size: 16px;
+  margin-bottom: 0;
+  font-weight: 300; }
+
+.intro__text-strong {
+  font-weight: 800; }
+
+@media (min-width: 991.98px) {
+  .intro__heading {
+    font-size: 20px; } }
+
+@media (min-width: 1199.98px) {
+  .intro__heading {
+    font-size: 25px; }
+  .intro__text {
+    font-size: 20px; } }
+
 .modal__overlay {
   position: absolute;
   overflow: auto;
@@ -6515,6 +6544,10 @@ body {
   font-size: 0.9375rem;
   overflow-x: hidden; }
 
+.row {
+  margin-right: 0;
+  margin-left: 0; }
+
 .visually-hidden,
 .visually-hidden:not(:focus):not(:active) {
   position: absolute;
@@ -6581,6 +6614,11 @@ a.header__mail {
   opacity: 0.6;
   background-image: url(../img/search.svg);
   background-repeat: no-repeat; }
+
+.navbar-dark .navbar-nav .nav-link--active {
+  color: #eacb86; }
+  .navbar-dark .navbar-nav .nav-link--active:hover, .navbar-dark .navbar-nav .nav-link--active:active, .navbar-dark .navbar-nav .nav-link--active:focus {
+    color: #eacb86; }
 
 .heading {
   padding-top: 115px;
