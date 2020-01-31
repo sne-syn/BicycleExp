@@ -82,97 +82,172 @@
         </div>
     </nav>
 
-    <main>
-        
-        </main>
-        <footer class="custom-container bg-danger text-white row py-2 py-md-3 footer">
-            <div class="footer-social col-md-7 col-lg-9 col-xl-5">
-                <ul class="social list-unstyled d-inline-flex justify-content-between">
-                    <li class="social-item"><a href="https://www.facebook.com/BicycleExpress">
-                            <svg class="social-icon" role="img" width="16" height="16">
-                                <title>Facebook</title>
-                                <use xlink:href="#icon-facebook"></use>
-                            </svg>Facebook
-                        </a>
-                    </li>
-                    <li class="social-item"><a href="https://www.yelp.com/biz/bicycle-express-san-jose">
-                            <svg class="social-icon" role="img" width="16" height="16">
-                                <title>Yelp</title>
-                                <use xlink:href="#icon-yelp"></use>
-                            </svg>Yelp
-                        </a>
-                    </li>
-                    <li class="social-item"><a href="https://twitter.com/BicycleExpress">
-                            <svg class="social-icon" role="img" width="16" height="16">
-                                <title>Twitter</title>
-                                <use xlink:href="#icon-twitter"></use>
-                            </svg>Twitter
-                        </a>
-                    </li>
-                    <li class="social-item"><a href="https://www.instagram.com/bikexpres">
-                            <svg class="social-icon" role="img" width="16" height="16">
-                                <title>Instagram</title>
-                                <use xlink:href="#icon-instagram"></use>
-                            </svg>Instagram
-                        </a>
-                    </li>
-                </ul>
-                <div class="footer__copyright">©<span id="year"></span> by Bicycle Express.</div>
-            </div>
-            <section class="d-none d-xl-block col-xl-4 footer__contact">
-                <h4 class="contact__heading">Contact</h4>
-                <p class="contact__text">
-                    131 E Williams St. San Jose, CA 95112<br> <a class="contact__mail"
-                        href="mailto:shop@bicycleexpress.net">shop@bicycleexpress.net</a><br>
-                    (408) 998-1618
-                </p>
-            </section>
-            <table class="d-none d-md-block col-md-5 col-lg-3 col-xl-3 footer__timetable">
-                <caption class="d-block text-white pt-0 pb-2 pb-xl-0">Hours</caption>
-                <tr class="timetable__row">
-                    <th class="pr-2 pr-xl-3">Tuesday - Friday</th>
-                    <td>10:30 am - 7 pm
-                    </td>
-                </tr>
-                <tr class="timetable__row ">
-                    <th class="pr-2 pr-xl-3">Saturday</th>
-                    <td>11am - 6 pm
-                    </td>
-                </tr>
-                <tr class="timetable__row">
-                    <th class="pr-2 pr-xl-3">Sunday</th>
-                    <td>11 am - 5 pm
-                    </td>
-                </tr>
-            </table>
-        </footer>
-    
-        <section aria-label="modal" class="modal">
-            <div class="modal__position">
-                <div class="modal__wrapper">
-                    <h3 class="modal__text-heading">Thank You for Subscribing!</h3>
-                    <p class="modal__text">You will be the first to know about new inventory, give aways and special
-                        projects!</p>
-                    <button class="modal__close" title="Close" type="button">Close modal</button>
+    <main class="contact-us">
+        <h1 class="visually-hidden">Our contact information</h1>
+        <div class="custom-container pt-4">
+            <div class="row-lg bg-white text-dark">
+                <div class="col-lg-6 mx-0 px-0">
+                    <section class="shop-info">
+                        <img class="shop-info-img img-fluid" src="img/contact-us.jpg" alt="">
+                        <table class="py-3">
+                            <caption class="lead text-dark">Business Hours</caption>
+                            <tr class="timetable__row">
+                                <th class="pr-2 pr-xl-3">Tuesday - Friday</th>
+                                <td>10:30 am - 7 pm
+                                </td>
+                            </tr>
+                            <tr class="timetable__row ">
+                                <th class="pr-2 pr-xl-3">Saturday</th>
+                                <td>11 am - 6 pm
+                                </td>
+                            </tr>
+                            <tr class="timetable__row">
+                                <th class="pr-2 pr-xl-3">Sunday</th>
+                                <td>11 am - 5 pm
+                                </td>
+                            </tr>
+                        </table>
+                    </section>
+                </div>
+                <div class="col-lg-6 mx-0 px-0">
+                    <section class="contact-info d-flex flex-column my-4">
+                        <div class="map-block mb-4">
+                            <iframe allowfullscreen height="160" width="100%" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426"></iframe>
+                            <p class="contact-map-img"><img class="shop-info-img img-fluid" src="img/contact-map.jpg" alt="131 E Williams St. San Jose, CA 95112"></p>                            
+                        </div>
+                        
+                        <div class="contact-location">
+                            <h2 class="lead d-none">Our Location</h2>
+                            <p class=" mb-0">131 E Williams St. San Jose, CA 95112</p>
+                        </div>
+                        <div class="contact-email">
+                            <h2 class="lead d-none">Our Email Address</h2>
+                            <a class="text-dark contact-mail"
+                                href="mailto:shop@bicycleexpress.net">shop@bicycleexpress.net</a>
+                        </div>
+                        <div class="contact-phone">
+                            <h2 class="lead d-none">Our Phone</h2>
+                            <p>(408) 998-1618</p>
+                        </div>
+                    </section>
                 </div>
             </div>
-            <div class="modal__overlay"></div>
+        </div>
+        <section class="form-section bg-success text-white custom-container py-5">
+            <h2 class="form-section-heading text-center"> Contact Us</h2>
+            <form class="container w-md-50">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input class="form-control" type="text" id="name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input class="form-control" type="email" id="email">
+                </div>
+                <div class="form-group">
+                    <label for="email">Phone Number</label>
+                    <input class="form-control" type="phone" id="phone">
+                </div>
+                <div class="form-group">
+                    <label for="company">Subject</label>
+                    <input class="form-control" type="text" id="subject">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea class="form-control" id="message" rows="5"></textarea>
+                </div>
+                <button class="btn btn-danger" type="submit">Send</button>
+            </form>
         </section>
-    
-        <script src="js/modal.js"></script>
-        <script src="http://code.jquery.com/jquery-3.3.1.min.js"
-            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
-        </script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
-            integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous">
-        </script>
-    
-        <script>
-            // Get the current year for the copyright
-            $('#year').text(new Date().getFullYear());
-        </script>
-    </body>
-    
-    </html>
+    </main>
+    <footer class="custom-container bg-danger text-white row py-2 py-md-3 footer">
+        <div class="footer-social col-md-7 col-lg-9 col-xl-5">
+            <ul class="social list-unstyled d-inline-flex justify-content-between">
+                <li class="social-item"><a href="https://www.facebook.com/BicycleExpress">
+                        <svg class="social-icon" role="img" width="16" height="16">
+                            <title>Facebook</title>
+                            <use xlink:href="#icon-facebook"></use>
+                        </svg>Facebook
+                    </a>
+                </li>
+                <li class="social-item"><a href="https://www.yelp.com/biz/bicycle-express-san-jose">
+                        <svg class="social-icon" role="img" width="16" height="16">
+                            <title>Yelp</title>
+                            <use xlink:href="#icon-yelp"></use>
+                        </svg>Yelp
+                    </a>
+                </li>
+                <li class="social-item"><a href="https://twitter.com/BicycleExpress">
+                        <svg class="social-icon" role="img" width="16" height="16">
+                            <title>Twitter</title>
+                            <use xlink:href="#icon-twitter"></use>
+                        </svg>Twitter
+                    </a>
+                </li>
+                <li class="social-item"><a href="https://www.instagram.com/bikexpres">
+                        <svg class="social-icon" role="img" width="16" height="16">
+                            <title>Instagram</title>
+                            <use xlink:href="#icon-instagram"></use>
+                        </svg>Instagram
+                    </a>
+                </li>
+            </ul>
+            <div class="footer__copyright">©<span id="year"></span> by Bicycle Express.</div>
+        </div>
+        <section class="d-none d-xl-block col-xl-4 footer__contact">
+            <h4 class="contact__heading">Contact</h4>
+            <p class="contact__text">
+                131 E Williams St. San Jose, CA 95112<br> <a class="contact__mail"
+                    href="mailto:shop@bicycleexpress.net">shop@bicycleexpress.net</a><br>
+                (408) 998-1618
+            </p>
+        </section>
+        <table class="d-none d-md-block col-md-5 col-lg-3 col-xl-3 footer__timetable">
+            <caption class="d-block text-white pt-0 pb-2 pb-xl-0">Hours</caption>
+            <tr class="timetable__row">
+                <th class="pr-2 pr-xl-3">Tuesday - Friday</th>
+                <td>10:30 am - 7 pm
+                </td>
+            </tr>
+            <tr class="timetable__row ">
+                <th class="pr-2 pr-xl-3">Saturday</th>
+                <td>11 am - 6 pm
+                </td>
+            </tr>
+            <tr class="timetable__row">
+                <th class="pr-2 pr-xl-3">Sunday</th>
+                <td>11 am - 5 pm
+                </td>
+            </tr>
+        </table>
+    </footer>
+
+    <section aria-label="modal" class="modal">
+        <div class="modal__position">
+            <div class="modal__wrapper">
+                <h3 class="modal__text-heading">Thank You for Subscribing!</h3>
+                <p class="modal__text">You will be the first to know about new inventory, give aways and special
+                    projects!</p>
+                <button class="modal__close" title="Close" type="button">Close modal</button>
+            </div>
+        </div>
+        <div class="modal__overlay"></div>
+    </section>
+
+    <script src="js/modal.js"></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+        integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous">
+    </script>
+
+    <script>
+        // Get the current year for the copyright
+        $('#year').text(new Date().getFullYear());
+    </script>
+</body>
+
+</html>

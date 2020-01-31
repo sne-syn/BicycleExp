@@ -173,6 +173,7 @@ $grid-breakpoints: (xs: 0,
 @import "card";
 @import "intro";
 @import "modal-style";
+@import "contact";
 
 @font-face {
   font-weight: 400;
@@ -204,6 +205,25 @@ html {
 body {
   font-size: $font-size-sm;
   overflow-x: hidden;
+}
+
+caption {
+  caption-side: top;
+}
+
+table th {
+  position: relative;
+  font-weight: 500;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 4px;
+    right: 7px;
+    width: 1px;
+    height: 15px;
+    background-color: $white;
+  }
 }
 
 .row {

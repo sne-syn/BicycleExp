@@ -1,0 +1,37 @@
+.contact-us caption {
+    font-weight: 700;
+}
+
+.contact-us th {
+    width: 160px;
+
+    &::after {
+        position: absolute;
+        content: "";
+        top: 4px;
+        right: 9px;
+        width: 1px;
+        height: 17px;
+        background-color: $dark;
+      }
+}
+
+.contact-us iframe {
+	position: relative;
+	z-index: 30;
+    border: none;
+}
+
+.contact-us .contact-map-img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	margin: 0;
+}
+
+.contact-us .btn {
+    display: block;
+    vertical-align: middle;
+    margin-left: auto;
+}
