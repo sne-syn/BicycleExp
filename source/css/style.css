@@ -6364,16 +6364,58 @@ a.text-dark:hover, a.text-dark:focus {
       -webkit-transition: none;
       transition: none; } }
 
-.blog-direction {
+.blog .card-direction {
+  position: relative;
   color: #000000; }
+  .blog .card-direction::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: -22px;
+    width: 17px;
+    height: 20px;
+    background-image: url(../img/location-pin.svg);
+    background-repeat: no-repeat; }
 
-.card-img {
-  border-radius: none; }
+.blog .card-img-top {
+  width: 100%;
+  border-radius: 0; }
+
+.blog .card-body {
+  width: 100%;
+  font-size: 13px; }
+
+.blog .card-footer {
+  padding-bottom: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #ffffff; }
+
+@media (min-width: 767.98px) {
+  .blog .card-img-top {
+    width: 100%; }
+  .blog .card-body {
+    font-size: 16px;
+    width: 100%; } }
+
+@media (min-width: 991.98px) {
+  .blog .card-img-top {
+    width: 36%; }
+  .blog .card-body {
+    padding: 0;
+    padding-left: 20px;
+    font-size: 15px; }
+  .blog .card-text {
+    margin-bottom: 0; }
+  .blog .card-direction::before {
+    top: -3px;
+    left: -23px; } }
 
 .intro__heading {
   font-size: 18px;
   font-weight: 800;
-  padding-bottom: 20px; }
+  padding-bottom: 10px; }
 
 .intro__text {
   font-size: 16px;
@@ -6477,7 +6519,7 @@ a.text-dark:hover, a.text-dark:focus {
     margin-left: -280px; }
   .modal__wrapper {
     width: 400px;
-    padding: 70px 50px 80px; }
+    padding: 50px; }
   .modal__text-heading {
     margin-top: 20px;
     margin-bottom: 10px;
@@ -6497,9 +6539,6 @@ a.text-dark:hover, a.text-dark:focus {
 @media (min-width: 1199.98px) {
   .modal__position {
     margin-left: -280px; }
-  .modal__wrapper {
-    width: 486px;
-    padding: 110px 100px 130px; }
   .modal__text-heading {
     margin-top: 25px;
     margin-bottom: 10px;
@@ -6850,11 +6889,14 @@ a.header__mail {
   .subscribe form {
     width: 40%; }
   .contact__heading {
-    font-size: 18px; }
+    font-size: 18px;
+    margin-bottom: 5px; }
   .contact__text {
     font-size: 13px; }
   .footer__timetable caption {
-    font-size: 17px;
-    padding-bottom: 0; } }
+    margin-bottom: 3px;
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 500; } }
 
 /*# sourceMappingURL=style.css.map */
