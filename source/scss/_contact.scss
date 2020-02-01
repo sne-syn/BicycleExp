@@ -16,6 +16,11 @@
       }
 }
 
+.contact-us .map-block {
+    width: 100%;
+    height: 100%;
+}
+
 .contact-us iframe {
 	position: relative;
 	z-index: 30;
@@ -27,7 +32,13 @@
 	top: 0;
 	left: 0;
 	z-index: 2;
-	margin: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.contact-us form {
+    width: 75%;
 }
 
 .contact-us .btn {
