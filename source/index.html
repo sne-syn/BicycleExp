@@ -11,7 +11,7 @@
     <title>Bicycle Express</title>
 </head>
 
-<body>
+<body class="typo-base">
     <svg style="display:none">
         <svg fill="none" viewBox="0 0 8 16" xmlns="http://www.w3.org/2000/svg" id="icon-facebook">
             <path
@@ -34,26 +34,26 @@
         </svg>
 
     </svg>
-    <header class="custom-container text-left  bg-white text-danger py-2 header">
+    <header class="bg-white custom-container text-left text-danger py-2 header">
         <div class="d-flex justify-content-between">
             <div class="header-logo d-inline-flex align-items-bottom">
-                <div class="header__img-container">
+                <div class="header-logo-container">
                     <picture>
                         <source media="(min-width: 768px)" srcset="img/logo-tablet.jpg">
-                        <img class="header__logo-image img-fluid" src="img/logo-mobile.jpg"
+                        <img class="header-img w-100 img-fluid" src="img/logo-mobile.jpg"
                             alt="Bicycle Express local repair shop" width="50" height="45">
                     </picture>
                 </div>
-                <p class="text-uppercase header__name">Bicycle Express</p>
+                <p class="text-uppercase font-weight-bold my-auto pl-2 header-name">Bicycle Express</p>
             </div>
-            <p class="header__info">
-                131 E Williams St. San Jose, CA 95112<br><a class="header__mail"
+            <p class="header-info my-auto">
+                131 E Williams St. San Jose, CA 95112<br><a class="header-mail"
                     href="mailto:shop@bicycleexpress.net">shop@bicycleexpress.net</a>
                 <br>(408) 998-1618
             </p>
         </div>
     </header>
-    <nav class="custom-container navbar navbar-expand-md navbar-dark bg-danger d-md-flex navigation">
+    <nav class="custom-container navbar navbar-expand-md navbar-dark bg-danger d-md-flex">
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -96,7 +96,8 @@
         <section class="about-us bg-secondary text-danger d-md-flex">
             <div class="about-us__text-block">
                 <h2 class="text-center">About Us</h2>
-                <p class="text-left mx-auto mb-md-5 about-us__text">We are a family owned and operated business that spans
+                <p class="text-left mx-auto mb-md-5 about-us__text">We are a family owned and operated business that
+                    spans
                     three generations worth of
                     quality service and have helped multiple generations of families and athletes to get the right bike
                     for
@@ -137,8 +138,8 @@
             <h2 class="subscribe__heading">Subscribe</h2>
             <form class="form-inline d-inline-flex">
                 <input class="form-control" type="email" id="email" placeholder="Enter Your Email">
-                <button type="submit"
-          class="btn text-white btn-danger d-inline-block modal__open-btn" aria-label="Sign up and get greeting message">Sign Up</button>
+                <button type="submit" class="btn text-white btn-danger d-inline-block modal__open-btn"
+                    aria-label="Sign up and get greeting message">Sign Up</button>
             </form>
 
             <p class="subscribe__text mb-1">Recieve emails with exlusive offers, events and more.</p>
@@ -188,18 +189,18 @@
         </section>
         <table class="d-none d-md-block col-md-5 col-lg-3 col-xl-3 footer__timetable">
             <caption class="d-block text-white pt-0 pb-2 pb-xl-0">Hours</caption>
-            <tr class="timetable__row">
-                <th class="pr-2 pr-xl-3">Tuesday - Friday</th>
+            <tr>
+                <th class="font-weight-normal position-relative pr-2 pr-xl-3">Tuesday - Friday</th>
                 <td>10:30 am - 7 pm
                 </td>
             </tr>
-            <tr class="timetable__row ">
-                <th class="pr-2 pr-xl-3">Saturday</th>
+            <tr>
+                <th class="font-weight-normal position-relative pr-2 pr-xl-3">Saturday</th>
                 <td>11 am - 6 pm
                 </td>
             </tr>
-            <tr class="timetable__row">
-                <th class="pr-2 pr-xl-3">Sunday</th>
+            <tr>
+                <th class="font-weight-normal position-relative  pr-2 pr-xl-3">Sunday</th>
                 <td>11 am - 5 pm
                 </td>
             </tr>

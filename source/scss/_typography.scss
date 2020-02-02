@@ -1,0 +1,51 @@
+$font-size-base: 1rem;
+$font-size-sm: $font-size-base * 0.5; // 8
+$font-size-md: $font-size-base * 0.88; // 14
+$font-size-lg: $font-size-base * 1.25; // 20
+
+$font-size-10: $font-size-base * 0.625;
+$font-size-12: $font-size-base * 0.75;
+$font-size-18: $font-size-base * 1.13;
+
+$display-5: $font-size-base * 1.38; // 22
+$display-4: $font-size-base * 1.5; // 24
+$display-3: $font-size-base * 1.63; // 26
+$display-2: $font-size-base * 1.88; // 30
+
+@font-face {
+    font-weight: 400;
+    font-family: "Roboto Slab";
+    font-style: normal;
+    font-display: swap;
+    src: local("Roboto Slab"), local("Roboto Slab Regular"), url("../fonts/robotoslabregular.woff2") format("woff2"), url("../fonts/robotoslabregular.woff") format("woff");
+}
+
+@font-face {
+    font-weight: 900;
+    font-family: "Roboto Slab";
+    font-style: normal;
+    font-display: swap;
+    src: local("Roboto Slab Bold"), local("Roboto Slab-Bold"), url("../fonts/robotoslabbold.woff2") format("woff2"), url("../fonts/robotoslabbold.woff") format("woff");
+}
+
+// .typo {
+
+//     .header-name {
+
+//     }
+//     @media (min-width: 575.98px) {}
+
+//     @media (min-width: 767.98px) {
+//         & {
+//             font-size: $font-size-18;
+//         }
+//     }
+
+//     @media (min-width: 991.98px) {
+//         & {
+//             font-size: $font-size-lg;
+//         }
+//     }
+
+//     @media (min-width: 1199.98px) {}
+// }

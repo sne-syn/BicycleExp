@@ -1,0 +1,87 @@
+.navbar {
+  .navbar-toggler {
+    border-color: transparent;
+  }
+
+  .form-inline {
+    width: 35%;
+    position: relative;
+  }
+
+  .form-control {
+    padding: 2px;
+    padding-left: 6px;
+    padding-right: 20px;
+    font-size: 12px;
+  }
+
+  .form-inline::before {
+    position: absolute;
+    content: "";
+    top: 6px;
+    right: 1px;
+    width: 15px;
+    height: 11px;
+    opacity: 0.6;
+    background-image: url(../img/search.svg);
+    background-repeat: no-repeat;
+  }
+
+  .navbar-dark .navbar-nav .nav-link--active {
+    color: $warning;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $warning;
+    }
+  }
+
+  @media (min-width: 575.98px) {}
+
+  @media (min-width: 767.98px) {
+    .form-inline {
+      width: 33%;
+    }
+
+    .form-inline::before {
+      top: 9px;
+      right: 3px;
+    }
+
+    .form-control {
+      padding: 3px;
+      padding-right: 20px;
+    }
+  }
+
+  @media (min-width: 991.98px) {
+    .form-control {
+      padding-left: 12px;
+      font-size: 15px;
+    }
+  }
+
+  @media (min-width: 1199.98px) {
+    .navbar-nav {
+      font-size: $display4-size;
+    }
+
+    .form-control {
+      font-size: $font-size-base;
+      padding-right: 30px;
+    }
+
+    .form-inline {
+      width: 20%;
+    }
+
+    .form-inline::before {
+      top: 8px;
+      right: 4px;
+      width: 20px;
+      height: 20px;
+    }
+
+  }
+}

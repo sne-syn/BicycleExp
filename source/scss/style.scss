@@ -110,25 +110,28 @@ $input-placeholder-color: #aaaaaa;
 $white: #ffffff;
 $black: #000000;
 $link-color: $white;
+$body-color: $dark;
+
 $input-height: 25px;
 $box-shadow: 0 3px 7px 0;
 
-
-
-$font-size-base: 1rem; // Assumes the browser default, typically `16px`
-$font-size-lg: 1.125rem;
-$font-size-md: 1.0625rem;
-$font-size-sm: 0.9375rem;
-
-// intro
-$display4-size: 1.3rem;
-$display5-size: 1.5rem;
-
-// Body
-$body-color: $dark;
+// $font-size-base: 1rem; // Assumes the browser default, typically `16px`
 $font-family-sans-serif: "Roboto Slab",
 "Open Sans",
 serif;
+$font-size-base: 1rem;
+$font-size-sm: $font-size-base * 0.5; // 8
+$font-size-md: $font-size-base * 0.88; // 14
+$font-size-lg: $font-size-base * 1.25; // 20
+
+$font-size-10: $font-size-base * 0.625;
+$font-size-12: $font-size-base * 0.75;
+$font-size-18: $font-size-base * 1.13;
+
+$display-5: $font-size-base * 1.38; // 22
+$display-4: $font-size-base * 1.5; // 24
+$display-3: $font-size-base * 1.63; // 26
+$display-2: $font-size-base * 1.88; // 30
 
 $navbar-toggler-padding-y: 0.1rem;
 $navbar-toggler-padding-x: 0.4rem;
@@ -140,7 +143,6 @@ $input-border-radius: 0;
 $input-border-radius-lg: 0;
 $input-border-radius-sm: 0;
 $border-width: 0;
-
 
 $padding-value: calc(50% - var(--container-width) / 2);
 $grid-breakpoints: (xs: 0,
@@ -169,27 +171,20 @@ $grid-breakpoints: (xs: 0,
 @import "../../node_modules/bootstrap/scss/type";
 @import "../../node_modules/bootstrap/scss/utilities";
 @import "../../node_modules/bootstrap/scss/transitions";
+@import "about-us";
 @import "blog";
 @import "card";
+@import "contact";
+@import "custom-container";
+@import "footer";
+@import "header";
 @import "intro";
 @import "modal-style";
-@import "contact";
+@import "navbar";
+@import "typography";
+@import "visually-hidden";
 
-@font-face {
-  font-weight: 400;
-  font-family: "Roboto Slab";
-  font-style: normal;
-  font-display: swap;
-  src: local("Roboto Slab"), local("Roboto Slab Regular"), url("../fonts/robotoslabregular.woff2") format("woff2"), url("../fonts/robotoslabregular.woff") format("woff");
-}
 
-@font-face {
-  font-weight: 900;
-  font-family: "Roboto Slab";
-  font-style: normal;
-  font-display: swap;
-  src: local("Roboto Slab Bold"), local("Roboto Slab-Bold"), url("../fonts/robotoslabbold.woff2") format("woff2"), url("../fonts/robotoslabbold.woff") format("woff");
-}
 
 html {
   box-sizing: border-box;
@@ -199,11 +194,9 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
-  // outline: 1px dashed red;
 }
 
 body {
-  font-size: $font-size-sm;
   overflow-x: hidden;
 }
 
@@ -212,9 +205,6 @@ caption {
 }
 
 table th {
-  position: relative;
-  font-weight: 500;
-
   &::after {
     position: absolute;
     content: "";
@@ -223,103 +213,6 @@ table th {
     width: 1px;
     height: 15px;
     background-color: $white;
-  }
-}
-
-.row {
-  margin-right: 0;
-  margin-left: 0;
-}
-
-.visually-hidden,
-.visually-hidden:not(:focus):not(:active) {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
-.custom-container {
-  padding-right: 15px;
-  padding-left: 15px;
-}
-
-.header .header__name {
-  margin-top: 15px;
-  padding-left: 10px;
-  font-size: 9px;
-  font-weight: 800;
-}
-
-.header .header__info {
-  margin-top: 10px;
-  margin-bottom: 0;
-  font-size: 7px;
-  width: 35%;
-}
-
-.header__img-container {
-  width: 50px;
-}
-
-.header__logo-image {
-  width: 100%;
-}
-
-a.header__mail {
-  color: $danger;
-
-  &:hover {
-    color: $danger-hover;
-  }
-
-  &:active,
-  &:focus {
-    color: $danger-active;
-  }
-}
-
-.navigation .navbar-toggler {
-  border-color: transparent;
-}
-
-.navigation .form-inline {
-  width: 35%;
-  position: relative;
-}
-
-.navigation .form-control {
-  padding: 2px;
-  padding-left: 6px;
-  padding-right: 20px;
-  font-size: 12px;
-}
-
-.navigation .form-inline::before {
-  position: absolute;
-  content: "";
-  top: 6px;
-  right: 1px;
-  width: 15px;
-  height: 11px;
-  opacity: 0.6;
-  background-image: url(../img/search.svg);
-  background-repeat: no-repeat;
-}
-
-.navbar-dark .navbar-nav .nav-link--active {
-  color: $warning;
-
-  &:hover,
-  &:active,
-  &:focus {
-    color: $warning;
   }
 }
 
@@ -389,7 +282,7 @@ a.header__mail {
 
 .social {
   margin-bottom: 10px;
-  width: 25%;
+  width: 27%;
 }
 
 .social-item a {
@@ -399,7 +292,6 @@ a.header__mail {
 
 @media (min-width: 575.98px) {
 
-  .custom-container,
   .about-us {
     padding-right: calc(50vw - 270px);
     padding-left: calc(50vw - 270px);
@@ -407,49 +299,12 @@ a.header__mail {
 }
 
 @media (min-width: 767.98px) {
-  body {
-    font-size: $font-size-md;
-  }
 
   .custom-container {
     padding-right: calc(50vw - 340px);
     padding-left: calc(50vw - 340px);
   }
 
-  .header .header__info,
-  .navigation .form-inline {
-    width: 33%;
-  }
-
-  .header__img-container {
-    width: 80px;
-  }
-
-  .header__logo-image {
-    width: 100%;
-  }
-
-  .header .header__name {
-    font-size: 20px;
-    font-weight: 800;
-    margin-top: 0;
-    padding-top: 29px;
-    padding-left: 20px;
-  }
-
-  .header .header__info {
-    font-size: 12px;
-  }
-
-  .navigation .form-inline::before {
-    top: 9px;
-    right: 3px;
-  }
-
-  .navigation .form-control {
-    padding: 3px;
-    padding-right: 20px;
-  }
 
   .heading {
     padding-top: 185px;
@@ -532,20 +387,6 @@ a.header__mail {
 }
 
 @media (min-width: 991.98px) {
-  .custom-container {
-    padding-right: calc(50vw - 480px);
-    padding-left: calc(50vw - 480px);
-  }
-
-  .header .header__info {
-    margin-top: 5px;
-    font-size: 14px;
-  }
-
-  .navigation .form-control {
-    padding-left: 12px;
-    font-size: 15px;
-  }
 
   .heading {
     padding-top: 224px;
@@ -596,48 +437,6 @@ a.header__mail {
 }
 
 @media (min-width: 1199.98px) {
-  body {
-    font-size: $font-size-lg;
-  }
-
-  .custom-container {
-    padding-right: calc(50vw - 580px);
-    padding-left: calc(50vw - 580px);
-  }
-
-  .header__img-container {
-    width: 100px;
-  }
-
-  .header .header__name {
-    font-size: 24px;
-    font-weight: 800;
-  }
-
-  .header .header__info {
-    font-size: 14px;
-    width: 23%;
-  }
-
-  .navigation .navbar-nav {
-    font-size: $display4-size;
-  }
-
-  .navigation .form-control {
-    font-size: $font-size-base;
-    padding-right: 30px;
-  }
-
-  .navigation .form-inline {
-    width: 20%;
-  }
-
-  .navigation .form-inline::before {
-    top: 8px;
-    right: 4px;
-    width: 20px;
-    height: 20px;
-  }
 
   .heading {
     padding-top: 300px;
@@ -693,5 +492,4 @@ a.header__mail {
     line-height: 1.2;
     font-weight: 500;
   }
-
 }
