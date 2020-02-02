@@ -184,8 +184,6 @@ $grid-breakpoints: (xs: 0,
 @import "typography";
 @import "visually-hidden";
 
-
-
 html {
   box-sizing: border-box;
 }
@@ -299,12 +297,6 @@ table th {
 }
 
 @media (min-width: 767.98px) {
-
-  .custom-container {
-    padding-right: calc(50vw - 340px);
-    padding-left: calc(50vw - 340px);
-  }
-
 
   .heading {
     padding-top: 185px;

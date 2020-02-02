@@ -1,42 +1,33 @@
 .custom-container {
     padding-right: 15px;
     padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-}
+
 
 @media (min-width: 575.98px) {
-    .custom-container {
+    & {
         padding-right: calc(50vw - 270px);
         padding-left: calc(50vw - 270px);
-        margin-right: auto;
-        margin-left: auto;
     }
 }
 
 @media (min-width: 767.98px) {
-    .custom-container {
+    & {
         padding-right: calc(50vw - 340px);
         padding-left: calc(50vw - 340px);
-        margin-right: auto;
-        margin-left: auto;
     }
 }
 
 @media (min-width: 991.98px) {
-    .custom-container {
+    & {
         padding-right: calc(50vw - 480px);
         padding-left: calc(50vw - 480px);
-        margin-right: auto;
-        margin-left: auto;
     }
 }
 
 @media (min-width: 1199.98px) {
-    .custom-container {
+    & {
         padding-right: calc(50vw - 580px);
         padding-left: calc(50vw - 580px);
-        margin-right: auto;
-        margin-left: auto;
     }
+}
 }
