@@ -6656,7 +6656,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 .modal__wrapper {
   position: relative;
-  width: 320px;
+  width: 310px;
   padding: 30px 25px;
   text-align: center;
   background-color: #ffffff;
@@ -6936,7 +6936,12 @@ html {
 *::before,
 *::after {
   -webkit-box-sizing: inherit;
-          box-sizing: inherit; }
+          box-sizing: inherit;
+  outline: 1px dashed red; }
+
+body .row {
+  margin-left: 0;
+  margin-right: 0; }
 
 body {
   overflow-x: hidden; }

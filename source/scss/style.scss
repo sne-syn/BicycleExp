@@ -194,6 +194,11 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+  outline: 1px dashed red;
+}
+body .row {
+  margin-left: 0;
+  margin-right: 0;
 }
 
 body {

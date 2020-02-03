@@ -137,7 +137,7 @@
             <h2 class="subscribe-heading font-weight-bold">Subscribe</h2>
             <form class="form-inline d-inline-flex">
                 <input class="form-control" type="email" id="email" placeholder="Enter Your Email">
-                <button type="submit" data-toggle="modal" data-target="#exampleModalCenter" class="btn text-white btn-danger d-inline-block modal__open-btn"
+                <button type="button" data-toggle="modal" data-target="#modalCenter" class="btn text-white btn-danger d-inline-block"
                     aria-label="Sign up and get greeting message">Sign Up</button>
             </form>
 
@@ -208,38 +208,20 @@
     </div>
     </footer>
 
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              ...
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    <!-- <section aria-label="modal" class="modal">
-        <div class="modal__position">
-            <div class="modal__wrapper">
-                <h3 class="modal__text-heading">Thank You for Subscribing!</h3>
-                <p class="modal__text">You will be the first to know about new inventory, give aways and special
-                    projects!</p>
-                <button class="modal__close" title="Close" type="button">Close modal</button>
-            </div>
-        </div>
-        <div class="modal__overlay"></div>
-    </section> -->
 
-    <script src="js/modal.js"></script>
+    <section aria-label="modal" class="modal">
+            <div class="modal__position">
+                <div class="modal__wrapper">
+                    <h3 class="modal__text-heading">Thank You for Subscribing!</h3>
+                    <p class="modal__text">You will be the first to know about new inventory, give aways and special
+                        projects!</p>
+                    <button class="modal__close" title="Close" type="button">Close modal</button>
+                </div>
+            </div>
+            <div class="modal__overlay"></div>
+        </section>
+    
+        <script src="js/modal.js"></script>
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
