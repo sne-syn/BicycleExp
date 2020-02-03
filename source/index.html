@@ -82,9 +82,9 @@
         </div>
     </nav>
     <main>
-        <section class="heading d-block mx-auto bg-success">
-            <h1 class="visually-hidden heading-text">Your Local Repair Shop</h1>
-            <div class="d-block heading-block py-3 py-md-4">
+        <section class="tagline d-block mx-auto bg-success">
+            <h1 class="visually-hidden tagline-text">Your Local Repair Shop</h1>
+            <div class="d-block tagline-block py-3 py-md-4">
                 <picture>
                     <source media="(min-width: 1200px)" srcset="img/index-heading-desktop.png">
                     <source media="(min-width: 500px)" srcset="img/index-heading-tablet.png">
@@ -94,9 +94,9 @@
             </div>
         </section>
         <section class="about-us bg-secondary text-danger d-md-flex">
-            <div class="about-us__text-block">
-                <h2 class="text-center">About Us</h2>
-                <p class="text-left mx-auto mb-md-5 about-us__text">We are a family owned and operated business that
+            <div class="about-us-text">
+                <h2 class="text-center font-weight-bold">About Us</h2>
+                <p class="text-left mx-auto mb-5 about-us-intro">We are a family owned and operated business that
                     spans
                     three generations worth of
                     quality service and have helped multiple generations of families and athletes to get the right bike
@@ -104,28 +104,28 @@
                     heir needs. Over the years, the brands and equipment have changed, but our commitment to our
                     customers
                     hasn’t.</p>
-                <table class="statistics w-100">
+                <table class="container statistics w-100">
                     <caption class="visually-hidden">Facts and figures</caption>
                     <tbody class="text-center row">
                         <tr class="col-sm-4 d-flex flex-column-reverse pb-3">
-                            <th class="">Years in Business</th>
-                            <td class="">30
+                            <th>Years in Business</th>
+                            <td>30
                             </td>
                         </tr>
                         <tr class="col-sm-4 d-flex flex-column-reverse pb-3">
-                            <th class="">Full Time Techs</th>
-                            <td class="">4
+                            <th>Full Time Techs</th>
+                            <td>4
                             </td>
                         </tr>
                         <tr class="col-sm-4 d-flex flex-column-reverse pb-3">
-                            <th class="">Yelp Reviews</th>
-                            <td class="">311
+                            <th>Yelp Reviews</th>
+                            <td>311
                             </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-            <div class="about-us__img-block d-none d-lg-inline">
+            <div class="about-us-img d-none d-lg-inline">
                 <picture>
                     <source media="(min-width: 1199.98px)" srcset="img/BE-shop-desktop.jpg">
                     <img class="w-100 img-fluid about-us__img" src="img/BE-shop-tablet.jpg" width="320" height="428"
@@ -135,35 +135,35 @@
             </div>
         </section>
         <section class="subscribe custom-container bg-success text-left text-white py-3">
-            <h2 class="subscribe__heading">Subscribe</h2>
+            <h2 class="subscribe-heading font-weight-bold">Subscribe</h2>
             <form class="form-inline d-inline-flex">
                 <input class="form-control" type="email" id="email" placeholder="Enter Your Email">
                 <button type="submit" class="btn text-white btn-danger d-inline-block modal__open-btn"
                     aria-label="Sign up and get greeting message">Sign Up</button>
             </form>
 
-            <p class="subscribe__text mb-1">Recieve emails with exlusive offers, events and more.</p>
+            <p class="subscribe-text mb-1">Recieve emails with exlusive offers, events and more.</p>
         </section>
     </main>
     <footer class="custom-container bg-danger text-white py-2 py-md-3 footer">
-        <div class="row">
-        <div class="footer-social col-md-7 col-lg-9 col-xl-5">
+        <div class="d-flex justify-content-between">
+        <div class="d-flex flex-column">
             <ul class="social list-unstyled d-inline-flex justify-content-between">
-                <li class="social-item"><a href="https://www.facebook.com/BicycleExpress">
+                <li class="social-item mr-2 mr-lg-4"><a href="https://www.facebook.com/BicycleExpress">
                         <svg class="social-icon" role="img" width="16" height="16">
                             <title>Facebook</title>
                             <use xlink:href="#icon-facebook"></use>
                         </svg>Facebook
                     </a>
                 </li>
-                <li class="social-item"><a href="https://www.yelp.com/biz/bicycle-express-san-jose">
+                <li class="social-item mr-2 mr-lg-4"><a href="https://www.yelp.com/biz/bicycle-express-san-jose">
                         <svg class="social-icon" role="img" width="16" height="16">
                             <title>Yelp</title>
                             <use xlink:href="#icon-yelp"></use>
                         </svg>Yelp
                     </a>
                 </li>
-                <li class="social-item"><a href="https://twitter.com/BicycleExpress">
+                <li class="social-item mr-2 mr-lg-4"><a href="https://twitter.com/BicycleExpress">
                         <svg class="social-icon" role="img" width="16" height="16">
                             <title>Twitter</title>
                             <use xlink:href="#icon-twitter"></use>
@@ -178,31 +178,31 @@
                     </a>
                 </li>
             </ul>
-            <div class="footer__copyright">©<span id="year"></span> by Bicycle Express.</div>
+            <div class="copyright mt-auto mb-3">©<span id="year"></span> by Bicycle Express.</div>
         </div>
-        <section class="d-none d-xl-block col-xl-4 footer__contact">
-            <h4 class="contact__heading">Contact</h4>
-            <address class="contact__text">
-                131 E Williams St. San Jose, CA 95112<br> <a class="contact__mail"
+        <section class="d-none d-xl-block contact">
+            <h4 class="contact-heading mb-3">Contact</h4>
+            <address class="contact-text">
+                131 E Williams St. San Jose, CA 95112<br> <a class="contact-mail"
                     href="mailto:shop@bicycleexpress.net">shop@bicycleexpress.net</a><br>
                 (408) 998-1618
             </address>
         </section>
-        <table class="d-none d-md-block col-md-5 col-lg-3 col-xl-3 footer__timetable">
-            <caption class="d-block text-white pt-0 pb-2 pb-xl-0">Hours</caption>
+        <table class="d-none d-md-block timetable">
+            <caption class="font-weight-normal mb-xl-3 d-block text-white pt-0 pb-2 pb-xl-0">Hours</caption>
             <tr>
-                <th class="font-weight-normal position-relative pr-2 pr-xl-3">Tuesday - Friday</th>
-                <td>10:30 am - 7 pm
+                <th class="timetable-th font-weight-normal position-relative pr-2 pr-xl-3">Tuesday - Friday</th>
+                <td class="timetable-td">10:30 am - 7 pm
                 </td>
             </tr>
             <tr>
-                <th class="font-weight-normal position-relative pr-2 pr-xl-3">Saturday</th>
-                <td>11 am - 6 pm
+                <th class="timetable-th font-weight-normal position-relative pr-2 pr-xl-3">Saturday</th>
+                <td class="timetable-td">11 am - 6 pm
                 </td>
             </tr>
             <tr>
-                <th class="font-weight-normal position-relative  pr-2 pr-xl-3">Sunday</th>
-                <td>11 am - 5 pm
+                <th class="timetable-th font-weight-normal position-relative  pr-2 pr-xl-3">Sunday</th>
+                <td class="timetable-td">11 am - 5 pm
                 </td>
             </tr>
         </table>

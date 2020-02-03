@@ -1,0 +1,66 @@
+.subscribe {
+    & .subscribe-heading {
+        font-size: $font-size-18;
+    }
+
+    & .form-control {
+        width: 70%;
+        height: 28px;
+    }
+
+    & .btn {
+        width: 30%;
+        padding-top: 2px;
+        padding-bottom: 2px;
+    }
+
+    & .subscribe-text {
+        padding-top: 10px;
+        font-size: $font-size-md;
+    }
+
+    @media (min-width: 767.98px) {
+        & .subscribe-heading {
+            margin-bottom: 20px;
+            font-size: $display-3;
+        }
+
+        & .form-inline {
+            width: 60%;
+        }
+
+        & .form-control {
+            width: 70%;
+            height: 42px;
+            padding-top: 7px;
+            padding-bottom: 5px;
+        }
+
+        & .btn {
+            width: 30%;
+            padding-top: 10px;
+            padding-bottom: 8px;
+        }
+
+        & .subscribe-text {
+            padding-top: 20px;
+            font-size: $font-size-18;
+        }
+    }
+
+    @media (min-width: 991.98px) {
+        & .form-inline {
+            width: 50%;
+        }
+
+        & .btn {
+            width: 25%;
+        }
+    }
+
+    @media (min-width: 1199.98px) {
+        & .form-inline {
+            width: 40%;
+        }
+    }
+}

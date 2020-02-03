@@ -28,24 +28,18 @@ $display-2: $font-size-base * 1.88; // 30
     src: local("Roboto Slab Bold"), local("Roboto Slab-Bold"), url("../fonts/robotoslabbold.woff2") format("woff2"), url("../fonts/robotoslabbold.woff") format("woff");
 }
 
-// .typo {
+.typo-base {
+    font-size: $font-size-base;
 
-//     .header-name {
+    @media (min-width: 767.98px) {
+        & {
+            font-size: $font-size-18;
+        }
+    }
 
-//     }
-//     @media (min-width: 575.98px) {}
-
-//     @media (min-width: 767.98px) {
-//         & {
-//             font-size: $font-size-18;
-//         }
-//     }
-
-//     @media (min-width: 991.98px) {
-//         & {
-//             font-size: $font-size-lg;
-//         }
-//     }
-
-//     @media (min-width: 1199.98px) {}
-// }
+    @media (min-width: 1199.98px) {
+        & {
+            font-size: $font-size-lg;
+        }
+    }
+}
