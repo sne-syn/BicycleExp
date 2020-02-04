@@ -47,7 +47,7 @@
             </div>
             <address class="header-address my-auto">
                 131 E Williams St. San Jose, CA 95112<br><a class="header-mail"
-                href="mailto:shop@bicycleexpress.net">shop@bicycleexpress.net</a>
+                    href="mailto:shop@bicycleexpress.net">shop@bicycleexpress.net</a>
                 <br>(408) 998-1618
             </address>
         </div>
@@ -56,7 +56,7 @@
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <form class="form-inline d-block my-1 order-md-3">
+        <form role="search" class="form-inline d-block my-1 order-md-3">
             <input class="form-control h-auto w-100" type="text" placeholder="Search" aria-label="Search">
         </form>
         <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -81,7 +81,7 @@
         </div>
     </nav>
     <main>
-        <section class="tagline d-block mx-auto bg-success">
+        <section role="banner" class="tagline d-block mx-auto bg-success">
             <h1 class="visually-hidden tagline-text">Your Local Repair Shop</h1>
             <div class="d-block tagline-block py-3 py-md-4">
                 <picture>
@@ -137,91 +137,110 @@
             <h2 class="subscribe-heading font-weight-bold">Subscribe</h2>
             <form class="form-inline d-inline-flex">
                 <input class="form-control" type="email" id="email" placeholder="Enter Your Email">
-                <button type="button" data-toggle="modal" data-target="#modalCenter" class="btn text-white btn-danger d-inline-block"
+                <button data-toggle="modal" data-target="#exampleModalCenter" type="button"  class="modal-open-btn btn text-white btn-danger d-inline-block"
                     aria-label="Sign up and get greeting message">Sign Up</button>
             </form>
-
             <p class="subscribe-text mb-1">Recieve emails with exlusive offers, events and more.</p>
         </section>
     </main>
     <footer class="custom-container bg-danger text-white py-2 py-md-3 footer">
         <div class="d-flex justify-content-between">
-        <div class="d-flex flex-column">
-            <ul class="social list-unstyled d-inline-flex justify-content-between">
-                <li class="social-item mr-2 mr-lg-4"><a href="https://www.facebook.com/BicycleExpress">
-                        <svg class="social-icon" role="img" width="16" height="16">
-                            <title>Facebook</title>
-                            <use xlink:href="#icon-facebook"></use>
-                        </svg>Facebook
-                    </a>
-                </li>
-                <li class="social-item mr-2 mr-lg-4"><a href="https://www.yelp.com/biz/bicycle-express-san-jose">
-                        <svg class="social-icon" role="img" width="16" height="16">
-                            <title>Yelp</title>
-                            <use xlink:href="#icon-yelp"></use>
-                        </svg>Yelp
-                    </a>
-                </li>
-                <li class="social-item mr-2 mr-lg-4"><a href="https://twitter.com/BicycleExpress">
-                        <svg class="social-icon" role="img" width="16" height="16">
-                            <title>Twitter</title>
-                            <use xlink:href="#icon-twitter"></use>
-                        </svg>Twitter
-                    </a>
-                </li>
-                <li class="social-item"><a href="https://www.instagram.com/bikexpres">
-                        <svg class="social-icon" role="img" width="16" height="16">
-                            <title>Instagram</title>
-                            <use xlink:href="#icon-instagram"></use>
-                        </svg>Instagram
-                    </a>
-                </li>
-            </ul>
-            <div class="copyright mt-auto mb-3">©<span id="year"></span> by Bicycle Express.</div>
+            <div class="d-flex flex-column">
+                <ul class="social list-unstyled d-inline-flex justify-content-between">
+                    <li class="social-item mr-2 mr-lg-4"><a href="https://www.facebook.com/BicycleExpress">
+                            <svg class="social-icon" role="img" width="16" height="16">
+                                <title>Facebook</title>
+                                <use xlink:href="#icon-facebook"></use>
+                            </svg>Facebook
+                        </a>
+                    </li>
+                    <li class="social-item mr-2 mr-lg-4"><a href="https://www.yelp.com/biz/bicycle-express-san-jose">
+                            <svg class="social-icon" role="img" width="16" height="16">
+                                <title>Yelp</title>
+                                <use xlink:href="#icon-yelp"></use>
+                            </svg>Yelp
+                        </a>
+                    </li>
+                    <li class="social-item mr-2 mr-lg-4"><a href="https://twitter.com/BicycleExpress">
+                            <svg class="social-icon" role="img" width="16" height="16">
+                                <title>Twitter</title>
+                                <use xlink:href="#icon-twitter"></use>
+                            </svg>Twitter
+                        </a>
+                    </li>
+                    <li class="social-item"><a href="https://www.instagram.com/bikexpres">
+                            <svg class="social-icon" role="img" width="16" height="16">
+                                <title>Instagram</title>
+                                <use xlink:href="#icon-instagram"></use>
+                            </svg>Instagram
+                        </a>
+                    </li>
+                </ul>
+                <div class="copyright mt-auto mb-3">©<span id="year"></span> by Bicycle Express.</div>
+            </div>
+            <section class="d-none d-xl-block contact">
+                <h4 class="contact-heading mb-3">Contact</h4>
+                <address class="contact-text">
+                    131 E Williams St. San Jose, CA 95112<br> <a class="contact-mail"
+                        href="mailto:shop@bicycleexpress.net">shop@bicycleexpress.net</a><br>
+                    (408) 998-1618
+                </address>
+            </section>
+            <table class="d-none d-md-block timetable">
+                <caption class="font-weight-normal mb-xl-3 d-block text-white pt-0 pb-2 pb-xl-0">Hours</caption>
+                <tr>
+                    <th class="timetable-th font-weight-normal position-relative pr-2 pr-xl-3">Tuesday - Friday</th>
+                    <td class="timetable-td">10:30 am - 7 pm
+                    </td>
+                </tr>
+                <tr>
+                    <th class="timetable-th font-weight-normal position-relative pr-2 pr-xl-3">Saturday</th>
+                    <td class="timetable-td">11 am - 6 pm
+                    </td>
+                </tr>
+                <tr>
+                    <th class="timetable-th font-weight-normal position-relative  pr-2 pr-xl-3">Sunday</th>
+                    <td class="timetable-td">11 am - 5 pm
+                    </td>
+                </tr>
+            </table>
         </div>
-        <section class="d-none d-xl-block contact">
-            <h4 class="contact-heading mb-3">Contact</h4>
-            <address class="contact-text">
-                131 E Williams St. San Jose, CA 95112<br> <a class="contact-mail"
-                    href="mailto:shop@bicycleexpress.net">shop@bicycleexpress.net</a><br>
-                (408) 998-1618
-            </address>
-        </section>
-        <table class="d-none d-md-block timetable">
-            <caption class="font-weight-normal mb-xl-3 d-block text-white pt-0 pb-2 pb-xl-0">Hours</caption>
-            <tr>
-                <th class="timetable-th font-weight-normal position-relative pr-2 pr-xl-3">Tuesday - Friday</th>
-                <td class="timetable-td">10:30 am - 7 pm
-                </td>
-            </tr>
-            <tr>
-                <th class="timetable-th font-weight-normal position-relative pr-2 pr-xl-3">Saturday</th>
-                <td class="timetable-td">11 am - 6 pm
-                </td>
-            </tr>
-            <tr>
-                <th class="timetable-th font-weight-normal position-relative  pr-2 pr-xl-3">Sunday</th>
-                <td class="timetable-td">11 am - 5 pm
-                </td>
-            </tr>
-        </table>
-    </div>
     </footer>
 
-
-    <section aria-label="modal" class="modal">
-            <div class="modal__position">
-                <div class="modal__wrapper">
-                    <h3 class="modal__text-heading">Thank You for Subscribing!</h3>
-                    <p class="modal__text">You will be the first to know about new inventory, give aways and special
-                        projects!</p>
-                    <button class="modal__close" title="Close" type="button">Close modal</button>
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
                 </div>
+                <div class="modal-body">
+                        <p class="modal-text">You will be the first to know about new inventory, give aways and special
+                                projects!</p>
+                </div>
+              </div>
             </div>
-            <div class="modal__overlay"></div>
-        </section>
-    
-        <script src="js/modal.js"></script>
+          </div>
+
+    <!-- <section class="modal-block">
+        <div class="modal-position">
+            <div class="modal-wrapper">
+                <h3 class="modal-text-heading">Thank You for Subscribing!</h3>
+                <p class="modal-text">You will be the first to know about new inventory, give aways and special
+                    projects!</p>
+                <button class="modal-close" title="Close" type="button">Close modal</button>
+            </div>
+        </div>
+        <div class="modal-overlay"></div>
+    </section> -->
+
+    <script>
+        $('#myModal').modal('handleUpdate');
+    </script>
+
+    <!-- <script src="js/modal.js"></script> -->
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"

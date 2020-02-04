@@ -6433,7 +6433,7 @@ a.text-dark:hover, a.text-dark:focus {
   .blog .card-direction::before {
     content: "";
     position: absolute;
-    top: 2px;
+    top: -5px;
     left: -22px;
     width: 17px;
     height: 20px;
@@ -6472,7 +6472,7 @@ a.text-dark:hover, a.text-dark:focus {
   .blog .card-text {
     margin-bottom: 0; }
   .blog .card-direction::before {
-    top: -3px;
+    top: 0;
     left: -23px; } }
 
 .contact-us caption {
@@ -6636,7 +6636,7 @@ a.text-dark:hover, a.text-dark:focus {
   .intro__text {
     font-size: 20px; } }
 
-.modal__overlay {
+.modal-cs .modal-overlay {
   position: absolute;
   overflow: auto;
   left: 0;
@@ -6646,7 +6646,7 @@ a.text-dark:hover, a.text-dark:focus {
   background-color: rgba(51, 51, 51, 0.8);
   z-index: 300; }
 
-.modal__position {
+.modal-cs .modal-position {
   position: fixed;
   left: 50%;
   top: 50%;
@@ -6654,31 +6654,31 @@ a.text-dark:hover, a.text-dark:focus {
   margin-top: -175px;
   z-index: 400; }
 
-.modal__wrapper {
+.modal-cs .modal-wrapper {
   position: relative;
-  width: 310px;
+  width: 320px;
   padding: 30px 25px;
   text-align: center;
   background-color: #ffffff;
   -webkit-box-shadow: 0 5px 10px 0 rgba(0, 1, 1, 0.25);
           box-shadow: 0 5px 10px 0 rgba(0, 1, 1, 0.25); }
 
-.modal {
+.modal-cs {
   display: none; }
 
-.modal--show {
+.modal-cs.modal--show {
   display: block; }
 
-.modal__text-heading {
+.modal-cs .modal-text-heading {
   padding-bottom: 10px;
   font-size: 18px;
   font-weight: 800;
   color: #70ab81; }
 
-.modal__text {
+.modal-cs .modal-text {
   color: #70ab81; }
 
-.modal__close {
+.modal-cs .modal-close {
   margin: 0;
   padding: 0;
   position: absolute;
@@ -6691,7 +6691,7 @@ a.text-dark:hover, a.text-dark:focus {
   border: none;
   cursor: pointer;
   z-index: 30; }
-  .modal__close::before, .modal__close::after {
+  .modal-cs .modal-close::before, .modal-cs .modal-close::after {
     content: "";
     position: absolute;
     top: 6px;
@@ -6699,60 +6699,60 @@ a.text-dark:hover, a.text-dark:focus {
     width: 15px;
     height: 2px;
     background-color: #70ab81; }
-  .modal__close::before {
+  .modal-cs .modal-close::before {
     -webkit-transform: rotate(45deg);
             transform: rotate(45deg); }
-  .modal__close::after {
+  .modal-cs .modal-close::after {
     -webkit-transform: rotate(-45deg);
             transform: rotate(-45deg); }
 
-.modal__close:hover::before,
-.modal__close:hover::after {
+.modal-cs .modal-close:hover::before,
+.modal-cs .modal-close:hover::after {
   background-color: #70ab81; }
 
-.modal__close:active {
+.modal-cs .modal-close:active {
   outline: none; }
-  .modal__close:active::before, .modal__close:active::after {
+  .modal-cs .modal-close:active::before, .modal-cs .modal-close:active::after {
     background-color: #70ab81; }
 
 @media (min-width: 991.98px) {
-  .modal__position {
+  .modal-cs .modal-position {
     margin-left: -280px; }
-  .modal__wrapper {
+  .modal-cs .modal-wrapper {
     width: 400px;
     padding: 50px; }
-  .modal__text-heading {
+  .modal-cs .modal-text-heading {
     margin-top: 20px;
     margin-bottom: 10px;
     font-size: 20px;
-    line-height: 57px;
+    line-height: 35px;
     font-weight: bold;
     text-align: center; }
-  .modal__text {
+  .modal-cs .modal-text {
     font-size: 16px; }
-  .modal__close {
+  .modal-cs .modal-close {
     top: 12px;
     right: 12px; }
-    .modal__close::before, .modal__close::after {
+    .modal-cs .modal-close::before, .modal-cs .modal-close::after {
       width: 18px;
       height: 3px; } }
 
 @media (min-width: 1199.98px) {
-  .modal__position {
+  .modal-cs .modal-position {
     margin-left: -280px; }
-  .modal__text-heading {
+  .modal-cs .modal-text-heading {
     margin-top: 25px;
     margin-bottom: 10px;
     font-size: 22px;
     line-height: 57px;
     font-weight: bold;
     text-align: center; }
-  .modal__text {
+  .modal-cs .modal-text {
     font-size: 18px; }
-  .modal__close {
+  .modal-cs .modal-close {
     top: 15px;
     right: 15px; }
-    .modal__close::before, .modal__close::after {
+    .modal-cs .modal-close::before, .modal-cs .modal-close::after {
       width: 18px;
       height: 3px; } }
 
@@ -6936,8 +6936,7 @@ html {
 *::before,
 *::after {
   -webkit-box-sizing: inherit;
-          box-sizing: inherit;
-  outline: 1px dashed red; }
+          box-sizing: inherit; }
 
 body .row {
   margin-left: 0;

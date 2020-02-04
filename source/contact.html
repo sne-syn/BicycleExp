@@ -58,7 +58,7 @@
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <form class="form-inline d-block my-1 order-md-3">
+        <form role="search" class="form-inline d-block my-1 order-md-3">
             <input class="form-control h-auto w-100" type="text" placeholder="Search" aria-label="Search">
         </form>
         <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -160,7 +160,7 @@
                     <label for="message">Message</label>
                     <textarea class="form-control" id="message" rows="5"></textarea>
                 </div>
-                <button class="btn btn-danger modal__open-btn" type="submit">Send</button>
+                <button class="btn btn-danger modal-open-btn" type="submit">Send</button>
             </form>
         </section>
     </main>
@@ -229,16 +229,16 @@
     </footer>
 
     <section aria-label="modal" class="modal">
-        <div class="modal__position">
-            <div class="modal__wrapper">
-                <h3 class="modal__text-heading my-0">Thank You!</h3>
-                <p class="modal__text font-weight-bold">Your message successfuly sent!</p>
-                <p class="modal__text">However, if we haven't reached you back within 2 days, please call us during
+        <div class="modal-position">
+            <div class="modal-wrapper">
+                <h3 class="modal-text-heading my-0">Thank You!</h3>
+                <p class="modal-text font-weight-bold">Your message successfuly sent!</p>
+                <p class="modal-text">However, if we haven't reached you back within 2 days, please call us during
                     business hours to get the conversation flowing!</p>
-                <button class="modal__close" title="Close" type="button">Close modal</button>
+                <button class="modal-close" title="Close" type="button">Close modal</button>
             </div>
         </div>
-        <div class="modal__overlay"></div>
+        <div class="modal-overlay"></div>
     </section>
 
     <script src="js/modal.js"></script>

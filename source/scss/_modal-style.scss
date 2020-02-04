@@ -1,4 +1,4 @@
-.modal__overlay {
+.modal-cs .modal-overlay {
   position: absolute;
   overflow: auto;
   left: 0;
@@ -9,7 +9,7 @@
   z-index: 300;
 }
 
-.modal__position {
+.modal-cs .modal-position {
   position: fixed;
   left: 50%;
   top: 50%;
@@ -18,7 +18,7 @@
   z-index: 400;
 }
 
-.modal__wrapper {
+.modal-cs .modal-wrapper {
   position: relative;
   width: 320px;
   padding: 30px 25px;
@@ -27,26 +27,27 @@
   box-shadow: 0 5px 10px 0 rgba(0, 1, 1, 0.25);
 }
 
-.modal {
+.modal-cs {
   display: none;
 }
 
-.modal--show {
+.modal-cs.modal--show {
   display: block;
 }
 
-.modal__text-heading {
+.modal-cs .modal-text-heading {
   padding-bottom: 10px;
   font-size: 18px;
   font-weight: 800;
-  color: $success;;
+  color: $success;
+  ;
 }
 
-.modal__text {
-  color: $success;;
+.modal-cs .modal-text {
+  color: $success;
 }
 
-.modal__close {
+.modal-cs .modal-close {
   margin: 0;
   padding: 0;
   position: absolute;
@@ -80,83 +81,84 @@
   }
 }
 
-.modal__close:hover::before,
-.modal__close:hover::after {
+.modal-cs .modal-close:hover::before,
+.modal-cs .modal-close:hover::after {
   background-color: $success;
 }
 
-.modal__close:active {
+.modal-cs .modal-close:active {
   outline: none;
 
   &::before,
   &::after {
-    background-color: $success;;
+    background-color: $success;
+    ;
   }
 }
 
 @media (min-width: 991.98px) {
 
-  .modal__position {
-      margin-left: -280px;
+  .modal-cs .modal-position {
+    margin-left: -280px;
+  }
+
+  .modal-cs .modal-wrapper {
+    width: 400px;
+    padding: 50px;
+  }
+
+  .modal-cs .modal-text-heading {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    line-height: 35px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .modal-cs .modal-text {
+    font-size: 16px;
+  }
+
+  .modal-cs .modal-close {
+    top: 12px;
+    right: 12px;
+
+    &::before,
+    &::after {
+      width: 18px;
+      height: 3px;
     }
-  
-    .modal__wrapper {
-      width: 400px;
-      padding: 50px;
-    }
-  
-    .modal__text-heading {
-      margin-top: 20px;
-      margin-bottom: 10px;
-      font-size: 20px;
-      line-height: 57px;
-      font-weight: bold;
-      text-align: center;
-    }
-  
-    .modal__text {
-      font-size: 16px;
-    }
-  
-    .modal__close {
-      top: 12px;
-      right: 12px;
-  
-      &::before,
-      &::after {
-        width: 18px;
-        height: 3px;
-      }
-    }
+  }
 }
 
 @media (min-width: 1199.98px) {
 
-  .modal__position {
-      margin-left: -280px;
+  .modal-cs .modal-position {
+    margin-left: -280px;
+  }
+
+  .modal-cs .modal-text-heading {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 22px;
+    line-height: 57px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .modal-cs  .modal-text {
+    font-size: 18px;
+  }
+
+  .modal-cs .modal-close {
+    top: 15px;
+    right: 15px;
+
+    &::before,
+    &::after {
+      width: 18px;
+      height: 3px;
     }
-  
-    .modal__text-heading {
-      margin-top: 25px;
-      margin-bottom: 10px;
-      font-size: 22px;
-      line-height: 57px;
-      font-weight: bold;
-      text-align: center;
-    }
-  
-    .modal__text {
-      font-size: 18px;
-    }
-  
-    .modal__close {
-      top: 15px;
-      right: 15px;
-  
-      &::before,
-      &::after {
-        width: 18px;
-        height: 3px;
-      }
-    }
+  }
 }

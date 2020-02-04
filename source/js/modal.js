@@ -1,10 +1,10 @@
 'use strict';
 
 (function () {
-  var popup = document.querySelector('.modal');
-  var overlay = document.querySelector('.modal__overlay');
-  var openButtons = document.querySelectorAll('.modal__open-btn');
-  var closeButton = popup.querySelector('.modal__close');
+  var popup = document.querySelector('.modal-cs');
+  var overlay = document.querySelector('.modal-overlay');
+  var openButtons = document.querySelectorAll('.modal-open-btn');
+  var closeButton = popup.querySelector('.modal-close');
 
   var openPopup = function () {
     popup.classList.add("modal--show");
