@@ -1,0 +1,56 @@
+.events {
+    & .card-direction {
+        position: relative;
+        color: $black;
+    
+        &::before {
+            content: "";
+            position: absolute;
+            top: -5px;
+            left: -22px;
+            width: 17px;
+            height: 20px;
+            background-image: url(../img/location-pin.svg);
+            background-repeat: no-repeat;
+    & .card-img-top {
+        width: 100%;
+        border-radius: 0;
+    }
+    
+    & .card-body {
+        width: 100%;
+        font-size: $font-size-md;
+    }
+    
+    & .card-footer {
+        padding-bottom: 0;
+        align-items: center;
+        background-color: $white;
+    }
+    
+    @media (min-width: 767.98px) {
+        & .card-body {
+            font-size: $font-size-base;
+        }
+    }
+    
+    @media (min-width: 991.98px) {
+        & .card-img-top {
+            width: 36%;
+        }
+    
+        & .card-body {
+            padding: 0;
+            padding-left: 20px;
+        }
+    
+        & .card-text {
+            margin-bottom: 0;
+        }
+    
+        & .card-direction::before {
+            top: 0;
+            left: -23px;
+        }
+    }
+}

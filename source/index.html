@@ -82,7 +82,7 @@
     </nav>
     <main>
         <section role="banner" class="tagline d-block mx-auto bg-success">
-            <h1 class="visually-hidden tagline-text">Your Local Repair Shop</h1>
+            <h1 class="sr-only tagline-text">Your Local Repair Shop</h1>
             <div class="d-block tagline-block py-3 py-md-4">
                 <picture>
                     <source media="(min-width: 1200px)" srcset="img/index-heading-desktop.png">
@@ -104,7 +104,7 @@
                     customers
                     hasn’t.</p>
                 <table class="container statistics w-100">
-                    <caption class="visually-hidden">Facts and figures</caption>
+                    <caption class="sr-only">Facts and figures</caption>
                     <tbody class="text-center row">
                         <tr class="col-sm-4 d-flex flex-column-reverse pb-3">
                             <th>Years in Business</th>
@@ -137,13 +137,13 @@
             <h2 class="subscribe-heading font-weight-bold">Subscribe</h2>
             <form class="form-inline d-inline-flex">
                 <input class="form-control" type="email" id="email" placeholder="Enter Your Email">
-                <button data-toggle="modal" data-target="#exampleModalCenter" type="button"  class="modal-open-btn btn text-white btn-danger d-inline-block"
+                <button data-toggle="modal" data-target="#modalCenter" type="button"  class="modal-open-btn btn text-white btn-danger d-inline-block"
                     aria-label="Sign up and get greeting message">Sign Up</button>
             </form>
             <p class="subscribe-text mb-1">Recieve emails with exlusive offers, events and more.</p>
         </section>
     </main>
-    <footer class="custom-container bg-danger text-white py-2 py-md-3 footer">
+    <footer class="custom-container bg-danger text-white py-3 py-md-3 footer">
         <div class="d-flex justify-content-between">
             <div class="d-flex flex-column">
                 <ul class="social list-unstyled d-inline-flex justify-content-between">
@@ -207,40 +207,23 @@
         </div>
     </footer>
 
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal fade bd-example-modal-sm bd-example-modal-lg" id="modalCenter" tabindex="-1" role="dialog" aria-labelledby="modalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-sm modal-dialog-centered text-success" role="document">
               <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                <div class="modal-header pb-0">
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
+                    <span aria-hidden="true" class="text-success">&times;</span>
                   </button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body pb-5 pt-3 text-center">
+                    <h5 class="modal-title font-weight-bold mb-2 mb-lg-5" id="modalLongTitle">Thank You for Subscribing!</h5>
                         <p class="modal-text">You will be the first to know about new inventory, give aways and special
                                 projects!</p>
                 </div>
               </div>
             </div>
           </div>
-
-    <!-- <section class="modal-block">
-        <div class="modal-position">
-            <div class="modal-wrapper">
-                <h3 class="modal-text-heading">Thank You for Subscribing!</h3>
-                <p class="modal-text">You will be the first to know about new inventory, give aways and special
-                    projects!</p>
-                <button class="modal-close" title="Close" type="button">Close modal</button>
-            </div>
-        </div>
-        <div class="modal-overlay"></div>
-    </section> -->
-
-    <script>
-        $('#myModal').modal('handleUpdate');
-    </script>
-
-    <!-- <script src="js/modal.js"></script> -->
+          
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
@@ -253,6 +236,9 @@
     <script>
         // Get the current year for the copyright
         $('#year').text(new Date().getFullYear());
+
+        // Readjust the modal’s position in case a scrollbar appears
+        $('#myModal').modal('handleUpdate');
     </script>
 </body>
 
