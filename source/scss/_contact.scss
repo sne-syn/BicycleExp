@@ -1,48 +1,91 @@
-.contact-us caption {
-    font-weight: 700;
-}
+.contact-us {
+    & .timetable,
+    & .map-info-block {
+        font-size: $font-size-base; 
+    }
 
-.contact-us th {
-    width: 160px;
-
-    &::after {
-        position: absolute;
-        content: "";
-        top: 4px;
-        right: 9px;
-        width: 1px;
-        height: 17px;
+    & .timetable .timetable-th::before {
         background-color: $dark;
-      }
-}
+    }
 
-.contact-us .map-block {
-    width: 100%;
-    height: 100%;
-}
+    & .map {
+        width: 100%;
+        height: 100%;
+    }
 
-.contact-us iframe {
-	position: relative;
-	z-index: 30;
-    border: none;
-}
+    & iframe {
+        position: relative;
+        z-index: 30;
+        border: none;
+    }
 
-.contact-us .contact-map-img {
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 2;
-    margin: 0;
-    width: 100%;
-    height: 100%;
-}
+    & .map-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
 
-.contact-us form {
-    width: 75%;
-}
+    & .form {
+        width: 75%;
+    }
 
-.contact-us .btn {
-    display: block;
-    vertical-align: middle;
-    margin-left: auto;
+    & .btn {
+        display: block;
+        vertical-align: middle;
+        margin-left: auto;
+    }
+
+    @media (min-width: 767.98px) {
+        & .shop-info-img {
+            width: 100%;
+            height: 400px;
+        }
+
+        & .timetable {
+            font-size: $font-size-18; 
+        }
+
+        & .timetable .timetable-th::before {
+            top: 7px;
+            right: 1px;
+            height: 17px;
+        }
+
+        & .form {
+            width: 55%;
+            font-size: $font-size-lg; 
+        }
+
+        & .form-control {
+            height: 35px;
+            font-size: $font-size-lg; 
+        }
+
+        & iframe {
+            height: 400px;
+        }
+    }
+
+    @media (min-width: 991.98px) {
+        & .shop-info-img {
+            width: 90%;
+            height: 350px;
+        }
+
+        & .map {
+            height: 350px;
+        }
+
+        & iframe {
+            height: 325px;
+        }
+
+        & .form {
+            width: 47%;
+        }
+    }
 }

@@ -12,32 +12,11 @@
 
     & .timetable {
       font-size: $font-size-md;
-      table-layout: fixed;
-    }
-
-    & .timetable-th {
-      display: inline-block;
-      vertical-align: middle;
-      margin-top: -10px;
-      padding-right: 2px;
     }
 
     & .timetable-th::before {
-        content: "";
-        position: absolute;
-        top: 6px;
-        right: 0;
-        width: 1px;
-        height: 13px;
         background-color: $white;
       }
-
-    & .timetable-td {
-      display: inline-block;
-      vertical-align: middle;
-      margin-top: -10px;
-      padding-left: 5px;
-    }
   }
 
   @media (min-width: 1199.98px) {
@@ -48,12 +27,6 @@
 
     & .contact-text {
       font-size: $font-size-md;
-    }
-
-    & .timetable caption {
-      margin-bottom: 3px;
-      font-size: $font-size-18;
-      line-height: 1.2;
     }
   }
 }

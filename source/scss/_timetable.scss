@@ -1,0 +1,40 @@
+.timetable {
+    table-layout: fixed;
+
+    & .timetable-th::before {
+        content: "";
+        position: absolute;
+        top: 6px;
+        right: 1px;
+        width: 1px;
+        height: 15px;
+    }
+
+    & caption {
+        caption-side: top;
+    }
+
+    & .timetable-th {
+        display: inline-block;
+        vertical-align: middle;
+        margin-top: -10px;
+        padding-right: 2px;
+    }
+
+    & .timetable-td {
+        display: inline-block;
+        vertical-align: middle;
+        margin-top: -10px;
+        padding-left: 5px;
+    }
+
+
+    @media (min-width: 1199.98px) {
+        & caption {
+            caption-side: top;
+            margin-bottom: 3px;
+            font-size: $font-size-18;
+            line-height: 1.2;
+        }
+    }
+}

@@ -183,6 +183,7 @@ $grid-breakpoints: (xs: 0,
 @import "navbar";
 @import "subscribe";
 @import "tagline";
+@import "timetable";
 @import "typography";
 
 html {
@@ -194,6 +195,7 @@ html {
 *::after {
   box-sizing: inherit;
 }
+
 body .row {
   margin-left: 0;
   margin-right: 0;
@@ -203,6 +205,10 @@ body {
   overflow-x: hidden;
 }
 
-caption {
-  caption-side: top;
+@media (min-width: 1199.98px) {
+  body .btn {
+    padding: 0.39rem 1.75rem;
+    font-size: $font-size-18;
+    line-height: 1.4;
+  }
 }
