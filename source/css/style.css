@@ -6476,14 +6476,14 @@ a.text-dark:hover, a.text-dark:focus {
   .contact-us .form-control {
     height: 35px;
     font-size: 1.25rem; }
+  .contact-us textarea.form-control {
+    height: auto; }
   .contact-us iframe {
     height: 400px; } }
 
 @media (min-width: 991.98px) {
   .contact-us .shop-info-img {
     width: 90%;
-    height: 350px; }
-  .contact-us .map {
     height: 350px; }
   .contact-us iframe {
     height: 350px; }

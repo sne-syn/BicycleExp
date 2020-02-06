@@ -65,6 +65,10 @@
             font-size: $font-size-lg; 
         }
 
+        & textarea.form-control {
+            height: auto;
+        }
+
         & iframe {
             height: 400px;
         }
@@ -76,12 +80,8 @@
             height: 350px;
         }
 
-        & .map {
-            height: 350px;
-        }
-
         & iframe {
-            height: 325px;
+            height: 350px;
         }
 
         & .form {
