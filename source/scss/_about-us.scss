@@ -12,7 +12,7 @@
     padding-bottom: 20px;
   }
 
-  .statistics {
+  & .statistics {
     font-size: $font-size-18;
   }
 
@@ -20,6 +20,10 @@
     & {
       padding-right: calc(50vw - 270px);
       padding-left: calc(50vw - 270px);
+    }
+
+    & .statistics {
+      font-size: $font-size-base;
     }
   }
 
@@ -46,6 +50,7 @@
 
     & .statistics {
       margin: 0;
+      font-size: $font-size-18;
     }
   }
 
