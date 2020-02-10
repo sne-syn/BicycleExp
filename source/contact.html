@@ -55,13 +55,12 @@
         </div>
     </header>
     <nav class="custom-container navbar navbar-expand-md navbar-dark bg-danger d-md-flex navigation">
-        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"><span class="sr-only">
-                Menu
-            </span></span>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse" aria-label="Menu">
+            <span class="navbar-toggler-icon"></span>
         </button>
         <form role="search" class="form-inline d-block my-1 order-md-3">
             <input class="form-control h-auto w-100" type="text" placeholder="Search" aria-label="Search">
+            <button type="submit" class="search-form-btn" aria-label="Search button"></button>
         </form>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav pt-3 pt-md-0">
@@ -91,11 +90,13 @@
             <div class="d-lg-flex bg-white text-dark">
                 <div class="col-lg-6 mx-0 px-0">
                     <section class="shop-info mb-4">
-                        <img class="px-0 shop-info-img img-fluid" src="img/contact-us.jpg" alt="">
+                        <img class="px-0 shop-info-img" src="img/contact-us.jpg" alt="">
                         <table class="py-3 timetable">
-                            <caption class="lead text-dark font-weight-bolder">Business Hours</caption>
+                            <caption class="lead text-dark font-weight-bolder contact-timetable-caption">Business Hours
+                            </caption>
                             <tr>
-                                <th class="timetable-th font-weight-normal position-relative pr-2 pr-xl-3">Tuesday - Friday</th>
+                                <th class="timetable-th font-weight-normal position-relative pr-2 pr-xl-3">Tuesday -
+                                    Friday</th>
                                 <td class="timetable-td">10:30 am - 7 pm
                                 </td>
                             </tr>
@@ -114,12 +115,18 @@
                 </div>
                 <div class="col-lg-6 mx-0 px-0">
                     <section class="map-info-block d-flex flex-column mb-4">
-                        <div class="map mb-2">
-                            <iframe title="Our Location is 131 E Williams St. San Jose, CA 95112"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3172.5237746910375!2d-121.88444308445514!3d37.33010677984282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fccb705e289f7%3A0x82a4205f54858ea8!2zMTMxIEUgV2lsbGlhbSBTdCwgU2FuIEpvc2UsIENBIDk1MTEyLCDQodCo0JA!5e0!3m2!1sru!2ses!4v1580552299369!5m2!1sru!2ses"
-                                width="100%" height="350px" style="border:0;"
-                                allowfullscreen="" loading="lazy"></iframe>
-                            <!-- <p class="contact-map-img"><img class="info-img img-fluid" src="img/contact-map.jpg" alt="131 E Williams St. San Jose, CA 95112"></p>                             -->
+                        <div class="map mb-3 position-relative">
+                            <div class="map-iframe-block position-absolute">
+                                <iframe title="Our Location is 131 E Williams St. San Jose, CA 95112"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3172.5237746910375!2d-121.88444308445514!3d37.33010677984282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fccb705e289f7%3A0x82a4205f54858ea8!2zMTMxIEUgV2lsbGlhbSBTdCwgU2FuIEpvc2UsIENBIDk1MTEyLCDQodCo0JA!5e0!3m2!1sru!2ses!4v1580552299369!5m2!1sru!2ses"
+                                    width="100%" height="350px" style="border:0;" allowfullscreen=""
+                                    loading="lazy"></iframe>
+                            </div>
+
+                            <div class="map-img-block position-absolute">
+                                    <img class="map-img"  src="img/Background.jpg"
+                                        alt="131 E Williams St. San Jose, CA 95112">
+                            </div>
                         </div>
 
                         <div class="contact-location">
@@ -152,7 +159,7 @@
                 </div>
                 <div class="form-group">
                     <label for="phone">Phone Number</label>
-                    <input class="form-control" type="phone" id="phone">
+                    <input class="form-control" type="phone" id="phone" aria-label="phone">
                 </div>
                 <div class="form-group">
                     <label for="subject">Subject</label>
@@ -162,7 +169,8 @@
                     <label for="message">Message</label>
                     <textarea class="form-control" id="message" rows="4"></textarea>
                 </div>
-                <button class="btn btn-danger modal-open-btn" type="button" data-toggle="modal" data-target="#modalCenter">Send</button>
+                <button class="btn btn-danger modal-open-btn" type="submit" data-toggle="modal"
+                    data-target="#modalCenter">Send</button>
             </form>
         </section>
     </main>
@@ -202,7 +210,7 @@
                 <div class="copyright mt-auto mb-3">©<span id="year"></span> by Bicycle Express.</div>
             </div>
             <section class="d-none d-xl-block contact">
-                <h4 class="contact-heading mb-3">Contact</h4>
+                <h3 class="contact-heading mb-3">Contact</h3>
                 <address class="contact-text">
                     131 E Williams St. San Jose, CA 95112<br> <a class="contact-mail"
                         href="mailto:shop@bicycleexpress.net">shop@bicycleexpress.net</a><br>
@@ -230,23 +238,24 @@
         </div>
     </footer>
 
-    <div class="modal fade bd-example-modal-sm bd-example-modal-lg" id="modalCenter" tabindex="-1" role="dialog" aria-labelledby="modalCenterTitle" aria-hidden="true">
+    <div class="modal fade bd-example-modal-sm bd-example-modal-lg" id="modalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="modalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-sm modal-dialog-centered text-success" role="document">
-          <div class="modal-content">
-            <div class="modal-header pb-0">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true" class="text-success">&times;</span>
-              </button>
+            <div class="modal-content">
+                <div class="modal-header pb-0">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="text-success">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body pb-5 pt-3 text-center">
+                    <h5 class="modal-title font-weight-bold mb-2" id="modalLongTitle">Thank You!</h5>
+                    <p class="modal-text font-weight-bold">Your message successfuly sent!</p>
+                    <p class="modal-text">However, if we haven't reached you back within 2 days, please call us during
+                        business hours to get the conversation flowing!</p>
+                </div>
             </div>
-            <div class="modal-body pb-5 pt-3 text-center">
-                <h5 class="modal-title font-weight-bold mb-2" id="modalLongTitle">Thank You!</h5>
-                <p class="modal-text font-weight-bold">Your message successfuly sent!</p>
-                <p class="modal-text">However, if we haven't reached you back within 2 days, please call us during
-                    business hours to get the conversation flowing!</p>
-            </div>
-          </div>
         </div>
-      </div>
+    </div>
 
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>

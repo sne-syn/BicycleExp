@@ -55,13 +55,12 @@
         </div>
     </header>
     <nav class="custom-container navbar navbar-expand-md navbar-dark bg-danger d-md-flex">
-        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"><span class="sr-only">
-                    Menu
-                </span></span>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse" aria-label="Menu">
+            <span class="navbar-toggler-icon"></span>
         </button>
         <form role="search" class="form-inline d-block my-1 order-md-3">
             <input class="form-control h-auto w-100" type="text" placeholder="Search" aria-label="Search">
+            <button type="submit" class="search-form-btn" aria-label="Search button"></button>
         </form>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav pt-3 pt-md-0">
@@ -140,9 +139,8 @@
         <section class="subscribe custom-container bg-success text-left text-white py-3">
             <h2 class="subscribe-heading font-weight-bold">Subscribe</h2>
             <form class="form-inline d-inline-flex">
-                <input class="form-control" type="email" id="email" placeholder="Enter Your Email">
-                <label class="sr-only" for="email">Enter Your Email</label>
-                <button data-toggle="modal" data-target="#modalCenter" type="button"
+                <input class="form-control" type="email" id="email" aria-label="Enter Your Email" placeholder="Enter Your Email">
+                <button data-toggle="modal" data-target="#modalCenter" type="submit"
                     class="modal-open-btn btn text-white btn-danger d-inline-block"
                     aria-label="Sign up and get greeting message">Sign Up</button>
             </form>
@@ -185,7 +183,7 @@
                 <div class="copyright mt-auto mb-3">©<span id="year"></span> by Bicycle Express.</div>
             </div>
             <section class="d-none d-xl-block contact">
-                <h4 class="contact-heading mb-3">Contact</h4>
+                <h3 class="contact-heading mb-3">Contact</h3>
                 <address class="contact-text">
                     131 E Williams St. San Jose, CA 95112<br> <a class="contact-mail"
                         href="mailto:shop@bicycleexpress.net">shop@bicycleexpress.net</a><br>
