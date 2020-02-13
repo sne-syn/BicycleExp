@@ -16,26 +16,21 @@
     }
 
     & .tab-pane {
-        margin-bottom: 30px;
-        font-size: 0.9rem;
+        font-size: $font-size-md;
     }
 
     & table {
-        margin-bottom: 30px;
+        width: 100%;
     }
 
-    & table td {
+    & td {
         border-bottom: 1px dashed $warning;
         padding: 0.5rem;
     }
 
-    & table th {
-        padding-bottom: 15px;
-    }
 
     & .detailes-heading {
         font-size: $font-size-18;
-        padding-bottom: 15px;
     }
 
     & .tune-ups-detailes table,
@@ -59,30 +54,33 @@
             font-size: $font-size-base;
         }
 
-        & table th {
+        & th,
+        & .detailes-heading {
             font-size: $font-size-lg;
         }
-
     }
 
     @media (min-width: 1199.98px) {
         & h2.services-heading {
             font-size: $display-5;
-            padding-bottom: 20px;
         }
 
         & .tab-pane {
             font-size: $font-size-18;
         }
 
-        & table th {
+        & th {
             font-size: $display-5;
-            padding-bottom: 30px;
+        }
+
+
+        & .table-row-left {
+            width: 70%;
         }
 
         & .detailes-heading {
-            font-size: $font-size-lg;
+            font-size: $display-5;
         }
     }
 
-    }
+}
