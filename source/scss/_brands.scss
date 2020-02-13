@@ -1,0 +1,49 @@
+// [aria-label="gallery"] {
+//     padding: 2.5rem;
+//     overflow-x: scroll;
+//   }
+
+//   [aria-label="gallery"] ul {
+//     white-space: nowrap;
+//   }
+
+//   [aria-label="gallery"] li {
+//     display: inline-block;
+//     margin-right: 1rem;
+//   }
+
+//   [aria-label="gallery"] img {
+//     max-height: 60vh;
+//   }
+
+.brand {
+
+    & .brand-slider {
+        padding: 2.5rem 1rem;
+        overflow-x: scroll;
+    }
+
+    & .brand-list {
+        white-space: nowrap;
+    }
+
+    & .brand-item {
+        margin-right: 1rem;
+    }
+
+    & img {
+        max-height: 60vh;
+    }
+
+    @media (min-width: 991.98px) {
+        & img {
+            width: 120px;
+        }
+    }
+
+    @media (min-width: 1199.98px) {
+        & img {
+            width: 150px;
+        }
+    }
+}

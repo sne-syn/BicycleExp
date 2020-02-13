@@ -6683,6 +6683,27 @@ a.text-dark:hover, a.text-dark:focus {
     .about-us .statistics {
       font-size: 1.25rem; } }
 
+.brand .brand-slider {
+  padding: 2.5rem 1rem;
+  overflow-x: scroll; }
+
+.brand .brand-list {
+  white-space: nowrap; }
+
+.brand .brand-item {
+  margin-right: 1rem; }
+
+.brand img {
+  max-height: 60vh; }
+
+@media (min-width: 991.98px) {
+  .brand img {
+    width: 120px; } }
+
+@media (min-width: 1199.98px) {
+  .brand img {
+    width: 150px; } }
+
 .contact-us .shop-info-img {
   height: auto;
   width: 100%; }
