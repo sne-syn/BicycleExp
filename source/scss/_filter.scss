@@ -26,19 +26,19 @@
 
 .checkbox-field input[type="checkbox"]+.checkbox-indication {
     position: absolute;
-    top: 7px;
+    top: 2px;
     left: 0;
     width: 19px;
     height: 19px;
-    border: 2px solid $success;
+    border: 2px solid rgba($success, 0.7)
 }
 
 .checkbox-field input[type="checkbox"]:focus+.checkbox-indication {
-    border: 2px solid $success;
+    border: 2px solid rgba($success, 0.7)
 }
 
 .checkbox-field input[type="checkbox"]:focus+.checkbox-indication {
-    outline: 5px auto rgb(0, 128, 255);
+    outline: 4px auto rgb(0, 128, 255);
 }
 
 .checkbox-field input[type="checkbox"]:disabled+.checkbox-indication {
@@ -48,33 +48,41 @@
 
 .filter .checkbox-field input[type="checkbox"]:checked+.checkbox-indication {
     position: absolute;
-    top: 7px;
+    top: 2px;
     left: 0;
     width: 19px;
     height: 19px;
-    border: 2px solid $warning;
+    background-image: url(../img/check.jpg);
+    background-repeat: no-repeat;
+    background-size: 13px 12px;
+    background-position: 45% 55%;
+    border: 2px solid $success;
 }
 
 .checkbox-field input[type="checkbox"]:disabled:checked+.checkbox-indication {
     position: absolute;
-    top: 7px;
+    top: 2px;
     left: 0;
     width: 19px;
     height: 19px;
-    border: 2px solid $warning;
+    background-image: url(../img/check.jpg);
+    background-repeat: no-repeat;
+    background-size: 13px 12px;
+    background-position: 45% 55%;
+    border: 2px solid $success;
     filter: grayscale(100%);
     opacity: 0.2;
     filter: alpha(opacity=20);
 }
 
 .filter h2 {
-    font-size: $display-5;
+    font-size: $font-size-lg;
 }
 
 .panel-title a {
     position: relative;
     display: block;
-    font-size: $display-5;
+    font-size: $font-size-lg;
     color: $dark;
     text-decoration: underline;
 }
