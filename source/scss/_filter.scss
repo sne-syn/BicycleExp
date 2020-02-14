@@ -84,5 +84,17 @@
     display: block;
     font-size: $font-size-lg;
     color: $dark;
-    text-decoration: underline;
+
+    &::after {
+        content: "▾";
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        top: 0;
+        right: 0;
+    }
+}
+
+.panel-title a:hover {
+    text-decoration: none;
 }
