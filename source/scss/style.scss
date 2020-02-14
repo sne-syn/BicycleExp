@@ -128,6 +128,7 @@ $grid-breakpoints: (xs: 0,
 @import "tagline";
 @import "timetable";
 @import "typography";
+@import "filter";
 
 html {
   box-sizing: border-box;
@@ -144,9 +145,9 @@ body .row {
   margin-right: 0;
 }
 
-body {
-  overflow-x: hidden;
-}
+// body {
+//   overflow-x: hidden;
+// }
 
 @media (min-width: 1199.98px) {
   body .btn {

@@ -6697,6 +6697,8 @@ a.text-dark:hover, a.text-dark:focus {
   max-height: 60vh; }
 
 @media (min-width: 991.98px) {
+  .brand .brand-slider {
+    overflow-x: hidden; }
   .brand img {
     width: 120px; } }
 
@@ -7179,6 +7181,72 @@ a.text-dark:hover, a.text-dark:focus {
     .typo-base {
       font-size: 1.25rem; } }
 
+.checkbox-container fieldset {
+  margin: 0;
+  padding: 0;
+  border: none; }
+
+.checkbox-field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  padding-left: 39px;
+  cursor: pointer; }
+
+.checkbox-field input[type="checkbox"] + .checkbox-indication {
+  position: absolute;
+  top: 7px;
+  left: 0;
+  width: 19px;
+  height: 19px;
+  border: 2px solid #70ab81; }
+
+.checkbox-field input[type="checkbox"]:focus + .checkbox-indication {
+  border: 2px solid #70ab81; }
+
+.checkbox-field input[type="checkbox"]:focus + .checkbox-indication {
+  outline: 5px auto #0080ff; }
+
+.checkbox-field input[type="checkbox"]:disabled + .checkbox-indication {
+  color: rgba(112, 171, 129, 0.2);
+  border: 2px solid rgba(112, 171, 129, 0.2); }
+
+.filter .checkbox-field input[type="checkbox"]:checked + .checkbox-indication {
+  position: absolute;
+  top: 7px;
+  left: 0;
+  width: 19px;
+  height: 19px;
+  border: 2px solid #eacb86; }
+
+.checkbox-field input[type="checkbox"]:disabled:checked + .checkbox-indication {
+  position: absolute;
+  top: 7px;
+  left: 0;
+  width: 19px;
+  height: 19px;
+  border: 2px solid #eacb86;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  opacity: 0.2;
+  filter: alpha(opacity=20); }
+
+.filter h2 {
+  font-size: 1.38rem; }
+
+.panel-title a {
+  display: block;
+  width: 100%;
+  position: relative;
+  font-size: 1.38rem;
+  color: #333333;
+  text-decoration: underline; }
+
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
@@ -7192,9 +7260,6 @@ html {
 body .row {
   margin-left: 0;
   margin-right: 0; }
-
-body {
-  overflow-x: hidden; }
 
 @media (min-width: 1199.98px) {
   body .btn {

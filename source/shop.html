@@ -43,7 +43,7 @@
                             alt="Bicycle Express local repair shop" width="50" height="45">
                     </picture>
                 </a>
-                <p class="text-uppercase font-weight-bold my-auto pl-1 header-name">Bicycle Express</p>
+                <p class="text-uppercase font-weight-bold my-auto pl-1 pl-lg-3 header-name">Bicycle Express</p>
             </div>
             <address class="header-address my-auto">
                 131 E Williams St. San Jose, CA 95112<br><a class="header-mail"
@@ -78,7 +78,6 @@
                     <a href="events.html" class="nav-link">Events</a>
                 </li>
             </ul>
-        </div>
         </div>
     </nav>
 
@@ -132,51 +131,113 @@
             </div>
         </article>
 
-        <aside>
-            <h2>Filter By</h2>
-            <fieldset>
-                <input type="checkbox" id="stock">
-                <label for="stock">In Stock</label>
-                <input type="checkbox" id="order">
-                <label for="order">Special Order</label>
-            </fieldset>
-            <h3>Categories</h3>
-            <fieldset>
-                <input type="checkbox" id="sport">
-                <label for="sport">Sport</label> <input type="checkbox" id="touring">
-                <label for="touring">Touring</label> <input type="checkbox" id="cyclocross">
-                <label for="cyclocross">Cyclocross</label> <input type="checkbox" id="mountain">
-                <label for="mountain">Mountain</label>
-            </fieldset>
-
-            <h3>Brands</h3>
-            <fieldset>
-                <input type="checkbox" id="dahon">
-                <label for="dahon">DAHON</label> <input type="checkbox" id="Hold Fast">
-                <label for="hold-fast">Hold Fast</label>
-                <input type="checkbox" id="felt">
-                <label for="felt">Felt</label>
-                <input type="checkbox" id="pure-fix">
-                <label for="pure-fix">Pure Fix</label>
-                <input type="checkbox" id="raleigh">
-                <label for="raleigh">Raleigh</label>
-                <input type="checkbox" id="santa-cruz">
-                <label for="santa-cruz">Santa Cruz</label>
-                <input type="checkbox" id="surly">
-                <label for="surly">Surly</label>
-                <input type="checkbox" id="unknown">
-                <label for="unknown">Unknown</label></fieldset>
+        <aside class="filter custom-container">
+            <h2 class="position-relative">Filter By</h2>
+            <div class="checkbox position-relative">
+                <div class="checkbox-container">
+                    <fieldset>
+                        <label class="checkbox-field" for="stock">
+                            <input checked class="sr-only" id="stock" name="availability" type="checkbox">
+                            <span class="checkbox-indication"></span>In Stock
+                        </label>
+                        <label class="checkbox-field" for="order">
+                            <input checked class="sr-only" id="order" name="availability" type="checkbox">
+                            <span class="checkbox-indication"></span>Special Order
+                        </label>
+                    </fieldset>
+                    <fieldset>
+                        <div class="panel-group" id="accordion">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion"
+                                            href="#collapse2">Categories</a>
+                                    </h4>
+                                </div>
+                                <div id="collapse2" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <label class="checkbox-field" for="sport">
+                                            <input checked class="sr-only" id="sport" name="categories" type="checkbox">
+                                            <span class="checkbox-indication"></span> Sport
+                                        </label>
+                                        <label class="checkbox-field" for="touring">
+                                            <input checked class="sr-only" id="touring" name="categories"
+                                                type="checkbox">
+                                            <span class="checkbox-indication"></span>Touring
+                                        </label>
+                                        <label class="checkbox-field" for="cyclocross">
+                                            <input class="sr-only" id="cyclocross" name="categories" type="checkbox">
+                                            <span class="checkbox-indication"></span>Cyclocross
+                                        </label>
+                                        <label class="checkbox-field" for="mountain">
+                                            <input checked class="sr-only" id="mountain" name="categories"
+                                                type="checkbox">
+                                            <span class="checkbox-indication"></span>Mountain
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                    </fieldset>
+                    <fieldset>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Brands</a>
+                                </h4>
+                            </div>
+                            <div id="collapse3" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <label class="checkbox-field" for="dahon">
+                                        <input checked class="sr-only" id="dahon" name="brand" type="checkbox">
+                                        <span class="checkbox-indication"></span>DAHON
+                                    </label>
+                                    <label class="checkbox-field" for="hold-fast">
+                                        <input checked class="sr-only" id="hold-fast" name="brand" type="checkbox">
+                                        <span class="checkbox-indication"></span>Hold Fast
+                                    </label>
+                                    <label class="checkbox-field" for="felt">
+                                        <input disabled class="sr-only" id="felt" name="brand" type="checkbox">
+                                        <span class="checkbox-indication"></span>Felt
+                                    </label>
+                                    <label class="checkbox-field" for="pure-fix">
+                                        <input checked class="sr-only" id="pure-fix" name="brand" type="checkbox">
+                                        <span class="checkbox-indication"></span>Pure Fix
+                                    </label>
+                                    <label class="checkbox-field" for="raleigh">
+                                        <input checked class="sr-only" id="raleigh" name="brand" type="checkbox">
+                                        <span class="checkbox-indication"></span>Raleigh
+                                    </label>
+                                    <label class="checkbox-field" for="santa-cruz">
+                                        <input checked class="sr-only" id="santa-cruz" name="brand" type="checkbox">
+                                        <span class="checkbox-indication"></span>Santa Cruz
+                                    </label>
+                                    <label class="checkbox-field" for="surly">
+                                        <input class="sr-only" id="surly" name="brand" type="checkbox">
+                                        <span class="checkbox-indication"></span>Surly
+                                    </label>
+                                    <label class="checkbox-field" for="unknown">
+                                        <input checked class="sr-only" id="unknown" name="brand" type="checkbox">
+                                        <span class="checkbox-indication"></span>Unknown
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+            <div class="">
+                <form action="#" class="sort-filter" autocomplete="off">
+                    <label for="sort">Sort By:</label>
+                    <select name="sort" class="sort-by" id="sort">
+                        <option value="bestsellers" selected>Bestsellers</option>
+                        <option value="low-high">Price Low-High</option>
+                        <option value="high-low">Price High-Low</option>
+                        <option value="new">New</option>
+                    </select>
+                </form>
+            </div>
         </aside>
-        <section>
-            <form action="#" class="sort-filter" autocomplete="off">
-                <select name="sort" class="sort-by" id="sort">
-                    <option value="bestsellers" selected>Bestsellers</option>
-                    <option value="low-high">Price Low-High</option>
-                    <option value="high-low">Price High-Low</option>
-                    <option value="new">New</option>
-                </select>
-            </form>
-        </section>
     </main>
     <footer class="custom-container bg-danger text-white py-2 py-md-3 footer">
         <div class="d-flex justify-content-between">
@@ -252,7 +313,7 @@
                     </button>
                 </div>
                 <div class="modal-body pb-5 pt-3 text-center">
-                    <h5 class="modal-title font-weight-bold mb-2 mb-lg-5" id="modalLongTitle">Thank You for Subscribing!
+                    <h5 class="modal-title font-weight-bold mb-2 mb-lg-5" id="modalCenterTitle">Thank You for Subscribing!
                     </h5>
                     <p class="modal-text">You will be the first to know about new inventory, give aways and special
                         projects!</p>
