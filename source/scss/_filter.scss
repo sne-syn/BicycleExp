@@ -86,12 +86,16 @@
     color: $dark;
 
     &::after {
-        content: "▾";
+        content: "";
         position: absolute;
-        width: 12px;
-        height: 12px;
-        top: 0;
+        height: 0px;
+        width: 0px;
         right: 0;
+        top: 10px;
+        border:none;
+        border-top:6px solid $dark;
+        border-left:6px solid rgba($dark,0);
+        border-right:6px solid rgba($dark,0);
     }
 }
 
