@@ -6657,6 +6657,7 @@ a.text-dark:hover, a.text-dark:focus {
       -ms-flex-item-align: center;
           align-self: center;
       padding-top: 50px;
+      padding-bottom: 0;
       padding-right: 40px;
       width: 76%; }
     .about-us .about-us-text h2 {
@@ -7216,7 +7217,7 @@ a.text-dark:hover, a.text-dark:focus {
   color: rgba(112, 171, 129, 0.2);
   border: 2px solid rgba(112, 171, 129, 0.2); }
 
-.filter .checkbox-field input[type="checkbox"]:checked + .checkbox-indication {
+.aside .checkbox-field input[type="checkbox"]:checked + .checkbox-indication {
   position: absolute;
   top: 2px;
   left: 0;
@@ -7244,7 +7245,8 @@ a.text-dark:hover, a.text-dark:focus {
   opacity: 0.2;
   filter: alpha(opacity=20); }
 
-.filter h2 {
+.filter h2,
+.sort label {
   font-size: 1.25rem; }
 
 .panel-title a {
@@ -7252,6 +7254,8 @@ a.text-dark:hover, a.text-dark:focus {
   display: block;
   font-size: 1.25rem;
   color: #333333; }
+  .panel-title a:hover {
+    text-decoration: none; }
   .panel-title a::after {
     content: "";
     position: absolute;
@@ -7259,13 +7263,21 @@ a.text-dark:hover, a.text-dark:focus {
     width: 0px;
     right: 0;
     top: 10px;
-    border: none;
     border-top: 6px solid #333333;
     border-left: 6px solid rgba(51, 51, 51, 0);
     border-right: 6px solid rgba(51, 51, 51, 0); }
 
-.panel-title a:hover {
-  text-decoration: none; }
+@media (min-width: 767.98px) {
+  .collapse:not(.show) {
+    display: block; }
+  .panel-title a::after {
+    content: none; }
+  .sort {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: auto;
+    width: 300px; } }
 
 html {
   -webkit-box-sizing: border-box;
