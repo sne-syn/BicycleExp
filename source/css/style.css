@@ -7275,9 +7275,10 @@ a.text-dark:hover, a.text-dark:focus {
   .sort {
     position: absolute;
     top: 0;
-    right: 0;
+    right: -28px;
     height: auto;
-    width: 300px; } }
+    width: 350px;
+    padding: 0; } }
 
 html {
   -webkit-box-sizing: border-box;
