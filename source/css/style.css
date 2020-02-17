@@ -3773,6 +3773,83 @@ textarea.form-control {
     .navbar-dark .navbar-text a:hover, .navbar-dark .navbar-text a:focus {
       color: #ffffff; }
 
+.pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+  border-radius: 0.25rem; }
+
+.page-link {
+  position: relative;
+  display: block;
+  padding: 0.5rem 0.75rem;
+  margin-left: 0;
+  line-height: 1.25;
+  color: #ffffff;
+  background-color: #ffffff;
+  border: 0 solid #dee2e6; }
+  .page-link:hover {
+    z-index: 2;
+    color: #d9d9d9;
+    text-decoration: none;
+    background-color: #e9ecef;
+    border-color: #dee2e6; }
+  .page-link:focus {
+    z-index: 3;
+    outline: 0;
+    -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
+
+.page-item:first-child .page-link {
+  margin-left: 0;
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem; }
+
+.page-item:last-child .page-link {
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem; }
+
+.page-item.active .page-link {
+  z-index: 3;
+  color: #ffffff;
+  background-color: #007bff;
+  border-color: #007bff; }
+
+.page-item.disabled .page-link {
+  color: #6c757d;
+  pointer-events: none;
+  cursor: auto;
+  background-color: #ffffff;
+  border-color: #dee2e6; }
+
+.pagination-lg .page-link {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.25rem;
+  line-height: 1.5; }
+
+.pagination-lg .page-item:first-child .page-link {
+  border-top-left-radius: 0.3rem;
+  border-bottom-left-radius: 0.3rem; }
+
+.pagination-lg .page-item:last-child .page-link {
+  border-top-right-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem; }
+
+.pagination-sm .page-link {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.5rem;
+  line-height: 1.5; }
+
+.pagination-sm .page-item:first-child .page-link {
+  border-top-left-radius: 0.2rem;
+  border-bottom-left-radius: 0.2rem; }
+
+.pagination-sm .page-item:last-child .page-link {
+  border-top-right-radius: 0.2rem;
+  border-bottom-right-radius: 0.2rem; }
+
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
@@ -6707,6 +6784,23 @@ a.text-dark:hover, a.text-dark:focus {
   .brand img {
     width: 150px; } }
 
+.card {
+  width: 100%; }
+
+.card-body {
+  width: 80%;
+  font-size: 1.13rem; }
+
+.card-title {
+  font-size: 1.38rem; }
+
+.card-body .btn {
+  font-size: 1.25rem; }
+
+@media (min-width: 767.98px) {
+  .card {
+    width: 45%; } }
+
 .contact-us .shop-info-img {
   height: auto;
   width: 100%; }
@@ -6998,6 +7092,21 @@ a.text-dark:hover, a.text-dark:focus {
     width: 23px;
     height: 20px; } }
 
+.pagination .page-item .page-link {
+  color: #333333;
+  font-size: 1rem; }
+
+.page-item.active .page-link {
+  background-color: #70ab81;
+  color: #ffffff; }
+
+.pagination .page-item:first-child .page-link {
+  margin-left: 0;
+  border-radius: 0; }
+
+.pagination .page-item:last-child .page-link {
+  border-radius: 0; }
+
 .services .services-heading {
   font-size: 1.38rem; }
 
@@ -7259,25 +7368,45 @@ a.text-dark:hover, a.text-dark:focus {
   .panel-title a::after {
     content: "";
     position: absolute;
-    height: 0px;
-    width: 0px;
+    height: 11px;
+    width: 30px;
     right: 0;
-    top: 10px;
-    border-top: 6px solid #333333;
-    border-left: 6px solid rgba(51, 51, 51, 0);
-    border-right: 6px solid rgba(51, 51, 51, 0); }
+    top: 7px;
+    background-image: url(../img/arrow-down.svg);
+    background-repeat: no-repeat; }
+
+.sort-by {
+  background: transparent;
+  width: 180px;
+  padding: 7px;
+  padding-left: 15px;
+  margin-left: 10px;
+  line-height: 1.4;
+  border: 1px solid #000000;
+  border-radius: 0;
+  height: auto;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url(../img/arrow-down.svg);
+  background-repeat: no-repeat;
+  background-size: 10px 30px;
+  background-position: 151px 4px; }
 
 @media (min-width: 767.98px) {
   .collapse:not(.show) {
     display: block; }
-  .panel-title a::after {
-    content: none; }
+  .panel-title a {
+    pointer-events: none;
+    cursor: default; }
+    .panel-title a::after {
+      content: none; }
   .sort {
     position: absolute;
     top: 0;
     right: -28px;
     height: auto;
-    width: 350px;
+    width: 280px;
     padding: 0; } }
 
 html {

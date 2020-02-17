@@ -76,7 +76,7 @@
 }
 
 .filter h2,
-.sort label{
+.sort label {
     font-size: $font-size-lg;
 }
 
@@ -93,16 +93,37 @@
     &::after {
         content: "";
         position: absolute;
-        height: 0px;
-        width: 0px;
+        height: 11px;
+        width: 30px;
         right: 0;
-        top: 10px;
-
-        border-top: 6px solid $dark;
-        border-left: 6px solid rgba($dark, 0);
-        border-right: 6px solid rgba($dark, 0);
+        top: 7px;
+        background-image: url(../img/arrow-down.svg);
+        background-repeat: no-repeat;
     }
 }
+
+
+.sort-by {
+    background: transparent;
+    width: 180px;
+    padding: 7px;
+    padding-left: 15px;
+    margin-left: 10px;
+    line-height: 1.4;
+    border: 1px solid $black;
+    border-radius: 0;
+    height: auto;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url(../img/arrow-down.svg);
+    background-repeat: no-repeat;
+    background-size: 10px 30px;
+    background-position: 151px 4px;
+
+}
+
+
 
 @media (min-width: 767.98px) {
     .collapse:not(.show) {
@@ -110,6 +131,9 @@
     }
 
     .panel-title a {
+        pointer-events: none;
+        cursor: default;
+
         &::after {
             content: none;
         }
@@ -120,7 +144,7 @@
         top: 0;
         right: -28px;
         height: auto;
-        width: 350px;
+        width: 280px;
         padding: 0;
     }
 }

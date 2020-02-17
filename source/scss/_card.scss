@@ -1,0 +1,22 @@
+.card {
+    width: 100%;
+}
+
+.card-body {
+    width: 80%;
+    font-size: $font-size-18;
+}
+
+.card-title {
+    font-size: $display-5;
+}
+
+.card-body .btn {
+    font-size: $font-size-lg;
+}
+
+@media (min-width: 767.98px) {
+    .card {
+        width: 45%;
+    }
+}
