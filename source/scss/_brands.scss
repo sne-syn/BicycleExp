@@ -16,7 +16,7 @@
         max-height: 60vh;
     }
 
-    @media (min-width: 991.98px) {
+    @media (min-width: $width-lg) {
         & .brand-slider {
             overflow-x: hidden;
         }
@@ -26,7 +26,7 @@
         }
     }
 
-    @media (min-width: 1199.98px) {
+    @media (min-width: $width-xl) {
 
         & img {
             width: 150px;

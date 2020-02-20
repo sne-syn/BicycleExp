@@ -19,9 +19,9 @@
         font-size: $font-size-md;
     }
 
-    @media (min-width: 767.98px) {
+    @media (min-width: $width-md) {
         & .subscribe-heading {
-            margin-bottom: 20px;
+            margin-bottom: 1.25rem;
             font-size: $display-2;
         }
 
@@ -34,6 +34,7 @@
             height: 42px;
             padding-top: 7px;
             padding-bottom: 5px;
+            font-size: $font-size-lg;
         }
 
         & .btn {
@@ -43,12 +44,12 @@
         }
 
         & .subscribe-text {
-            padding-top: 20px;
+            padding-top: 1.25rem;
             font-size: $font-size-lg;
         }
     }
 
-    @media (min-width: 991.98px) {
+    @media (min-width: $width-lg) {
         & .form-inline {
             width: 50%;
         }
@@ -58,7 +59,7 @@
         }
     }
 
-    @media (min-width: 1199.98px) {
+    @media (min-width: $width-xl) {
         & .form-inline {
             width: 47%;
         }

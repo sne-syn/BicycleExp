@@ -47,7 +47,7 @@
         margin-left: auto;
     }
 
-    @media (min-width: 767.98px) {
+    @media (min-width: $width-md) {
         & .shop-info-img {
             width: 100%;
             height: 400px;
@@ -78,7 +78,7 @@
         }
     }
 
-    @media (min-width: 991.98px) {
+    @media (min-width: $width-lg) {
         & .shop-info-img {
             width: 90%;
             height: 350px;
@@ -89,7 +89,7 @@
         }
     }
 
-    @media (min-width: 1199.98px) {
+    @media (min-width: $width-xl) {
         & .contact-timetable-caption {
             font-size: 1.25rem;
         }

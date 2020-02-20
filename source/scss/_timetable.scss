@@ -29,7 +29,7 @@
     }
 
 
-    @media (min-width: 1199.98px) {
+    @media (min-width: $width-xl) {
         & caption {
             caption-side: top;
             margin-bottom: 3px;

@@ -51,7 +51,7 @@
         color: $warning;
     }
 
-    @media (min-width: 575.98px) {
+    @media (min-width: $width-sm) {
         & .card {
             flex-direction: row;
         }
@@ -61,7 +61,7 @@
         }
     }
 
-    @media (min-width: 767.98px) {
+    @media (min-width: $width-md) {
         .card {
             flex-direction: column;
             width: 48%;
@@ -76,13 +76,13 @@
         }
     }
 
-    @media (min-width: 991.98px) {
+    @media (min-width: $width-lg) {
         .card-body {
             width: 80%;
         }
     }
 
-    @media (min-width: 1199.98px) {
+    @media (min-width: $width-xl) {
         .card {
             width: 29%;
             position: relative;

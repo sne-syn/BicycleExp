@@ -38,9 +38,9 @@
     }
   }
 
-  @media (min-width: 575.98px) {}
+  @media (min-width: $width-sm) {}
 
-  @media (min-width: 767.98px) {
+  @media (min-width: $width-md) {
     & .form-inline {
       width: 33%;
     }
@@ -62,14 +62,14 @@
     }
   }
 
-  @media (min-width: 991.98px) {
+  @media (min-width: $width-lg) {
     & .form-control {
       padding-left: 12px;
       font-size: $font-size-base;
     }
   }
 
-  @media (min-width: 1199.98px) {
+  @media (min-width: $width-xl) {
     & .navbar-nav {
       font-size: $display-5;
     }

@@ -25,14 +25,14 @@
         }
     }
 
-    @media (min-width: 575.98px) {
+    @media (min-width: $width-sm) {
         .header-address {
             width: 35%;
             font-size: $font-size-10;
         }
     }
 
-    @media (min-width: 767.98px) {
+    @media (min-width: $width-md) {
         .header-logo-container {
             width: 80px;
         }
@@ -47,13 +47,13 @@
         }
     }
 
-    @media (min-width: 991.98px) {
+    @media (min-width: $width-lg) {
         .header-address {
             font-size: $font-size-md;
         }
     }
 
-    @media (min-width: 1199.98px) {
+    @media (min-width: $width-xl) {
         .header-img-container {
             width: 100px;
         }

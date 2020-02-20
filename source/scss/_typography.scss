@@ -31,13 +31,13 @@ $display-2: $font-size-base * 1.88; // 30
 .typo-base {
     font-size: $font-size-base;
 
-    @media (min-width: 767.98px) {
+    @media (min-width: $width-md) {
         & {
             font-size: $font-size-18;
         }
     }
 
-    @media (min-width: 1199.98px) {
+    @media (min-width: $width-xl) {
         & {
             font-size: $font-size-lg;
         }

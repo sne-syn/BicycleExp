@@ -1,5 +1,5 @@
 .tagline {
-    padding-top: 115px;
+    padding-top: 11rem;
     min-height: 300px;
     background-image: url("../img/heading-photo-mobile.jpg");
     background-repeat: no-repeat;
@@ -13,9 +13,9 @@
         height: 20px;
     }
 
-    @media (min-width: 575.98px) {}
+    @media (min-width: $width-sm) {}
 
-    @media (min-width: 767.98px) {
+    @media (min-width: $width-md) {
         & {
             padding-top: 185px;
             min-height: 455px;
@@ -28,14 +28,14 @@
         }
     }
 
-    @media (min-width: 991.98px) {
+    @media (min-width: $width-lg) {
         & {
             padding-top: 224px;
             min-height: 594px;
         }
     }
 
-    @media (min-width: 1199.98px) {
+    @media (min-width: $width-xl) {
         & {
             padding-top: 300px;
             min-height: 600px;

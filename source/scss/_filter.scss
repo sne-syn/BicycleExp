@@ -107,7 +107,7 @@
     background: transparent;
     width: 180px;
     padding: 7px;
-    padding-left: 15px;
+    padding-left: 1rem;
     margin-left: 10px;
     line-height: 1.4;
     border: 1px solid $black;
@@ -125,7 +125,7 @@
 
 
 
-@media (min-width: 767.98px) {
+@media (min-width: $width-md) {
     .collapse:not(.show) {
         display: block;
     }

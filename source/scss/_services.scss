@@ -45,7 +45,7 @@
         padding-right: 0.5rem;
     }
 
-    @media (min-width: 767.98px) {
+    @media (min-width: $width-md) {
         & .list-group-item {
             font-size: $font-size-18;
         }
@@ -60,7 +60,7 @@
         }
     }
 
-    @media (min-width: 1199.98px) {
+    @media (min-width: $width-xl) {
         & h2.services-heading {
             font-size: $display-5;
         }
