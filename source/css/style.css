@@ -7082,10 +7082,19 @@ a.text-dark:hover, a.text-dark:focus {
   .intro__text {
     font-size: 20px; } }
 
+.request-modal .form-control {
+  border: 1px solid #797676; }
+
+@media (min-width: 767.98px) {
+  .modal .modal-sm {
+    max-width: 400px;
+    font-size: 1.13rem; } }
+
 @media (min-width: 992px) {
   .modal-lg,
   .modal-xl {
-    max-width: 500px; }
+    max-width: 500px;
+    font-size: 1.25rem; }
   .modal-body {
     padding-left: 30px;
     padding-right: 30px; }

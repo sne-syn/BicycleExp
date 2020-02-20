@@ -25,7 +25,7 @@
     }
 
     .card-order-mark {
-        color: $card-mark-color;
+        color: $light-grey-color;
     }
 
     .card-new-mark::before {
@@ -60,7 +60,6 @@
             width: 50%;
         }
     }
-
 
     @media (min-width: 767.98px) {
         .card {

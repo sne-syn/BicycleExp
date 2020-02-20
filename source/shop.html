@@ -257,7 +257,8 @@
                                 </div>
                                 <div class="mt-auto">
                                     <p class="card-text">$ 1.549.99</p>
-                                    <button type="button" class="btn btn-primary bg-success w-100">Request</button>
+                                    <button type="button" class="btn btn-primary bg-success w-100" data-toggle="modal"
+                                        data-target="#modalCenter">Request</button>
                                 </div>
                             </div>
                         </div>
@@ -272,7 +273,8 @@
                                 </div>
                                 <div class="mt-auto">
                                     <p class="card-text">$ 1.549.99</p>
-                                    <button type="button" class="btn btn-primary bg-success w-100">Request</button>
+                                    <button type="button" class="btn btn-primary bg-success w-100" data-toggle="modal"
+                                        data-target="#modalCenter">Request</button>
                                 </div>
                             </div>
                         </div>
@@ -288,7 +290,8 @@
                                 </div>
                                 <div class="mt-auto">
                                     <p class="card-text">$ 1.549.99</p>
-                                    <button type="button" class="btn btn-primary bg-success w-100">Request</button>
+                                    <button type="button" class="btn btn-primary bg-success w-100" data-toggle="modal"
+                                        data-target="#modalCenter">Request</button>
                                 </div>
                             </div>
                         </div>
@@ -303,7 +306,8 @@
                                 </div>
                                 <div class="mt-auto">
                                     <p class="card-text">$ 1.549.99</p>
-                                    <button type="button" class="btn btn-primary bg-success w-100">Request</button>
+                                    <button type="button" class="btn btn-primary bg-success w-100" data-toggle="modal"
+                                        data-target="#modalCenter">Request</button>
                                 </div>
                             </div>
                         </div>
@@ -318,7 +322,8 @@
                                 </div>
                                 <div class="mt-auto">
                                     <p class="card-text">$ 1.549.99</p>
-                                    <button type="button" class="btn btn-primary bg-success w-100">Request</button>
+                                    <button type="button" class="btn btn-primary bg-success w-100" data-toggle="modal"
+                                        data-target="#modalCenter">Request</button>
                                 </div>
                             </div>
                         </div>
@@ -333,7 +338,8 @@
                                 </div>
                                 <div class="mt-auto">
                                     <p class="card-text">$ 1.549.99</p>
-                                    <button type="button" class="btn btn-primary bg-success w-100">Request</button>
+                                    <button type="button" class="btn btn-primary bg-success w-100" data-toggle="modal"
+                                        data-target="#modalCenter">Request</button>
                                 </div>
                             </div>
                         </div>
@@ -416,8 +422,8 @@
         </div>
     </footer>
 
-    <div class="modal fade bd-example-modal-sm bd-example-modal-lg" id="modalCenter" tabindex="-1" role="dialog"
-        aria-labelledby="modalCenterTitle" aria-hidden="true">
+    <div class="modal request-modal fade bd-example-modal-sm bd-example-modal-lg" id="modalCenter" tabindex="-1"
+        role="dialog" aria-labelledby="modalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-sm modal-dialog-centered text-success" role="document">
             <div class="modal-content">
                 <div class="modal-header pb-0">
@@ -425,12 +431,32 @@
                         <span aria-hidden="true" class="text-success">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body pb-5 pt-3 text-center">
-                    <h5 class="modal-title font-weight-bold mb-2 mb-lg-5" id="modalCenterTitle">Thank You for
-                        Subscribing!
+                <div class="modal-body pb-5 pt-0">
+                    <h5 class="modal-title text-center font-weight-bold mb-2 mb-lg-3" id="modalCenterTitle">Request Form
                     </h5>
-                    <p class="modal-text">You will be the first to know about new inventory, give aways and special
-                        projects!</p>
+                    <form id="shop-request">
+                        <div class="mb-4">
+                            <div class="form-group">
+                                <label class="mb-0" for="name">Name</label>
+                                <input class="form-control p-md-3" type="text" id="name">
+                            </div>
+                            <div class="form-group">
+                                <label class="mb-0" for="email">Email</label>
+                                <input class="form-control p-md-3" type="email" id="email">
+                            </div>
+                            <div class="form-group">
+                                <label class="mb-0" for="phone">Phone Number</label>
+                                <input class="form-control p-md-3" type="phone" id="phone" aria-label="phone">
+                            </div>
+                            <div class="form-group">
+                                <label class="mb-0" for="serial">Serial Number</label>
+                                <input type="text" class="form-control p-md-3 bg-white" id="serial"
+                                    aria-label="serial-number" placeholder="WTUI23AB4567C" disabled>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-success d-block ml-auto">Request</button>
+                    </form>
                 </div>
             </div>
         </div>

@@ -1,8 +1,23 @@
+.request-modal {
+  .form-control {
+    border: 1px solid $light-grey-color
+  }
+
+}
+
+@media (min-width: 767.98px) {
+  .modal .modal-sm {
+    max-width: 400px;
+    font-size: $font-size-18;
+  }
+}
+
 @media (min-width: 992px) {
 
   .modal-lg,
   .modal-xl {
     max-width: 500px;
+    font-size: $font-size-lg;
   }
 
   .modal-body {
