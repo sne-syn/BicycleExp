@@ -1,10 +1,6 @@
 .footer {
   font-size: $font-size-10;
 
-  & .social-item a {
-    font-size: 0;
-  }
-
   @media (min-width: $width-md) {
     & .copyright {
       font-size: $font-size-md;

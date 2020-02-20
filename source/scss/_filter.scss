@@ -1,23 +1,11 @@
-.checkbox-container {
-    // display: flex;
-    // margin-bottom: 43px;
-}
-
 .checkbox-container fieldset {
-    // display: flex;
-    // flex-direction: column;
     margin: 0;
     padding: 0;
     border: none;
 }
 
-.checkbox-legend {
-    // margin-bottom: 18px;
-}
-
 .checkbox-field {
     display: flex;
-    // -ms-flex-direction: column;
     flex-direction: column;
     position: relative;
     padding-left: 39px;
@@ -102,13 +90,12 @@
     }
 }
 
-
 .sort-by {
     background: transparent;
     width: 180px;
-    padding: 7px;
+    padding: 0.63rem;
     padding-left: 1rem;
-    margin-left: 10px;
+    margin-left: 0.63rem;
     line-height: 1.4;
     border: 1px solid $black;
     border-radius: 0;

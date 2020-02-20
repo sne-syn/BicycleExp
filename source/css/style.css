@@ -6733,29 +6733,27 @@ a.text-dark:hover, a.text-dark:focus {
     .about-us .about-us-text {
       -ms-flex-item-align: center;
           align-self: center;
-      padding-top: 3.13rem;
+      padding-top: 3rem;
       padding-bottom: 0;
       padding-right: 2.5rem;
       width: 76%; }
     .about-us .about-us-text h2 {
       font-size: 1.88rem;
-      padding-bottom: 1.56rem; }
+      padding-bottom: 1.5rem; }
     .about-us .about-us-intro {
-      width: 100%;
       font-size: 1.25rem; }
     .about-us .about-us-img {
       width: 45%; }
     .about-us .statistics {
-      font-size: 1.25rem; } }
+      font-size: 1.13rem; } }
   @media (min-width: 1199.98px) {
     .about-us .about-us-text {
-      padding-right: 5.63rem; }
+      padding-right: 6rem; }
     .about-us .about-us-text h2 {
       font-size: 1.88rem;
-      padding-bottom: 1.88rem; }
+      padding-bottom: 2rem; }
     .about-us .about-us-intro {
-      width: 100%;
-      margin-bottom: 1.88rem; }
+      margin-bottom: 2rem; }
     .about-us .about-us-img {
       width: 40%; }
     .about-us .statistics {
@@ -6829,7 +6827,7 @@ a.text-dark:hover, a.text-dark:focus {
   right: -1px;
   width: 48px;
   text-align: center;
-  font-size: 14px;
+  font-size: 0.88rem;
   color: #eacb86; }
 
 @media (min-width: 575.98px) {
@@ -6897,11 +6895,6 @@ a.text-dark:hover, a.text-dark:focus {
 
 .contact-us .form {
   width: 75%; }
-
-.contact-us .btn {
-  display: block;
-  vertical-align: middle;
-  margin-left: auto; }
 
 @media (min-width: 767.98px) {
   .contact-us .shop-info-img {
@@ -7004,8 +6997,6 @@ a.text-dark:hover, a.text-dark:focus {
 
 .footer {
   font-size: 0.625rem; }
-  .footer .social-item a {
-    font-size: 0; }
   @media (min-width: 767.98px) {
     .footer .copyright {
       font-size: 0.88rem; }
@@ -7452,9 +7443,9 @@ a.text-dark:hover, a.text-dark:focus {
 .sort-by {
   background: transparent;
   width: 180px;
-  padding: 7px;
+  padding: 0.63rem;
   padding-left: 1rem;
-  margin-left: 10px;
+  margin-left: 0.63rem;
   line-height: 1.4;
   border: 1px solid #000000;
   border-radius: 0;

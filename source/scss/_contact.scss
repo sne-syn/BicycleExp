@@ -41,12 +41,6 @@
         width: 75%;
     }
 
-    & .btn {
-        display: block;
-        vertical-align: middle;
-        margin-left: auto;
-    }
-
     @media (min-width: $width-md) {
         & .shop-info-img {
             width: 100%;
@@ -91,7 +85,7 @@
 
     @media (min-width: $width-xl) {
         & .contact-timetable-caption {
-            font-size: 1.25rem;
+            font-size: $font-size-lg;
         }
     }
 }
