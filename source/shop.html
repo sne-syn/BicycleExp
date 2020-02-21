@@ -11,7 +11,7 @@
     <title>Bicycle Express</title>
 </head>
 
-<body>
+<body class="typo-base">
     <svg style="display:none">
         <svg fill="none" viewBox="0 0 8 16" xmlns="http://www.w3.org/2000/svg" id="icon-facebook">
             <path
@@ -66,7 +66,7 @@
                     <a href="services.html" class="nav-link">Services</a>
                 </li>
                 <li class="nav-item pr-lg-3">
-                    <a href="shop.html" class="nav-link nav-link--active">Shop</a>
+                    <a href="shop.html" class="nav-link nav-link-active">Shop</a>
                 </li>
                 <li class="nav-item pr-lg-3">
                     <a href="demo.html" class="nav-link">Demo</a>
@@ -84,7 +84,8 @@
     <main>
         <section class="intro custom-container bg-success text-white py-5 align-items-center row">
             <h1 class="intro-heading text-left font-weight-bold  col-md-3 pb-3">How To Buy:</h1>
-            <p class="intro-text text-left font-weight-normal col-md-9 pl-md-1 mb-0">To order any bike of your choice, fill in the request form
+            <p class="intro-text text-left font-weight-normal col-md-9 pl-md-1 mb-0">To order any bike of your choice,
+                fill in the request form
                 and we will order it right from manufacture, make sure that your order is getting shipped in time and
                 recieved without a hassle of waiting for a delivery. In addition, we will build a bike in our shop and
                 <b class="font-weight-bold">deliver in radius of 30 miles for free!</b></p>
@@ -147,43 +148,43 @@
                         <h2 class="pb-3">Filter By</h2>
                         <div class="checkbox position-relative">
                             <div class="checkbox-container">
-                                <fieldset>
-                                    <label class="checkbox-field" for="stock">
+                                <fieldset class="m-0 p-0 border-0">
+                                    <label class="checkbox-field d-flex flex-column position-relative" for="stock">
                                         <input class="sr-only" id="stock" name="availability" type="checkbox">
                                         <span class="checkbox-indication"></span>In Stock
                                     </label>
-                                    <label class="checkbox-field" for="order">
+                                    <label class="checkbox-field d-flex flex-column position-relative" for="order">
                                         <input class="sr-only" id="order" name="availability" type="checkbox">
                                         <span class="checkbox-indication"></span>Special Order
                                     </label>
                                 </fieldset>
-                                <fieldset>
+                                <fieldset class="m-0 p-0 border-0">
                                     <div class="panel-group" id="accordion">
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
                                                 <h4 class="panel-title py-2">
-                                                    <a data-toggle="collapse" data-parent="#accordion"
+                                                    <a class="d-block position-relative text-dark" data-toggle="collapse" data-parent="#accordion"
                                                         href="#collapse2">Categories</a>
                                                 </h4>
                                             </div>
                                             <div id="collapse2" class="panel-collapse collapse">
                                                 <div class="panel-body">
-                                                    <label class="checkbox-field" for="sport">
+                                                    <label class="checkbox-field d-flex flex-column position-relative" for="sport">
                                                         <input class="sr-only" id="sport" name="categories"
                                                             type="checkbox">
                                                         <span class="checkbox-indication"></span> Sport
                                                     </label>
-                                                    <label class="checkbox-field" for="touring">
+                                                    <label class="checkbox-field d-flex flex-column position-relative" for="touring">
                                                         <input class="sr-only" id="touring" name="categories"
                                                             type="checkbox">
                                                         <span class="checkbox-indication"></span>Touring
                                                     </label>
-                                                    <label class="checkbox-field" for="cyclocross">
+                                                    <label class="checkbox-field d-flex flex-column position-relative" for="cyclocross">
                                                         <input class="sr-only" id="cyclocross" name="categories"
                                                             type="checkbox">
                                                         <span class="checkbox-indication"></span>Cyclocross
                                                     </label>
-                                                    <label class="checkbox-field" for="mountain">
+                                                    <label class="checkbox-field d-flex flex-column position-relative" for="mountain">
                                                         <input checked disabled class="sr-only" id="mountain"
                                                             name="categories" type="checkbox">
                                                         <span class="checkbox-indication"></span>Mountain
@@ -193,46 +194,54 @@
                                         </div>
                                     </div>
                                 </fieldset>
-                                <fieldset>
+                                <fieldset class="m-0 p-0 border-0">
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
                                             <h4 class="panel-title py-2">
-                                                <a data-toggle="collapse" data-parent="#accordion"
+                                                <a class="d-block position-relative text-dark" data-toggle="collapse" data-parent="#accordion"
                                                     href="#collapse3">Brands</a>
                                             </h4>
                                         </div>
                                         <div id="collapse3" class="panel-collapse collapse">
                                             <div class="panel-body">
-                                                <label class="checkbox-field" for="dahon">
+                                                <label class="checkbox-field d-flex flex-column position-relative"
+                                                    for="dahon">
                                                     <input class="sr-only" id="dahon" name="brand" type="checkbox">
                                                     <span class="checkbox-indication"></span>DAHON
                                                 </label>
-                                                <label class="checkbox-field" for="hold-fast">
+                                                <label class="checkbox-field d-flex flex-column position-relative"
+                                                    for="hold-fast">
                                                     <input class="sr-only" id="hold-fast" name="brand" type="checkbox">
                                                     <span class="checkbox-indication"></span>Hold Fast
                                                 </label>
-                                                <label class="checkbox-field" for="felt">
+                                                <label class="checkbox-field d-flex flex-column position-relative"
+                                                    for="felt">
                                                     <input disabled class="sr-only" id="felt" name="brand"
                                                         type="checkbox">
                                                     <span class="checkbox-indication"></span>Felt
                                                 </label>
-                                                <label class="checkbox-field" for="pure-fix">
+                                                <label class="checkbox-field d-flex flex-column position-relative"
+                                                    for="pure-fix">
                                                     <input class="sr-only" id="pure-fix" name="brand" type="checkbox">
                                                     <span class="checkbox-indication"></span>Pure Fix
                                                 </label>
-                                                <label class="checkbox-field" for="raleigh">
+                                                <label class="checkbox-field d-flex flex-column position-relative"
+                                                    for="raleigh">
                                                     <input class="sr-only" id="raleigh" name="brand" type="checkbox">
                                                     <span class="checkbox-indication"></span>Raleigh
                                                 </label>
-                                                <label class="checkbox-field" for="santa-cruz">
+                                                <label class="checkbox-field d-flex flex-column position-relative"
+                                                    for="santa-cruz">
                                                     <input class="sr-only" id="santa-cruz" name="brand" type="checkbox">
                                                     <span class="checkbox-indication"></span>Santa Cruz
                                                 </label>
-                                                <label class="checkbox-field" for="surly">
+                                                <label class="checkbox-field d-flex flex-column position-relative"
+                                                    for="surly">
                                                     <input class="sr-only" id="surly" name="brand" type="checkbox">
                                                     <span class="checkbox-indication"></span>Surly
                                                 </label>
-                                                <label class="checkbox-field" for="unknown">
+                                                <label class="checkbox-field d-flex flex-column position-relative"
+                                                    for="unknown">
                                                     <input class="sr-only" id="unknown" name="brand" type="checkbox">
                                                     <span class="checkbox-indication"></span>Unknown
                                                 </label>
@@ -247,7 +256,8 @@
                 <section class="col-md-9 col-xl-10 mt-5 shop">
                     <div class="cards-flow d-flex flex-row flex-wrap justify-content-between">
                         <div class="card d-flex mb-5">
-                            <img class="card-img-top" src="img/product-demo-1.png" alt="Raleight bicycle, blue color">
+                            <img class="card-img-top d-block" src="img/product-demo-1.png"
+                                alt="Raleight bicycle, blue color">
                             <div class="card-body d-flex flex-column justify-content-between mx-auto pt-3">
                                 <div class="pb-0">
                                     <h5 class="card-title text-success mb-0">Raleight</h5>
@@ -264,56 +274,8 @@
                         </div>
 
                         <div class="card d-flex mb-5">
-                            <img class="card-img-top" src="img/product-demo-2.png" alt="Raleight bicycle, blue color">
-                            <div class="card-body d-flex flex-column justify-content-between mx-auto pt-3">
-                                <div class="pb-0">
-                                    <h5 class="card-title text-success mb-0">Raleight</h5>
-                                    <span class="card-order-mark d-block mb-2">In Stock</span>
-                                    <p class="card-text mb-1">RXW - Women's - 2015</p>
-                                </div>
-                                <div class="mt-auto">
-                                    <p class="card-text">$ 1.549.99</p>
-                                    <button type="button" class="btn btn-primary bg-success w-100" data-toggle="modal"
-                                        data-target="#modalCenter">Request</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card d-flex  mb-5">
-                            <span class="card-new-mark" aria-label="New item"></span>
-                            <img class="card-img-top" src="img/product-demo-3.png" alt="Raleight bicycle, blue color">
-                            <div class="card-body d-flex flex-column justify-content-between mx-auto pt-3">
-                                <div class="pb-0">
-                                    <h5 class="card-title text-success mb-0">Raleight</h5>
-                                    <span class="card-order-mark d-block mb-2">In Stock</span>
-                                    <p class="card-text mb-1">Tamland - 2</p>
-                                </div>
-                                <div class="mt-auto">
-                                    <p class="card-text">$ 1.549.99</p>
-                                    <button type="button" class="btn btn-primary bg-success w-100" data-toggle="modal"
-                                        data-target="#modalCenter">Request</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card d-flex  mb-5">
-                            <img class="card-img-top" src="img/product-demo-4.png" alt="Raleight bicycle, blue color">
-                            <div class="card-body d-flex flex-column justify-content-between mx-auto pt-3">
-                                <div class="pb-0">
-                                    <h5 class="card-title text-success mb-0">Raleight</h5>
-                                    <span class="card-order-mark d-block mb-2">In Stock</span>
-                                    <p class="card-text mb-1">Redux 2</p>
-                                </div>
-                                <div class="mt-auto">
-                                    <p class="card-text">$ 1.549.99</p>
-                                    <button type="button" class="btn btn-primary bg-success w-100" data-toggle="modal"
-                                        data-target="#modalCenter">Request</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card d-flex  mb-5">
-                            <img class="card-img-top" src="img/product-demo-5.png" alt="Raleight bicycle, blue color">
+                            <img class="card-img-top d-block" src="img/product-demo-2.png"
+                                alt="Raleight bicycle, blue color">
                             <div class="card-body d-flex flex-column justify-content-between mx-auto pt-3">
                                 <div class="pb-0">
                                     <h5 class="card-title text-success mb-0">Raleight</h5>
@@ -329,7 +291,60 @@
                         </div>
 
                         <div class="card d-flex mb-5">
-                            <img class="card-img-top" src="img/product-demo-6.png" alt="Raleight bicycle, blue color">
+                            <span class="card-new-mark" aria-label="New item"></span>
+                            <img class="card-img-top d-block" src="img/product-demo-3.png"
+                                alt="Raleight bicycle, blue color">
+                            <div class="card-body d-flex flex-column justify-content-between mx-auto pt-3">
+                                <div class="pb-0">
+                                    <h5 class="card-title text-success mb-0">Raleight</h5>
+                                    <span class="card-order-mark d-block mb-2">In Stock</span>
+                                    <p class="card-text mb-1">Tamland - 2</p>
+                                </div>
+                                <div class="mt-auto">
+                                    <p class="card-text">$ 1.549.99</p>
+                                    <button type="button" class="btn btn-primary bg-success w-100" data-toggle="modal"
+                                        data-target="#modalCenter">Request</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card d-flex  mb-5">
+                            <img class="card-img-top d-block" src="img/product-demo-4.png"
+                                alt="Raleight bicycle, blue color">
+                            <div class="card-body d-flex flex-column justify-content-between mx-auto pt-3">
+                                <div class="pb-0">
+                                    <h5 class="card-title text-success mb-0">Raleight</h5>
+                                    <span class="card-order-mark d-block mb-2">In Stock</span>
+                                    <p class="card-text mb-1">Redux 2</p>
+                                </div>
+                                <div class="mt-auto">
+                                    <p class="card-text">$ 1.549.99</p>
+                                    <button type="button" class="btn btn-primary bg-success w-100" data-toggle="modal"
+                                        data-target="#modalCenter">Request</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card d-flex  mb-5">
+                            <img class="card-img-top d-block" src="img/product-demo-5.png"
+                                alt="Raleight bicycle, blue color">
+                            <div class="card-body d-flex flex-column justify-content-between mx-auto pt-3">
+                                <div class="pb-0">
+                                    <h5 class="card-title text-success mb-0">Raleight</h5>
+                                    <span class="card-order-mark d-block mb-2">In Stock</span>
+                                    <p class="card-text mb-1">RXW - Women's - 2015</p>
+                                </div>
+                                <div class="mt-auto">
+                                    <p class="card-text">$ 1.549.99</p>
+                                    <button type="button" class="btn btn-primary bg-success w-100" data-toggle="modal"
+                                        data-target="#modalCenter">Request</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card d-flex mb-5">
+                            <img class="card-img-top d-block" src="img/product-demo-6.png"
+                                alt="Raleight bicycle, blue color">
                             <div class="card-body d-flex flex-column justify-content-between mx-auto pt-3">
                                 <div class="pb-0">
                                     <h5 class="card-title text-success mb-0">Raleight</h5>
@@ -361,36 +376,39 @@
     <footer class="custom-container bg-danger text-white py-2 py-md-3 footer">
         <div class="d-flex justify-content-between">
             <div class="d-flex flex-column">
-                    <ul class="social list-unstyled d-inline-flex justify-content-between">
-                            <li class="social-item mr-2 mr-lg-4"><a href="https://www.facebook.com/BicycleExpress" aria-label="Facebook link">
-                                    <svg class="social-icon" role="img" width="16" height="16">
-                                        <title>Facebook</title>
-                                        <use xlink:href="#icon-facebook"></use>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="social-item mr-2 mr-lg-4"><a href="https://www.yelp.com/biz/bicycle-express-san-jose" aria-label="Yelp link">
-                                    <svg class="social-icon" role="img" width="16" height="16">
-                                        <title>Yelp</title>
-                                        <use xlink:href="#icon-yelp"></use>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="social-item mr-2 mr-lg-4"><a href="https://twitter.com/BicycleExpress" aria-label="Twitter link">
-                                    <svg class="social-icon" role="img" width="16" height="16">
-                                        <title>Twitter</title>
-                                        <use xlink:href="#icon-twitter"></use>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="social-item"><a href="https://www.instagram.com/bikexpres" aria-label="Instagram link">
-                                    <svg class="social-icon" role="img" width="16" height="16">
-                                        <title>Instagram</title>
-                                        <use xlink:href="#icon-instagram"></use>
-                                    </svg>
-                                </a>
-                            </li>
-                        </ul>
+                <ul class="social list-unstyled d-inline-flex justify-content-between">
+                    <li class="social-item mr-2 mr-lg-4"><a href="https://www.facebook.com/BicycleExpress"
+                            aria-label="Facebook link">
+                            <svg class="social-icon" role="img" width="16" height="16">
+                                <title>Facebook</title>
+                                <use xlink:href="#icon-facebook"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social-item mr-2 mr-lg-4"><a href="https://www.yelp.com/biz/bicycle-express-san-jose"
+                            aria-label="Yelp link">
+                            <svg class="social-icon" role="img" width="16" height="16">
+                                <title>Yelp</title>
+                                <use xlink:href="#icon-yelp"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social-item mr-2 mr-lg-4"><a href="https://twitter.com/BicycleExpress"
+                            aria-label="Twitter link">
+                            <svg class="social-icon" role="img" width="16" height="16">
+                                <title>Twitter</title>
+                                <use xlink:href="#icon-twitter"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social-item"><a href="https://www.instagram.com/bikexpres" aria-label="Instagram link">
+                            <svg class="social-icon" role="img" width="16" height="16">
+                                <title>Instagram</title>
+                                <use xlink:href="#icon-instagram"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
                 <div class="copyright mt-auto mb-3">©<span id="year"></span> by Bicycle Express.</div>
             </div>
             <section class="d-none d-xl-block contact">
@@ -431,7 +449,7 @@
                         <span aria-hidden="true" class="text-success">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body pb-5 pt-0">
+                <div class="modal-body pb-5 pt-0 px-md-5">
                     <h5 class="modal-title text-center font-weight-bold mb-2 mb-lg-3" id="modalCenterTitle">Request Form
                     </h5>
                     <form id="shop-request">
@@ -464,7 +482,7 @@
 
     <template id="shop-card">
         <div class="card d-flex mb-5">
-            <img class="card-img-top" src="img/product-demo-4.png" alt="Raleight bicycle, blue color">
+            <img class="card-img-top d-block" src="img/product-demo-4.png" alt="Raleight bicycle, blue color">
             <div class="card-body d-flex flex-column justify-content-between mx-auto pt-3">
                 <div class="pb-0">
                     <h5 class="card-title text-success mb-0">Raleight</h5>

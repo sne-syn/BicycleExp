@@ -22,14 +22,7 @@
         }
 
         & img {
-            width: 120px;
-        }
-    }
-
-    @media (min-width: $width-xl) {
-
-        & img {
-            width: 150px;
+            width: 100%;
         }
     }
 }

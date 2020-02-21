@@ -1,14 +1,12 @@
 .events {
-& .card-img-top {
-  width: 100%;
-  border-radius: 0;
-}
+  & .card-img-top {
+    width: 100%;
+  }
 
-& .card-direction {
-  position: relative;
-  color: $black;
+  & .card-direction {
+    color: $black;
 
-  &::before {
+    &::before {
       content: "";
       position: absolute;
       top: -2px;
@@ -17,47 +15,37 @@
       height: 1.25rem;
       background-image: url(../img/location-pin.svg);
       background-repeat: no-repeat;
+    }
   }
-}
 
-& .card-body {
-  width: 100%;
-  font-size: $font-size-md;
-}
-
-& .card-date {
-  order: -1;
-}
-
-& .card-footer {
-  padding-bottom: 0;
-  align-items: center;
-  background-color: $white;
-}
-
-@media (min-width: $width-md) {
   & .card-body {
-    font-size: $font-size-base;
+    width: 100%;
+    font-size: $font-size-md;
   }
-}
 
-@media (min-width: $width-lg) {
+  & .card-date {
+    order: -1;
+  }
+
+  @media (min-width: $width-md) {
+    & .card-body {
+      font-size: $font-size-base;
+    }
+  }
+
+  @media (min-width: $width-lg) {
     & .card-img-top {
-        width: 36%;
+      width: 36%;
     }
 
     & .card-body {
-        padding: 0;
-        padding-left: 1.25rem;
-    }
-
-    & .card-text {
-        margin-bottom: 0;
+      padding: 0;
+      padding-left: 1.25rem;
     }
 
     & .card-direction::before {
-        top: 0;
-        left: -23px;
+      top: 0;
+      left: -23px;
     }
-}
+  }
 }

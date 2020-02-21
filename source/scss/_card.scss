@@ -6,7 +6,6 @@
     }
 
     .card-img-top {
-        display: block;
         height: 190px;
         object-fit: contain;
     }
@@ -85,7 +84,6 @@
     @media (min-width: $width-xl) {
         .card {
             width: 29%;
-            position: relative;
         }
 
         .card-body {

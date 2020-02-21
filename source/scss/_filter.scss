@@ -1,14 +1,5 @@
-.checkbox-container fieldset {
-    margin: 0;
-    padding: 0;
-    border: none;
-}
-
 .checkbox-field {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    padding-left: 39px;
+    padding-left: 2.5rem;
     cursor: pointer;
 }
 
@@ -69,10 +60,7 @@
 }
 
 .panel-title a {
-    position: relative;
-    display: block;
     font-size: $font-size-lg;
-    color: $dark;
 
     &:hover {
         text-decoration: none;
@@ -100,17 +88,12 @@
     border: 1px solid $black;
     border-radius: 0;
     height: auto;
-    -webkit-appearance: none;
-    -moz-appearance: none;
     appearance: none;
     background-image: url(../img/arrow-down.svg);
     background-repeat: no-repeat;
     background-size: 10px 30px;
     background-position: 151px 4px;
-
 }
-
-
 
 @media (min-width: $width-md) {
     .collapse:not(.show) {
