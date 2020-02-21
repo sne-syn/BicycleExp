@@ -6724,7 +6724,6 @@ a.text-dark:hover, a.text-dark:focus {
       font-size: 1.13rem;
       width: 100%; }
     .about-us .statistics {
-      margin: 0;
       font-size: 1.13rem; } }
   @media (min-width: 991.98px) {
     .about-us {
@@ -6780,7 +6779,6 @@ a.text-dark:hover, a.text-dark:focus {
 
 .shop .card {
   width: 100%;
-  position: relative;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
