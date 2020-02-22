@@ -1,18 +1,18 @@
 .header {
-    .header-name {
+    & .header-name {
         font-size: $font-size-10;
     }
 
-    .header-address {
+    & .header-address {
         width: 40%;
         font-size: $font-size-sm;
     }
 
-    .header-logo-container {
+    & .header-logo-container {
         width: 50px;
     }
 
-    .header-mail {
+    & .header-mail {
         color: $danger;
 
         &:hover {
@@ -26,43 +26,43 @@
     }
 
     @media (min-width: $width-sm) {
-        .header-address {
+        & .header-address {
             width: 35%;
             font-size: $font-size-10;
         }
     }
 
     @media (min-width: $width-md) {
-        .header-logo-container {
+        & .header-logo-container {
             width: 80px;
         }
 
-        .header-name {
+        & .header-name {
             font-size: $font-size-lg;
         }
 
-        .header-address {
+        & .header-address {
             width: 33%;
             font-size: $font-size-12;
         }
     }
 
     @media (min-width: $width-lg) {
-        .header-address {
+        & .header-address {
             font-size: $font-size-md;
         }
     }
 
     @media (min-width: $width-xl) {
-        .header-img-container {
+        & .header-img-container {
             width: 100px;
         }
 
-        .header-name {
+        & .header-name {
             font-size: $display-4;
         }
 
-        .header-address {
+        & .header-address {
             width: 23%;
         }
     }

@@ -6777,6 +6777,9 @@ a.text-dark:hover, a.text-dark:focus {
   .brand img {
     width: 100%; } }
 
+.shop {
+  margin-top: 3rem; }
+
 .shop .card {
   width: 100%;
   -webkit-box-orient: vertical;
@@ -6833,6 +6836,8 @@ a.text-dark:hover, a.text-dark:focus {
     width: 50%; } }
 
 @media (min-width: 767.98px) {
+  .shop {
+    margin-top: 4rem; }
   .shop .card {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -6845,6 +6850,8 @@ a.text-dark:hover, a.text-dark:focus {
     width: 100%; } }
 
 @media (min-width: 991.98px) {
+  .shop {
+    margin-top: 5rem; }
   .shop .card-body {
     width: 80%; } }
 
@@ -7035,16 +7042,16 @@ a.text-dark:hover, a.text-dark:focus {
   .header .header-address {
     width: 23%; } }
 
-.intro-heading {
+.intro .intro-heading {
   font-size: 1.25rem; }
 
-.intro-text {
+.intro .intro-text {
   font-size: 1.13rem; }
 
 @media (min-width: 1199.98px) {
-  .intro-heading {
+  .intro .intro-heading {
     font-size: 1.63rem; }
-  .intro-text {
+  .intro .intro-text {
     font-size: 1.25rem; } }
 
 .modal-content {
@@ -7138,7 +7145,7 @@ a.text-dark:hover, a.text-dark:focus {
   color: #333333;
   font-size: 1rem; }
 
-.page-item.active .page-link {
+.pagination .page-item.active .page-link {
   background-color: #70ab81;
   color: #ffffff; }
 
@@ -7334,11 +7341,11 @@ a.text-dark:hover, a.text-dark:focus {
     .typo-base {
       font-size: 1.25rem; } }
 
-.checkbox-field {
+.filter-block .checkbox-field {
   padding-left: 2.5rem;
   cursor: pointer; }
 
-.checkbox-field input[type="checkbox"] + .checkbox-indication {
+.filter-block .checkbox-field input[type="checkbox"] + .checkbox-indication {
   position: absolute;
   top: 2px;
   left: 0;
@@ -7346,17 +7353,17 @@ a.text-dark:hover, a.text-dark:focus {
   height: 19px;
   border: 2px solid rgba(112, 171, 129, 0.7); }
 
-.checkbox-field input[type="checkbox"]:focus + .checkbox-indication {
+.filter-block .checkbox-field input[type="checkbox"]:focus + .checkbox-indication {
   border: 2px solid rgba(112, 171, 129, 0.7); }
 
-.checkbox-field input[type="checkbox"]:focus + .checkbox-indication {
+.filter-block .checkbox-field input[type="checkbox"]:focus + .checkbox-indication {
   outline: 4px auto #0080ff; }
 
-.checkbox-field input[type="checkbox"]:disabled + .checkbox-indication {
+.filter-block .checkbox-field input[type="checkbox"]:disabled + .checkbox-indication {
   color: rgba(112, 171, 129, 0.2);
   border: 2px solid rgba(112, 171, 129, 0.2); }
 
-.aside .checkbox-field input[type="checkbox"]:checked + .checkbox-indication {
+.filter-block .checkbox-field input[type="checkbox"]:checked + .checkbox-indication {
   position: absolute;
   top: 2px;
   left: 0;
@@ -7368,7 +7375,7 @@ a.text-dark:hover, a.text-dark:focus {
   background-position: 45% 55%;
   border: 2px solid #70ab81; }
 
-.checkbox-field input[type="checkbox"]:disabled:checked + .checkbox-indication {
+.filter-block .checkbox-field input[type="checkbox"]:disabled:checked + .checkbox-indication {
   position: absolute;
   top: 2px;
   left: 0;
@@ -7384,15 +7391,15 @@ a.text-dark:hover, a.text-dark:focus {
   opacity: 0.2;
   filter: alpha(opacity=20); }
 
-.filter h2,
-.sort label {
+.filter-block .filter h2,
+.filter-block .sort label {
   font-size: 1.25rem; }
 
-.panel-title a {
+.filter-block .panel-title a {
   font-size: 1.25rem; }
-  .panel-title a:hover {
+  .filter-block .panel-title a:hover {
     text-decoration: none; }
-  .panel-title a::after {
+  .filter-block .panel-title a::after {
     content: "";
     position: absolute;
     height: 11px;
@@ -7402,7 +7409,7 @@ a.text-dark:hover, a.text-dark:focus {
     background-image: url(../img/arrow-down.svg);
     background-repeat: no-repeat; }
 
-.sort-by {
+.filter-block .sort-by {
   background: transparent;
   width: 180px;
   padding: 0.63rem;
@@ -7421,14 +7428,14 @@ a.text-dark:hover, a.text-dark:focus {
   background-position: 151px 4px; }
 
 @media (min-width: 767.98px) {
-  .collapse:not(.show) {
+  .filter-block .collapse:not(.show) {
     display: block; }
-  .panel-title a {
+  .filter-block .panel-title a {
     pointer-events: none;
     cursor: default; }
-    .panel-title a::after {
+    .filter-block .panel-title a::after {
       content: none; }
-  .sort {
+  .filter-block .sort {
     position: absolute;
     top: 0;
     right: 0;

@@ -1,120 +1,122 @@
-.checkbox-field {
-    padding-left: 2.5rem;
-    cursor: pointer;
-}
-
-.checkbox-field input[type="checkbox"]+.checkbox-indication {
-    position: absolute;
-    top: 2px;
-    left: 0;
-    width: 19px;
-    height: 19px;
-    border: 2px solid rgba($success, 0.7)
-}
-
-.checkbox-field input[type="checkbox"]:focus+.checkbox-indication {
-    border: 2px solid rgba($success, 0.7)
-}
-
-.checkbox-field input[type="checkbox"]:focus+.checkbox-indication {
-    outline: 4px auto rgb(0, 128, 255);
-}
-
-.checkbox-field input[type="checkbox"]:disabled+.checkbox-indication {
-    color: rgba($success, 0.2);
-    border: 2px solid rgba($success, 0.2)
-}
-
-.aside .checkbox-field input[type="checkbox"]:checked+.checkbox-indication {
-    position: absolute;
-    top: 2px;
-    left: 0;
-    width: 19px;
-    height: 19px;
-    background-image: url(../img/check.jpg);
-    background-repeat: no-repeat;
-    background-size: 13px 12px;
-    background-position: 45% 55%;
-    border: 2px solid $success;
-}
-
-.checkbox-field input[type="checkbox"]:disabled:checked+.checkbox-indication {
-    position: absolute;
-    top: 2px;
-    left: 0;
-    width: 19px;
-    height: 19px;
-    background-image: url(../img/check.jpg);
-    background-repeat: no-repeat;
-    background-size: 13px 12px;
-    background-position: 45% 55%;
-    border: 2px solid $success;
-    filter: grayscale(100%);
-    opacity: 0.2;
-    filter: alpha(opacity=20);
-}
-
-.filter h2,
-.sort label {
-    font-size: $font-size-lg;
-}
-
-.panel-title a {
-    font-size: $font-size-lg;
-
-    &:hover {
-        text-decoration: none;
+.filter-block {
+    & .checkbox-field {
+        padding-left: 2.5rem;
+        cursor: pointer;
     }
-
-    &::after {
-        content: "";
+    
+    & .checkbox-field input[type="checkbox"]+.checkbox-indication {
         position: absolute;
-        height: 11px;
-        width: 30px;
-        right: 0;
-        top: 7px;
-        background-image: url(../img/arrow-down.svg);
+        top: 2px;
+        left: 0;
+        width: 19px;
+        height: 19px;
+        border: 2px solid rgba($success, 0.7)
+    }
+    
+    & .checkbox-field input[type="checkbox"]:focus+.checkbox-indication {
+        border: 2px solid rgba($success, 0.7)
+    }
+    
+    & .checkbox-field input[type="checkbox"]:focus+.checkbox-indication {
+        outline: 4px auto rgb(0, 128, 255);
+    }
+    
+    & .checkbox-field input[type="checkbox"]:disabled+.checkbox-indication {
+        color: rgba($success, 0.2);
+        border: 2px solid rgba($success, 0.2)
+    }
+    
+    & .checkbox-field input[type="checkbox"]:checked+.checkbox-indication {
+        position: absolute;
+        top: 2px;
+        left: 0;
+        width: 19px;
+        height: 19px;
+        background-image: url(../img/check.jpg);
         background-repeat: no-repeat;
+        background-size: 13px 12px;
+        background-position: 45% 55%;
+        border: 2px solid $success;
     }
-}
-
-.sort-by {
-    background: transparent;
-    width: 180px;
-    padding: 0.63rem;
-    padding-left: 1rem;
-    margin-left: 0.63rem;
-    line-height: 1.4;
-    border: 1px solid $black;
-    border-radius: 0;
-    height: auto;
-    appearance: none;
-    background-image: url(../img/arrow-down.svg);
-    background-repeat: no-repeat;
-    background-size: 10px 30px;
-    background-position: 151px 4px;
-}
-
-@media (min-width: $width-md) {
-    .collapse:not(.show) {
-        display: block;
+    
+    & .checkbox-field input[type="checkbox"]:disabled:checked+.checkbox-indication {
+        position: absolute;
+        top: 2px;
+        left: 0;
+        width: 19px;
+        height: 19px;
+        background-image: url(../img/check.jpg);
+        background-repeat: no-repeat;
+        background-size: 13px 12px;
+        background-position: 45% 55%;
+        border: 2px solid $success;
+        filter: grayscale(100%);
+        opacity: 0.2;
+        filter: alpha(opacity=20);
     }
-
-    .panel-title a {
-        pointer-events: none;
-        cursor: default;
-
+    
+    .filter h2,
+    & .sort label {
+        font-size: $font-size-lg;
+    }
+    
+    & .panel-title a {
+        font-size: $font-size-lg;
+    
+        &:hover {
+            text-decoration: none;
+        }
+    
         &::after {
-            content: none;
+            content: "";
+            position: absolute;
+            height: 11px;
+            width: 30px;
+            right: 0;
+            top: 7px;
+            background-image: url(../img/arrow-down.svg);
+            background-repeat: no-repeat;
         }
     }
-
-    .sort {
-        position: absolute;
-        top: 0;
-        right: 0;
+    
+    & .sort-by {
+        background: transparent;
+        width: 180px;
+        padding: 0.63rem;
+        padding-left: 1rem;
+        margin-left: 0.63rem;
+        line-height: 1.4;
+        border: 1px solid $black;
+        border-radius: 0;
         height: auto;
-        width: 270px;
-        padding: 0;
+        appearance: none;
+        background-image: url(../img/arrow-down.svg);
+        background-repeat: no-repeat;
+        background-size: 10px 30px;
+        background-position: 151px 4px;
+    }
+    
+    @media (min-width: $width-md) {
+        & .collapse:not(.show) {
+            display: block;
+        }
+    
+        & .panel-title a {
+            pointer-events: none;
+            cursor: default;
+    
+            &::after {
+                content: none;
+            }
+        }
+    
+        & .sort {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: auto;
+            width: 270px;
+            padding: 0;
+        }
     }
 }

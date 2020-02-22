@@ -1,24 +1,26 @@
-.pagination .page-item .page-link {
-    color: $dark;
-    font-size: $font-size-base;
-}
-
-.page-item.active .page-link {
-    background-color: $success;
-    color: $white;
-}
-
-.pagination .page-item {
-    &:first-child {
-        .page-link {
-            margin-left: 0;
-            border-radius: 0;
-        }
+.pagination {
+    & .page-item .page-link {
+        color: $dark;
+        font-size: $font-size-base;
     }
 
-    &:last-child {
-        .page-link {
-            border-radius: 0;
+    & .page-item.active .page-link {
+        background-color: $success;
+        color: $white;
+    }
+
+    & .page-item {
+        &:first-child {
+            .page-link {
+                margin-left: 0;
+                border-radius: 0;
+            }
+        }
+
+        &:last-child {
+            .page-link {
+                border-radius: 0;
+            }
         }
     }
 }

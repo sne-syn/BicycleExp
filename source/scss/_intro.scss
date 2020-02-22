@@ -1,17 +1,19 @@
-.intro-heading {
-    font-size: $font-size-lg;
-}
-
-.intro-text {
-    font-size: $font-size-18;
-}
-
-@media (min-width: $width-xl) {
-    .intro-heading {
-        font-size: $display-3;
+.intro {
+    & .intro-heading {
+        font-size: $font-size-lg;
     }
 
-    .intro-text {
-        font-size: $font-size-lg;
+    & .intro-text {
+        font-size: $font-size-18;
+    }
+
+    @media (min-width: $width-xl) {
+        & .intro-heading {
+            font-size: $display-3;
+        }
+
+        & .intro-text {
+            font-size: $font-size-lg;
+        }
     }
 }
