@@ -41,6 +41,10 @@
         width: 75%;
     }
 
+    & .form-control.error {
+        border: 1px solid red;
+    }
+
     @media (min-width: $width-md) {
         & .shop-info-img {
             width: 100%;

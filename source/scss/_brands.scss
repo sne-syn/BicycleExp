@@ -1,4 +1,23 @@
 .brand {
+    & ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    /* Track */
+    & ::-webkit-scrollbar-track {
+        background: $white;
+    }
+
+    /* Handle */
+    & ::-webkit-scrollbar-thumb {
+        background: rgba($success, 0.5);
+    }
+
+    /* Handle on hover */
+    & ::-webkit-scrollbar-thumb:hover {
+        background: rgba($success, 0.3);
+    }
+
     & .brand-slider {
         padding: 2.5rem 1rem;
         overflow-x: scroll;

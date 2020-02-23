@@ -6758,24 +6758,32 @@ a.text-dark:hover, a.text-dark:focus {
     .about-us .statistics {
       font-size: 1.25rem; } }
 
-.brand .brand-slider {
-  padding: 2.5rem 1rem;
-  overflow-x: scroll; }
-
-.brand .brand-list {
-  white-space: nowrap; }
-
-.brand .brand-item {
-  margin-right: 1rem; }
-
-.brand img {
-  max-height: 60vh; }
-
-@media (min-width: 991.98px) {
+.brand {
+  /* Track */
+  /* Handle */
+  /* Handle on hover */ }
+  .brand ::-webkit-scrollbar {
+    width: 10px; }
+  .brand ::-webkit-scrollbar-track {
+    background: #ffffff; }
+  .brand ::-webkit-scrollbar-thumb {
+    background: rgba(112, 171, 129, 0.5); }
+  .brand ::-webkit-scrollbar-thumb:hover {
+    background: rgba(112, 171, 129, 0.3); }
   .brand .brand-slider {
-    overflow-x: hidden; }
+    padding: 2.5rem 1rem;
+    overflow-x: scroll; }
+  .brand .brand-list {
+    white-space: nowrap; }
+  .brand .brand-item {
+    margin-right: 1rem; }
   .brand img {
-    width: 100%; } }
+    max-height: 60vh; }
+  @media (min-width: 991.98px) {
+    .brand .brand-slider {
+      overflow-x: hidden; }
+    .brand img {
+      width: 100%; } }
 
 .shop {
   margin-top: 3rem; }
@@ -6894,6 +6902,9 @@ a.text-dark:hover, a.text-dark:focus {
 
 .contact-us .form {
   width: 75%; }
+
+.contact-us .form-control.error {
+  border: 1px solid red; }
 
 @media (min-width: 767.98px) {
   .contact-us .shop-info-img {
