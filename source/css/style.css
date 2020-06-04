@@ -6903,8 +6903,20 @@ a.text-dark:hover, a.text-dark:focus {
 .contact-us .form {
   width: 75%; }
 
-.contact-us .form-control.error {
+.contact-us .form-group {
+  position: relative; }
+
+.contact-us .form-group.error input {
   border: 1px solid red; }
+
+.contact-us .form-group small {
+  bottom: 0;
+  left: 0;
+  color: red;
+  visibility: hidden; }
+
+.contact-us .form-group.error small {
+  visibility: visible; }
 
 @media (min-width: 767.98px) {
   .contact-us .shop-info-img {

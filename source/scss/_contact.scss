@@ -41,8 +41,23 @@
         width: 75%;
     }
 
-    & .form-control.error {
+    & .form-group {
+        position: relative;
+    }
+
+    & .form-group.error input {
         border: 1px solid red;
+    }
+
+    & .form-group small {
+        bottom: 0;
+        left: 0;
+        color: red;
+        visibility: hidden;
+    }
+
+    & .form-group.error small {
+        visibility: visible;
     }
 
     @media (min-width: $width-md) {

@@ -81,7 +81,7 @@
         </div>
     </nav>
 
-    <main>
+    <main class="main">
         <section class="intro custom-container bg-success text-white py-5 align-items-center row">
             <h1 class="intro-heading text-left font-weight-bold  col-md-3 pb-3">How To Buy:</h1>
             <p class="intro-text text-left font-weight-normal col-md-9 pl-md-1 mb-0">To order any bike of your choice,
@@ -132,7 +132,7 @@
             </div>
         </article>
 
-        <div class="custom-container filter-block">
+        <section class="custom-container filter-block">
             <div class="row position-relative">
                 <div class="sort col mb-3 mb-md-0">
                     <label for="sort">Sort By:</label>
@@ -372,6 +372,7 @@
                 </section>
             </div>
         </div>
+        </section>
     </main>
     <footer class="custom-container bg-danger text-white py-2 py-md-3 footer">
         <div class="d-flex justify-content-between">
@@ -508,7 +509,8 @@
 
     <script>
         // Get the current year for the copyright
-        $('#year').text(new Date().getFullYear());
+        const currentYear = new Date().getFullYear();
+        document.getElementById('year').textContent = currentYear;
     </script>
 </body>
 

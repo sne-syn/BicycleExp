@@ -240,7 +240,8 @@
 
     <script>
         // Get the current year for the copyright
-        $('#year').text(new Date().getFullYear());
+        const currentYear = new Date().getFullYear();
+        document.getElementById('year').textContent = currentYear;
 
         // Readjust the modal’s position in case a scrollbar appears
         $('#myModal').modal('handleUpdate');
