@@ -4,9 +4,13 @@
   "description": "training-project",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.x",
+    "acorn": "6.4.1",
     "autoprefixer": "9.5.x",
     "browser-sync": "2.26.x",
+    "chokidar": "^3.4.0",
     "del": "^4.1.1",
+    "eslint": "^7.2.0",
+    "eslint-config-htmlacademy": "^0.5.2",
     "gulp": "4.0.x",
     "gulp-csso": "^3.0.1",
     "gulp-htmlmin": "^5.0.1",
@@ -23,16 +27,25 @@
     "gulp-svgstore": "^7.0.1",
     "gulp-webp": "^4.0.1",
     "install": "^0.12.2",
+    "jquery": "^3.5.1",
+    "popper.js": "1.16.1",
     "posthtml-include": "^1.2.0",
+    "stylelint": "13.6.0",
     "stylelint-config-recess-order": "^2.0.3",
-    "stylelint-config-recommended": "^3.0.0"
+    "stylelint-config-recommended": "^3.0.0",
+    "webpack": "4.43.0",
+    "webpack-cli": "3.3.11",
+    "webpack-dev-server": "3.11.0"
   },
   "scripts": {
+    "jsbuild": "webpack",
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
+    "eslint": "eslint source/**/*.js",
     "test": "npm run editorconfig && npm run stylelint",
     "build": "gulp build",
-    "start": "gulp start"
+    "start": "gulp start",
+    "jsstart": "webpack-dev-server --open 'Google Chrome'"
   },
   "browserslist": [
     "last 2 versions",

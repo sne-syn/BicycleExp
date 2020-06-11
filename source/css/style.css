@@ -7407,7 +7407,6 @@ a.text-dark:hover, a.text-dark:focus {
   background-image: url(../img/check.jpg);
   background-repeat: no-repeat;
   background-size: 13px 12px;
-  background-position: 45% 55%;
   border: 2px solid #70ab81;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
