@@ -59,6 +59,9 @@
     & .sort label {
         font-size: $font-size-lg;
     }
+    .sort-by option {
+        font-size: $font-size-md;
+    }
     
     & .panel-title a {
         font-size: $font-size-lg;
@@ -93,7 +96,7 @@
         background-image: url(../img/arrow-down.svg);
         background-repeat: no-repeat;
         background-size: 10px 30px;
-        background-position: 151px 4px;
+        background-position: 151px 7px;
     }
     
     @media (min-width: $width-md) {

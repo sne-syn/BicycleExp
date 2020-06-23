@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "training-project",
   "devDependencies": {
+    "@babel/core": "^7.10.3",
+    "@babel/preset-env": "^7.10.3",
     "@htmlacademy/editorconfig-cli": "1.x",
     "acorn": "6.4.1",
     "autoprefixer": "9.5.x",
+    "babel-loader": "^8.1.0",
     "browser-sync": "2.26.x",
     "chokidar": "^3.4.0",
     "del": "^4.1.1",
@@ -33,19 +36,16 @@
     "stylelint": "13.6.0",
     "stylelint-config-recess-order": "^2.0.3",
     "stylelint-config-recommended": "^3.0.0",
-    "webpack": "4.43.0",
-    "webpack-cli": "3.3.11",
-    "webpack-dev-server": "3.11.0"
+    "webpack": "^4.43.0",
+    "webpack-stream": "^5.2.1"
   },
   "scripts": {
-    "jsbuild": "webpack",
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
     "eslint": "eslint source/**/*.js",
     "test": "npm run editorconfig && npm run stylelint",
     "build": "gulp build",
-    "start": "gulp start",
-    "jsstart": "webpack-dev-server --open 'Google Chrome'"
+    "start": "gulp start"
   },
   "browserslist": [
     "last 2 versions",
