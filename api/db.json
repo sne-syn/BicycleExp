@@ -1,0 +1,262 @@
+{
+    "products": [{
+            "id": 1,
+            "brand": "DAHON",
+            "model": "RXW - Women's - 2015",
+            "price": 1549.99,
+            "category": "sport",
+            "isInStock": true,
+            "isNew": true,
+            "isBestseller": false
+        },
+        {
+            "id": 2,
+            "brand": "Hold Fast",
+            "model": "Gala",
+            "price": 2635.99,
+            "category": "touring",
+            "isInStock": false,
+            "isNew": false,
+            "isBestseller": true
+        },
+        {
+            "id": 3,
+            "brand": "Felt",
+            "model": "RXW - Women's - 2015",
+            "price": 479.99,
+            "category": "cyclocross",
+            "isInStock": true,
+            "isNew": true,
+            "isBestseller": false
+        }, {
+            "id": 4,
+            "brand": "Pure Fix",
+            "model": "Decree FRD",
+            "price": 539.99,
+            "category": "mountain",
+            "isInStock": false,
+            "isNew": false,
+            "isBestseller": false
+        },
+        {
+            "id": 5,
+            "brand": "DAHON",
+            "model": "Straggler",
+            "price": 7859.99,
+            "category": "mountain",
+            "isInStock": true,
+            "isNew": false,
+            "isBestseller": true
+        },
+        {
+            "id": 6,
+            "brand": "Surly",
+            "model": "Lowside",
+            "price": 3676.99,
+            "category": "cyclocross",
+            "isInStock": false,
+            "isNew": false,
+            "isBestseller": false
+        },
+        {
+            "id": 7,
+            "brand": "Felt",
+            "model": "Decree FRD",
+            "price": 8567.99,
+            "category": "touring",
+            "isInStock": true,
+            "isNew": false,
+            "isBestseller": true
+        },
+        {
+            "id": 8,
+            "brand": "DAHON",
+            "model": "Gala",
+            "price": 149.99,
+            "category": "sport",
+            "isInStock": true,
+            "isNew": false,
+            "isBestseller": false
+        },
+        {
+            "id": 9,
+            "brand": "Surly",
+            "model": "Big Dummy",
+            "price": 4634.99,
+            "category": "touring",
+            "isInStock": true,
+            "isNew": true,
+            "isBestseller": false
+        },
+        {
+            "id": 10,
+            "brand": "Hold Fast",
+            "model": "Gala",
+            "price": 4566.99,
+            "category": "cyclocross",
+            "isInStock": true,
+            "isNew": false,
+            "isBestseller": true
+        },
+        {
+            "id": 11,
+            "brand": "Unknown",
+            "model": "Krampus",
+            "price": 5577.99,
+            "category": "mountain",
+            "isInStock": false,
+            "isNew": false,
+            "isBestseller": true
+        },
+        {
+            "id": 12,
+            "brand": "DAHON",
+            "model": "Decree FRD",
+            "price": 1434.99,
+            "category": "mountain",
+            "isInStock": true,
+            "isNew": true,
+            "isBestseller": false
+        },
+        {
+            "id": 13,
+            "brand": "Raleigh",
+            "model": "Decree FRD",
+            "price": 3847.99,
+            "category": "touring",
+            "isInStock": true,
+            "isNew": false,
+            "isBestseller": true
+        },
+        {
+            "id": 14,
+            "brand": "DAHON",
+            "model": "Ogre",
+            "price": 6905.99,
+            "category": "cyclocross",
+            "isInStock": false,
+            "isNew": false,
+            "isBestseller": true
+        },
+        {
+            "id": 15,
+            "brand": "Pure Fix",
+            "model": "Midnight Special",
+            "price": 3738.99,
+            "category": "sport",
+            "isInStock": true,
+            "isNew": false,
+            "isBestseller": false
+        },
+        {
+            "id": 16,
+            "brand": "Felt",
+            "model": "Decree FRD",
+            "price": 1348.99,
+            "category": "mountain",
+            "isInStock": false,
+            "isNew": true,
+            "isBestseller": false
+        },
+        {
+            "id": 17,
+            "brand": "Unknown",
+            "model": "RXW - Women's - 2015",
+            "price": 1222.99,
+            "category": "touring",
+            "isInStock": true,
+            "isNew": false,
+            "isBestseller": true
+        },
+        {
+            "id": 18,
+            "brand": "Surly",
+            "model": "Redux 2",
+            "price": 1738.99,
+            "category": "mountain",
+            "isInStock": false,
+            "isNew": true,
+            "isBestseller": false
+        },
+        {
+            "id": 19,
+            "brand": "Santa Cruz",
+            "model": "Decree FRD",
+            "price": 6887.99,
+            "category": "cyclocross",
+            "isInStock": true,
+            "isNew": false,
+            "isBestseller": true
+        },
+        {
+            "id": 20,
+            "brand": "Pure Fix",
+            "model": "Pack Rat",
+            "price": 3677.99,
+            "category": "touring",
+            "isInStock": true,
+            "isNew": true,
+            "isBestseller": false
+        },
+        {
+            "id": 21,
+            "brand": "DAHON",
+            "model": "Troll",
+            "price": 567.99,
+            "category": "mountain",
+            "isInStock": true,
+            "isNew": false,
+            "isBestseller": false
+        },
+        {
+            "id": 22,
+            "brand": "Hold Fast",
+            "model": "Tamland - 2",
+            "price": 7973.99,
+            "category": "touring",
+            "isInStock": false,
+            "isNew": true,
+            "isBestseller": false
+        },
+        {
+            "id": 23,
+            "brand": "DAHON",
+            "model": "Pugsley",
+            "price": 3785.99,
+            "category": "sport",
+            "isInStock": true,
+            "isNew": true,
+            "isBestseller": false
+        },
+        {
+            "id": 24,
+            "brand": "Santa Cruz",
+            "model": "Redux 2",
+            "price": 166.99,
+            "category": "sport",
+            "isInStock": true,
+            "isNew": false,
+            "isBestseller": true
+        },
+        {
+            "id": 25,
+            "brand": "Raleigh",
+            "model": "Decree FRD",
+            "price": 34564.99,
+            "category": "mountain",
+            "isInStock": false,
+            "isNew": true,
+            "isBestseller": false
+        },
+        {
+            "id": 26,
+            "brand": "Unknown",
+            "model": "Tamland - 2",
+            "price": 765.99,
+            "category": "sport",
+            "isInStock": true,
+            "isNew": false,
+            "isBestseller": false
+        }
+    ]
+}
