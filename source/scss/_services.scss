@@ -28,19 +28,18 @@
         padding: 0.5rem;
     }
 
-
-    & .detailes-heading {
+    & .details-heading {
         font-size: $font-size-18;
     }
 
-    & .tune-ups-detailes table,
-    & .tune-ups-detailes th,
-    & .tune-ups-detailes td,
+    & .tune-ups-details table,
+    & .tune-ups-details th,
+    & .tune-ups-details td,
         {
         border: 1px solid $warning;
     }
 
-    & .tune-ups-detailes th {
+    & .tune-ups-details th {
         padding-left: 0.5rem;
         padding-right: 0.5rem;
     }
@@ -55,14 +54,14 @@
         }
 
         & th,
-        & .detailes-heading {
+        & .details-heading {
             font-size: $font-size-lg;
         }
     }
 
     @media (min-width: $width-xl) {
         & h2.services-heading {
-            font-size: $display-5;
+            font-size: $display-4;
         }
 
         & .tab-pane {
@@ -78,8 +77,8 @@
             width: 70%;
         }
 
-        & .detailes-heading {
-            font-size: $display-5;
+        & .details-heading {
+            font-size: $display-4;
         }
     }
 
