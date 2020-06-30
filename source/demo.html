@@ -80,7 +80,6 @@
                 </li>
             </ul>
         </div>
-        </div>
     </nav>
 
     <main class="main">
@@ -279,7 +278,6 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
 
                     <nav class="d-flex flex-row justify-content-end" aria-label="pagination">
@@ -292,7 +290,6 @@
                         </ul>
                     </nav>
                 </section>
-            </div>
             </div>
         </section>
     </main>
@@ -363,18 +360,45 @@
         </div>
     </footer>
 
-    <section aria-label="modal" class="modal">
-        <div class="modal__position">
-            <div class="modal__wrapper">
-                <h3 class="modal__text-heading">Thank You for Subscribing!</h3>
-                <p class="modal__text">You will be the first to know about new inventory, give aways and special
-                    projects!</p>
-                <button class="modal__close" title="Close" type="button">Close modal</button>
+    <div class="modal request-modal fade bd-example-modal-sm bd-example-modal-lg" id="modalCenter" tabindex="-1"
+        role="dialog" aria-labelledby="modalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-sm modal-dialog-centered text-success" role="document">
+            <div class="modal-content">
+                <div class="modal-header pb-0">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="text-success">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body pb-5 pt-0 px-md-5">
+                    <h5 class="modal-title text-center font-weight-bold mb-2 mb-lg-3" id="modalCenterTitle">Request Form
+                    </h5>
+                    <form id="shop-request">
+                        <div class="mb-4">
+                            <div class="form-group">
+                                <label class="mb-0" for="name">Name</label>
+                                <input class="form-control p-sm-3" type="text" id="name">
+                            </div>
+                            <div class="form-group">
+                                <label class="mb-0" for="email">Email</label>
+                                <input class="form-control p-sm-3" type="email" id="email">
+                            </div>
+                            <div class="form-group">
+                                <label class="mb-0" for="phone">Phone Number</label>
+                                <input class="form-control p-sm-3" type="tel" id="phone" aria-label="phone">
+                            </div>
+                            <div class="form-group">
+                                <label class="mb-0" for="serial">Serial Number</label>
+                                <input type="text" class="form-control p-sm-3 bg-white" id="serial"
+                                    aria-label="serial-number" placeholder="WTUI23AB4567C" disabled>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-success d-block ml-auto">Request</button>
+                    </form>
+                </div>
             </div>
         </div>
-        <div class="modal__overlay"></div>
-    </section>
-
+    </div>
 
     <template id="shop-card">
         <div class="card d-flex mb-5 position-relative">

@@ -15,10 +15,6 @@
         border: none;
     }
 
-    & .tab-pane {
-        font-size: $font-size-md;
-    }
-
     & table {
         width: 100%;
     }
@@ -34,7 +30,7 @@
 
     & .tune-ups-details table,
     & .tune-ups-details th,
-    & .tune-ups-details td,
+    & .tune-ups-details td
         {
         border: 1px solid $warning;
     }
@@ -49,17 +45,13 @@
             font-size: $font-size-18;
         }
 
-        & .tab-pane {
-            font-size: $font-size-base;
-        }
-
         & th,
         & .details-heading {
-            font-size: $font-size-18;
+            font-size: $font-size-lg;
         }
 
         & th.font-weight-normal {
-            font-size: $font-size-md;
+            font-size: $font-size-18;
         }
     }
 
@@ -68,14 +60,9 @@
             font-size: $display-4;
         }
 
-        & .tab-pane {
+        & th.font-weight-normal {
             font-size: $font-size-18;
         }
-
-        & th.font-weight-normal {
-            font-size: $display-3;
-        }
-
 
         & .table-row-left {
             width: 70%;
@@ -85,5 +72,4 @@
             font-size: $display-4;
         }
     }
-
 }
