@@ -18,4 +18,3 @@ const getProducts = () => {
 document.addEventListener('DOMContentLoaded', getProducts);
 
 getCurrentYear();
-
