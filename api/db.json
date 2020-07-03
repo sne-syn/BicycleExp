@@ -285,20 +285,6 @@
       "isInStock": true,
       "isNew": false,
       "isBestseller": false
-    },
-    {
-      "name": "sne_syn",
-      "email": "ghghghg@gmail.com",
-      "phone": "56656556565",
-      "serialNumber": "XYQEEZSGF3LW7",
-      "id": 27
-    },
-    {
-      "name": "sne_syn",
-      "email": "ghghghg@gmail.com",
-      "phone": "56656556565",
-      "serialNumber": "XYQEEZSGF3LW7",
-      "id": 28
     }
   ],
   "requests": [
@@ -322,6 +308,20 @@
       "phone": "7777",
       "serialNumber": "8NAZZPZ5YQG9E",
       "id": 3
+    },
+    {
+      "name": "ddd",
+      "email": "ghghghg@gmail.com",
+      "phone": "(566) 565 5656",
+      "serialNumber": "D2UNFR2E4NJSE",
+      "id": 4
+    },
+    {
+      "name": "ddd",
+      "email": "ghghghg@gmail.com",
+      "phone": "(566) 565 5656",
+      "serialNumber": "D2UNFR2E4NJSE",
+      "id": 5
     }
   ]
 }
