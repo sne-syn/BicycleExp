@@ -1,18 +1,26 @@
 import {
-    removeCards
-} from './card';
-
-import {
     formatPrice
 } from './util/common';
 
 const COUNT_CARD_ON_PAGE = 9;
 const cardsList = document.querySelector('.cards-flow');
-const cardTemplate = document.querySelector('#shop-card');
+const cardTemplate = document.querySelector('#template-card');
+
+const cardBtnClickHandler = (card) => {
+    $('#modalCenter').modal('show');
+    document.querySelector('#serial').placeholder = card.serial;
+};
+
+const removeCards = () => {
+    const cards = document.querySelectorAll('.card');
+    cards.forEach((card) => {
+        card.remove();
+    });
+};
 
 const renderCard = function (card) {
     const cardElement = cardTemplate.content.cloneNode(true);
-    const element = cardElement.querySelector(`.card`);
+    const element = cardElement.querySelector('.card');
     const newMark = element.querySelector('#card-mark');
     const availability = element.querySelector('.card-order-mark');
 
@@ -25,8 +33,9 @@ const renderCard = function (card) {
     availability.textContent = card.isInStock ? `In Stock` : `Special Order`;
     element.querySelector('.card-text').textContent = `${card.model}`;
     element.querySelector('.card-price').textContent = `$ ${formatPrice(card.price)}`;
-    element.querySelector('.btn').addEventListener(`click`, function () {
-        console.log('click-plick');
+
+    element.querySelector('.btn').addEventListener('click', function () {
+        cardBtnClickHandler(card);
     });
 
     return element;
@@ -34,7 +43,8 @@ const renderCard = function (card) {
 
 export const render = (data) => {
     removeCards();
-    for (var i = 0; i < COUNT_CARD_ON_PAGE; i++) {
+    const countCardsOnPage = data.length > COUNT_CARD_ON_PAGE ? COUNT_CARD_ON_PAGE : data.length;
+    for (let i = 0; i < countCardsOnPage; i++) {
         cardsList.appendChild(renderCard(data[i]));
     }
 };

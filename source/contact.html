@@ -272,17 +272,17 @@
         const subjectInput = document.getElementById('subject');
         const messageInput = document.getElementById('message');
 
-function showError (input, message) {
-    const formGroup = input.parentElement;
-    const small = formGroup.querySelector('small');
-    formGroup.className = 'form-group error';
-    small.innerText = message;
-}
+        function showError(input, message) {
+            const formGroup = input.parentElement;
+            const small = formGroup.querySelector('small');
+            formGroup.className = 'form-group error';
+            small.innerText = message;
+        }
 
         form.addEventListener('submit', function (evt) {
             evt.preventDefault();
 
-            if(nameInput.value === '') {
+            if (nameInput.value === '') {
                 showError(nameInput, 'Name is required');
             } else {
                 showSucces(nameInput)
@@ -298,7 +298,14 @@ function showError (input, message) {
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
         integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous">
     </script>
-    <script src="bundle.js"></script>
+    <script>
+        const currentYear = new Date().getFullYear();
+        const getCurrentYear = () => {
+            document.getElementById('year').textContent = currentYear;
+        };
+
+        getCurrentYear()
+    </script>
 </body>
 
 </html>

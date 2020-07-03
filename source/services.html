@@ -84,7 +84,8 @@
     <main>
         <section class="intro custom-container bg-success text-white py-5 align-items-center row">
             <h1 class="intro-heading text-left font-weight-bold col-md-3 pb-3">Get Fixed:</h1>
-            <p class="intro-text text-left font-weight-normal col-md-9 pl-md-1 mb-0">Need your bike looked at and fixed? Bicycle Express
+            <p class="intro-text text-left font-weight-normal col-md-9 pl-md-1 mb-0">Need your bike looked at and fixed?
+                Bicycle Express
                 offers free estimates and diagnosis. Simply walk in at any time, and we will give you an inspection at
                 no cost. Can’t come in any time soon? Feel free to use the diagram and labor items list below to zero in
                 your bike problems, and get an idea of how much it will cost to fix it.</p>
@@ -463,36 +464,39 @@
     <footer class="custom-container bg-danger text-white py-2 py-md-3 footer">
         <div class="d-flex justify-content-between">
             <div class="d-flex flex-column">
-                    <ul class="social list-unstyled d-inline-flex justify-content-between">
-                            <li class="social-item mr-2 mr-lg-4"><a href="https://www.facebook.com/BicycleExpress" aria-label="Facebook link">
-                                    <svg class="social-icon" role="img" width="16" height="16">
-                                        <title>Facebook</title>
-                                        <use xlink:href="#icon-facebook"></use>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="social-item mr-2 mr-lg-4"><a href="https://www.yelp.com/biz/bicycle-express-san-jose" aria-label="Yelp link">
-                                    <svg class="social-icon" role="img" width="16" height="16">
-                                        <title>Yelp</title>
-                                        <use xlink:href="#icon-yelp"></use>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="social-item mr-2 mr-lg-4"><a href="https://twitter.com/BicycleExpress" aria-label="Twitter link">
-                                    <svg class="social-icon" role="img" width="16" height="16">
-                                        <title>Twitter</title>
-                                        <use xlink:href="#icon-twitter"></use>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="social-item"><a href="https://www.instagram.com/bikexpres" aria-label="Instagram link">
-                                    <svg class="social-icon" role="img" width="16" height="16">
-                                        <title>Instagram</title>
-                                        <use xlink:href="#icon-instagram"></use>
-                                    </svg>
-                                </a>
-                            </li>
-                        </ul>
+                <ul class="social list-unstyled d-inline-flex justify-content-between">
+                    <li class="social-item mr-2 mr-lg-4"><a href="https://www.facebook.com/BicycleExpress"
+                            aria-label="Facebook link">
+                            <svg class="social-icon" role="img" width="16" height="16">
+                                <title>Facebook</title>
+                                <use xlink:href="#icon-facebook"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social-item mr-2 mr-lg-4"><a href="https://www.yelp.com/biz/bicycle-express-san-jose"
+                            aria-label="Yelp link">
+                            <svg class="social-icon" role="img" width="16" height="16">
+                                <title>Yelp</title>
+                                <use xlink:href="#icon-yelp"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social-item mr-2 mr-lg-4"><a href="https://twitter.com/BicycleExpress"
+                            aria-label="Twitter link">
+                            <svg class="social-icon" role="img" width="16" height="16">
+                                <title>Twitter</title>
+                                <use xlink:href="#icon-twitter"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social-item"><a href="https://www.instagram.com/bikexpres" aria-label="Instagram link">
+                            <svg class="social-icon" role="img" width="16" height="16">
+                                <title>Instagram</title>
+                                <use xlink:href="#icon-instagram"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
                 <div class="copyright mt-auto mb-3">©<span id="year"></span> by Bicycle Express.</div>
             </div>
             <section class="d-none d-xl-block contact">
@@ -524,7 +528,14 @@
         </div>
     </footer>
 
+    <script>
+        const currentYear = new Date().getFullYear();
+        const getCurrentYear = () => {
+            document.getElementById('year').textContent = currentYear;
+        };
 
+        getCurrentYear()
+    </script>
 
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -534,7 +545,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
         integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous">
     </script>
-    <script src="bundle.js"></script>
 </body>
 
 </html>

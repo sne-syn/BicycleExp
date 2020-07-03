@@ -163,28 +163,33 @@
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
                                                 <h4 class="panel-title py-2">
-                                                    <a class="d-block position-relative text-dark" data-toggle="collapse" data-parent="#accordion"
+                                                    <a class="d-block position-relative text-dark"
+                                                        data-toggle="collapse" data-parent="#accordion"
                                                         href="#collapse2">Categories</a>
                                                 </h4>
                                             </div>
                                             <div id="collapse2" class="panel-collapse collapse">
                                                 <div class="panel-body">
-                                                    <label class="checkbox-field d-flex flex-column position-relative" for="sport">
+                                                    <label class="checkbox-field d-flex flex-column position-relative"
+                                                        for="sport">
                                                         <input class="sr-only" id="sport" name="categories"
                                                             type="checkbox">
                                                         <span class="checkbox-indication"></span> Sport
                                                     </label>
-                                                    <label class="checkbox-field d-flex flex-column position-relative" for="touring">
+                                                    <label class="checkbox-field d-flex flex-column position-relative"
+                                                        for="touring">
                                                         <input class="sr-only" id="touring" name="categories"
                                                             type="checkbox">
                                                         <span class="checkbox-indication"></span>Touring
                                                     </label>
-                                                    <label class="checkbox-field d-flex flex-column position-relative" for="cyclocross">
+                                                    <label class="checkbox-field d-flex flex-column position-relative"
+                                                        for="cyclocross">
                                                         <input class="sr-only" id="cyclocross" name="categories"
                                                             type="checkbox">
                                                         <span class="checkbox-indication"></span>Cyclocross
                                                     </label>
-                                                    <label class="checkbox-field d-flex flex-column position-relative" for="mountain">
+                                                    <label class="checkbox-field d-flex flex-column position-relative"
+                                                        for="mountain">
                                                         <input checked disabled class="sr-only" id="mountain"
                                                             name="categories" type="checkbox">
                                                         <span class="checkbox-indication"></span>Mountain
@@ -198,8 +203,8 @@
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
                                             <h4 class="panel-title py-2">
-                                                <a class="d-block position-relative text-dark" data-toggle="collapse" data-parent="#accordion"
-                                                    href="#collapse3">Brands</a>
+                                                <a class="d-block position-relative text-dark" data-toggle="collapse"
+                                                    data-parent="#accordion" href="#collapse3">Brands</a>
                                             </h4>
                                         </div>
                                         <div id="collapse3" class="panel-collapse collapse">
@@ -496,7 +501,15 @@
             </div>
         </div>
     </template>
-    <script src="bundle.js"></script>
+
+    <script>
+        const currentYear = new Date().getFullYear();
+        const getCurrentYear = () => {
+            document.getElementById('year').textContent = currentYear;
+        };
+
+        getCurrentYear()
+    </script>
 
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>

@@ -138,7 +138,8 @@
         <section class="subscribe custom-container bg-success text-left text-white py-3">
             <h2 class="subscribe-heading font-weight-bold">Subscribe</h2>
             <form class="form-inline d-inline-flex">
-                <input class="form-control" type="email" id="email" aria-label="Enter Your Email" placeholder="Enter Your Email">
+                <input class="form-control" type="email" id="email" aria-label="Enter Your Email"
+                    placeholder="Enter Your Email">
                 <button data-toggle="modal" data-target="#modalCenter" type="button"
                     class="modal-open-btn btn text-white btn-danger d-inline-block"
                     aria-label="Sign up and get greeting message">Sign Up</button>
@@ -149,36 +150,39 @@
     <footer class="custom-container bg-danger text-white py-3 py-md-3 footer">
         <div class="d-flex justify-content-between">
             <div class="d-flex flex-column">
-                    <ul class="social list-unstyled d-inline-flex justify-content-between">
-                            <li class="social-item mr-2 mr-lg-4"><a href="https://www.facebook.com/BicycleExpress" aria-label="Facebook link">
-                                    <svg class="social-icon" role="img" width="16" height="16">
-                                        <title>Facebook</title>
-                                        <use xlink:href="#icon-facebook"></use>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="social-item mr-2 mr-lg-4"><a href="https://www.yelp.com/biz/bicycle-express-san-jose" aria-label="Yelp link">
-                                    <svg class="social-icon" role="img" width="16" height="16">
-                                        <title>Yelp</title>
-                                        <use xlink:href="#icon-yelp"></use>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="social-item mr-2 mr-lg-4"><a href="https://twitter.com/BicycleExpress" aria-label="Twitter link">
-                                    <svg class="social-icon" role="img" width="16" height="16">
-                                        <title>Twitter</title>
-                                        <use xlink:href="#icon-twitter"></use>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="social-item"><a href="https://www.instagram.com/bikexpres" aria-label="Instagram link">
-                                    <svg class="social-icon" role="img" width="16" height="16">
-                                        <title>Instagram</title>
-                                        <use xlink:href="#icon-instagram"></use>
-                                    </svg>
-                                </a>
-                            </li>
-                        </ul>
+                <ul class="social list-unstyled d-inline-flex justify-content-between">
+                    <li class="social-item mr-2 mr-lg-4"><a href="https://www.facebook.com/BicycleExpress"
+                            aria-label="Facebook link">
+                            <svg class="social-icon" role="img" width="16" height="16">
+                                <title>Facebook</title>
+                                <use xlink:href="#icon-facebook"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social-item mr-2 mr-lg-4"><a href="https://www.yelp.com/biz/bicycle-express-san-jose"
+                            aria-label="Yelp link">
+                            <svg class="social-icon" role="img" width="16" height="16">
+                                <title>Yelp</title>
+                                <use xlink:href="#icon-yelp"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social-item mr-2 mr-lg-4"><a href="https://twitter.com/BicycleExpress"
+                            aria-label="Twitter link">
+                            <svg class="social-icon" role="img" width="16" height="16">
+                                <title>Twitter</title>
+                                <use xlink:href="#icon-twitter"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social-item"><a href="https://www.instagram.com/bikexpres" aria-label="Instagram link">
+                            <svg class="social-icon" role="img" width="16" height="16">
+                                <title>Instagram</title>
+                                <use xlink:href="#icon-instagram"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
                 <div class="copyright mt-auto mb-3">©<span id="year"></span> by Bicycle Express.</div>
             </div>
             <section class="d-none d-xl-block contact">
@@ -220,7 +224,8 @@
                     </button>
                 </div>
                 <div class="modal-body pb-5 pt-3 text-center">
-                    <h5 class="modal-title font-weight-bold mb-2 mb-lg-5" id="modalCenterTitle">Thank You for Subscribing!
+                    <h5 class="modal-title font-weight-bold mb-2 mb-lg-5" id="modalCenterTitle">Thank You for
+                        Subscribing!
                     </h5>
                     <p class="modal-text">You will be the first to know about new inventory, give aways and special
                         projects!</p>
@@ -237,10 +242,16 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
         integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous">
     </script>
-    <script src="bundle.js"></script>
+    <script>
+        const currentYear = new Date().getFullYear();
+        const getCurrentYear = () => {
+            document.getElementById('year').textContent = currentYear;
+        };
+
+        getCurrentYear()
+    </script>
 
     <script>
-
         // Readjust the modal’s position in case a scrollbar appears
         $('#myModal').modal('handleUpdate');
     </script>
