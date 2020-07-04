@@ -1,10 +1,12 @@
 import {
     formatPrice
 } from './util/common';
-
 import {
     http
 } from "./server/http";
+import {
+    validateForm
+} from './validation';
 
 const COUNT_CARD_ON_PAGE = 9;
 const cardsList = document.querySelector('.cards-flow');
@@ -12,31 +14,36 @@ const cardTemplate = document.querySelector('#template-card');
 const paginationButtons = document.querySelectorAll('.page-item');
 
 const sendRequestForm = () => {
-    const name = document.querySelector('#name').value;
-    const email = document.querySelector('#email').value;
-    const phone = document.querySelector('#phone').value;
-    const serialNumber = document.querySelector('#serial').placeholder;
+    const form = document.querySelector('#shop-request');
+    const name = form.querySelector('#name');
+    const email = form.querySelector('#email');
+    const phone = form.querySelector('#phone');
+    const inputsForCheck = [name, email, phone];
 
     const data = {
-        name,
-        email,
-        phone,
-        serialNumber
+        nameValue: name.value,
+        emailValue: email.value,
+        phoneValue: phone.value,
+        serialNumberValue: form.querySelector('#serial').placeholder
     };
 
-    http.post('http://localhost:3000/requests', data)
-        .then(data => {
-            console.log(data + ' мы здесь');
-        })
-        .catch(err => console.log(err));
+    validateForm(inputsForCheck);
+
+    // http.post('http://localhost:3000/requests', data)
+    //     .then(data => {
+    //         console.log(data + ' мы здесь');
+    //     })
+    //     .catch(err => console.log(err));
 };
 
 const cardBtnClickHandler = (card) => {
     $('#modalCenter').modal('show');
     document.querySelector('#serial').placeholder = card.serial;
-
-    document.querySelector('.btn-request').addEventListener('click', sendRequestForm);
-
+    
+    document.querySelector('.btn-request').addEventListener('click', (evt) => {
+        evt.preventDefault();
+        sendRequestForm();
+    });
 };
 
 const removeCards = () => {

@@ -1,0 +1,25 @@
+.modal {
+    & .form-group {
+        position: relative;
+    }
+
+    & .form-group.success input {
+        border: 1px solid $success;
+    }
+
+    & .form-group.error input {
+        border: 1px solid $danger;
+    }
+
+    & .form-group small {
+        position: absolute;
+        bottom: -20px;
+        left: 0;
+        color: $danger;
+        visibility: hidden;
+    }
+
+    & .form-group.error small {
+        visibility: visible;
+    }
+}

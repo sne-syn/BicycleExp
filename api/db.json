@@ -288,40 +288,6 @@
     }
   ],
   "requests": [
-    {
-      "name": "sne_syn",
-      "email": "ghghghg@gmail.com",
-      "phone": "56656556565",
-      "serialNumber": "XYQEEZSGF3LW7",
-      "id": 1
-    },
-    {
-      "name": "sne_syn",
-      "email": "ghghghg@gmail.com",
-      "phone": "7777",
-      "serialNumber": "XYQEEZSGF3LW7",
-      "id": 2
-    },
-    {
-      "name": "ddd",
-      "email": "trust_no_l@mail.ru",
-      "phone": "7777",
-      "serialNumber": "8NAZZPZ5YQG9E",
-      "id": 3
-    },
-    {
-      "name": "ddd",
-      "email": "ghghghg@gmail.com",
-      "phone": "(566) 565 5656",
-      "serialNumber": "D2UNFR2E4NJSE",
-      "id": 4
-    },
-    {
-      "name": "ddd",
-      "email": "ghghghg@gmail.com",
-      "phone": "(566) 565 5656",
-      "serialNumber": "D2UNFR2E4NJSE",
-      "id": 5
-    }
+
   ]
 }

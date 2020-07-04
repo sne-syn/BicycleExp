@@ -12,11 +12,10 @@ $link-color: $white;
 $body-color: $dark;
 $light-grey-color: #797676;
 
-$input-height: 25px;
-
 $font-family-sans-serif: "Roboto Slab",
 "Open Sans",
 serif;
+
 $font-size-base: 1rem;
 $font-size-sm: $font-size-base * 0.5; // 8
 $font-size-md: $font-size-base * 0.88; // 14
@@ -37,10 +36,11 @@ $navbar-toggler-padding-x: 0.4rem;
 $navbar-dark-color: $white;
 $navbar-dark-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='#{$navbar-dark-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
 
-$btn-border-radius: 0;
+$input-height: 25px;
 $input-border-radius: 0;
 $input-border-radius-lg: 0;
 $input-border-radius-sm: 0;
+$btn-border-radius: 0;
 $border-width: 0;
 
 $padding-value: calc(50% - var(--container-width) / 2);
@@ -84,6 +84,7 @@ $width-xl: 1199.98px;
 @import "modal";
 @import "navbar";
 @import "pagination";
+@import "request-form";
 @import "services";
 @import "subscribe";
 @import "tagline";
@@ -100,17 +101,12 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
-  // outline: 1px dashed $warning
 }
 
 body .row {
   margin-left: 0;
   margin-right: 0;
 }
-
-// body {
-//   overflow-x: hidden;
-// }
 
 @media (min-width: 1199.98px) {
   body .btn {
