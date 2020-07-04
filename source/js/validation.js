@@ -1,11 +1,15 @@
 import {
-    isValidEmail, capitalizeChar
+    capitalizeChar
 } from './util/common';
+
+import {
+    RegExpForValidation
+} from './util/const';
 
 // Show input error message
 const showError = (input, message) => {
     const formControl = input.parentElement;
-    formControl.className = 'form-group error';
+    formControl.classList.add('error');
     const small = formControl.querySelector('small');
     small.innerText = message;
 };
@@ -13,10 +17,33 @@ const showError = (input, message) => {
 // Show success outline
 const showSuccess = (input) => {
     const formControl = input.parentElement;
-    formControl.className = 'form-group success';
+    formControl.classList.add('success');
 };
 
-export const validateForm = ([...inputs]) => {
+// Check phone && email with regExp
+export const checkValidWithRegExp = (input) => {
+    const inputName = input.id.toUpperCase();
+    if (RegExpForValidation[inputName].test(input.value.trim())) {
+        showSuccess(input);
+    } else if (input.value.trim() === '') {
+        showError(input, `* ${capitalizeChar(input.id)} is required`);
+    } else {
+        showError(input, `* ${capitalizeChar(input.id)} is not valid`);
+    }
+};
+
+export const checkLength = (input, min, max) => {
+    if (input.value.length < min) {
+        showError(input, `${capitalizeChar(input.id)} must be at least ${min} characters`);
+    } else if (input.value.length > max) {
+        showError(input, `${capitalizeChar(input.id)} must be less than ${max} characters`);
+    } else {
+        showSuccess(input);
+    }
+};
+
+// Check required inputs
+export const checkInputRequired = (inputs) => {
     inputs.forEach((input) => {
         if (input.value.trim() === '') {
             showError(input, `* ${capitalizeChar(input.id)} is required`);

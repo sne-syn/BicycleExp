@@ -5,8 +5,15 @@ import {
     http
 } from "./server/http";
 import {
-    validateForm
+    checkValidWithRegExp,
+    checkInputRequired,
+    checkLength
 } from './validation';
+
+const NameLength = {
+    MIN: 3,
+    MAX: 15
+};
 
 const COUNT_CARD_ON_PAGE = 9;
 const cardsList = document.querySelector('.cards-flow');
@@ -18,7 +25,7 @@ const sendRequestForm = () => {
     const name = form.querySelector('#name');
     const email = form.querySelector('#email');
     const phone = form.querySelector('#phone');
-    const inputsForCheck = [name, email, phone];
+    const inputsForCheck = new Set([name, email, phone]);
 
     const data = {
         nameValue: name.value,
@@ -27,7 +34,10 @@ const sendRequestForm = () => {
         serialNumberValue: form.querySelector('#serial').placeholder
     };
 
-    validateForm(inputsForCheck);
+    checkInputRequired(inputsForCheck);
+    checkValidWithRegExp(email);
+    checkValidWithRegExp(phone);
+    checkLength(name, NameLength.MIN, NameLength.MAX);
 
     // http.post('http://localhost:3000/requests', data)
     //     .then(data => {
@@ -39,7 +49,7 @@ const sendRequestForm = () => {
 const cardBtnClickHandler = (card) => {
     $('#modalCenter').modal('show');
     document.querySelector('#serial').placeholder = card.serial;
-    
+
     document.querySelector('.btn-request').addEventListener('click', (evt) => {
         evt.preventDefault();
         sendRequestForm();
