@@ -6,7 +6,7 @@ import {
 } from "./server/http";
 import {
     checkValidWithRegExp,
-    checkInputRequired,
+    //checkInputRequired,
     checkLength
 } from './validation';
 
@@ -25,25 +25,31 @@ const sendRequestForm = () => {
     const name = form.querySelector('#name');
     const email = form.querySelector('#email');
     const phone = form.querySelector('#phone');
-    const inputsForCheck = new Set([name, email, phone]);
+    const inputsForCheck = [name, email, phone];
 
     const data = {
-        nameValue: name.value,
-        emailValue: email.value,
-        phoneValue: phone.value,
-        serialNumberValue: form.querySelector('#serial').placeholder
+        name: name.value,
+        emai: email.value,
+        phone: phone.value,
+        serial: form.querySelector('#serial').placeholder
     };
 
-    checkInputRequired(inputsForCheck);
-    checkValidWithRegExp(email);
-    checkValidWithRegExp(phone);
-    checkLength(name, NameLength.MIN, NameLength.MAX);
-
-    // http.post('http://localhost:3000/requests', data)
-    //     .then(data => {
-    //         console.log(data + ' мы здесь');
-    //     })
-    //     .catch(err => console.log(err));
+    if (checkValidWithRegExp(email) && checkValidWithRegExp(phone) && checkLength(name, NameLength.MIN, NameLength.MAX)) {
+        http.post('http://localhost:3000/requests', data)
+            .then(data => {
+                console.log('it works');
+            })
+            .catch(err => console.log(err));
+        $('#modalCenter').modal('hide');
+        inputsForCheck.forEach((input) => input.value = '');
+        form.querySelectorAll('.form-group').forEach((control) => {
+            control.className = 'form-group mb-4';
+        });
+    } else {
+        checkValidWithRegExp(email);
+        checkValidWithRegExp(phone);
+        checkLength(name, NameLength.MIN, NameLength.MAX);
+    }
 };
 
 const cardBtnClickHandler = (card) => {
