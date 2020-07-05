@@ -3,7 +3,7 @@ import {
 } from './util/common';
 import {
     http
-} from "./server/http";
+} from './server/http';
 import {
     checkValidWithRegExp,
     checkLength
@@ -15,13 +15,7 @@ const NameLength = {
 };
 const cardTemplate = document.querySelector('#template-card');
 
-const sendRequestForm = () => {
-    const form = document.querySelector('#shop-request');
-    const name = form.querySelector('#name');
-    const email = form.querySelector('#email');
-    const phone = form.querySelector('#phone');
-    const inputsForCheck = [name, email, phone];
-
+const sendRequestForm = (form, name, email, phone) => {
     const data = {
         name: name.value,
         emai: email.value,
@@ -31,17 +25,15 @@ const sendRequestForm = () => {
     };
 
     if (checkValidWithRegExp(email) && checkValidWithRegExp(phone) && checkLength(name, NameLength.MIN, NameLength.MAX)) {
+        // Send request
         http.post('http://localhost:3000/requests', data)
             .then(data => {
                 console.log('it works');
             })
             .catch(err => console.log(err));
         $('#modalCenter').modal('hide');
-        inputsForCheck.forEach((input) => input.value = '');
-        form.querySelectorAll('.form-group').forEach((control) => {
-            control.className = 'form-group mb-4';
-        });
     } else {
+        // Show error messages
         checkValidWithRegExp(email);
         checkValidWithRegExp(phone);
         checkLength(name, NameLength.MIN, NameLength.MAX);
@@ -49,12 +41,29 @@ const sendRequestForm = () => {
 };
 
 const cardBtnClickHandler = (card) => {
+    // List inputs
+    const form = document.querySelector('#shop-request');
+    const name = form.querySelector('#name');
+    const email = form.querySelector('#email');
+    const phone = form.querySelector('#phone');
+    const requiredFields = [name, email, phone];
+
+    // open require form
     $('#modalCenter').modal('show');
+
+    // Clear fields
+    requiredFields.forEach((input) => input.value = '');
+    form.querySelectorAll('.form-group').forEach((control) => {
+        control.className = 'form-group mb-4';
+    });
+
+    // Fill form with serial number
     document.querySelector('#serial').placeholder = card.serial;
 
+    // Catch button event
     document.querySelector('.btn-request').addEventListener('click', (evt) => {
         evt.preventDefault();
-        sendRequestForm();
+        sendRequestForm(form, name, email, phone);
     });
 };
 
@@ -73,7 +82,7 @@ export const renderCard = function (card) {
     const newMark = element.querySelector('#card-mark');
     if (card.isNew) {
         newMark.classList.add('card-new-mark');
-        newMark.setAttribute("aria-label", "New item");
+        newMark.setAttribute('aria-label', 'New item');
     }
 
     element.querySelector('.card-img-top').src = `img/product-${card.id}.jpg`;
@@ -82,7 +91,7 @@ export const renderCard = function (card) {
     element.querySelector('.card-text').textContent = `${card.model}`;
     element.querySelector('.card-price').textContent = `$ ${formatPrice(card.price)}`;
 
-    element.querySelector('.btn').addEventListener('click', function () {
+    element.querySelector('.btn').addEventListener('click', () => {
         cardBtnClickHandler(card);
     });
 

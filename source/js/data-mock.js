@@ -1,5 +1,4 @@
-{
-  "products": [
+export const data =  [
     {
       "id": 1,
       "serial": "XYQEEZSGF3LW7",
@@ -286,23 +285,4 @@
       "isNew": false,
       "isBestseller": false
     }
-  ],
-  "requests": [
-    {
-      "name": "sne_syn",
-      "emai": "ghghghg@gmail.com",
-      "phone": "56656556565",
-      "serial": "27GVWN4QD68YV",
-      "date": "2020-07-05T11:20:27.569Z",
-      "id": 1
-    },
-    {
-      "name": "sne_syn",
-      "emai": "ghghghg@gmail.com",
-      "phone": "56656556565",
-      "serial": "XYQEEZSGF3LW7",
-      "date": "2020-07-05T11:29:53.555Z",
-      "id": 2
-    }
   ]
-}

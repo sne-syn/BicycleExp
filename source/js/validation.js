@@ -1,7 +1,6 @@
 import {
     capitalizeChar
 } from './util/common';
-
 import {
     RegExpValid
 } from './util/const';
