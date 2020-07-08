@@ -15,7 +15,6 @@ const loadProducts = () => {
         .catch(err => console.error(err));
 };
 
-
 // document.addEventListener('DOMContentLoaded', loadProducts);
 
 getCurrentYear();
