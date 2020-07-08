@@ -7,7 +7,8 @@ import {
 } from './data-mock';
 
 const COUNT_CARD_ON_PAGE = 9;
-export const RenderPosition = {
+
+export const InsertPosition = {
     AFTERBEGIN: `afterbegin`,
     BEFOREEND: `beforeend`
 };
@@ -57,15 +58,15 @@ const pageButtons = (pages, state) => {
     }
     
     for (let page = maxLeft; page <= maxRight; page++) {
-        paginationContainer.insertAdjacentHTML(RenderPosition.BEFOREEND, `<li class="page-item mr-1"><button class="page-link" value="${page}">${page}</button></li>`);
+        paginationContainer.insertAdjacentHTML(InsertPosition.BEFOREEND, `<li class="page-item mr-1"><button class="page-link" value="${page}">${page}</button></li>`);
     }
 
     if (state.page !== 1 && state.page > 3) {
-        paginationContainer.insertAdjacentHTML(RenderPosition.AFTERBEGIN, `<li class="page-item mr-1"><button class="page-link" value=${1}> &#171;</button></li>`);
+        paginationContainer.insertAdjacentHTML(InsertPosition.AFTERBEGIN, `<li class="page-item mr-1"><button class="page-link" value=${1}> &#171;</button></li>`);
     }
-
-    if (state.page != pages) {
-        paginationContainer.insertAdjacentHTML(RenderPosition.BEFOREEND, `<li class="page-item mr-1"><button class="page-link" value=${pages}> &#187;</button></li>`);
+    
+    if (state.page != pages && state.page < (pages - 2)) {
+        paginationContainer.insertAdjacentHTML(InsertPosition.BEFOREEND, `<li class="page-item mr-1"><button class="page-link" value=${pages}> &#187;</button></li>`);
     }
 
     const pageButtons = paginationContainer.querySelectorAll('.page-link');
