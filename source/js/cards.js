@@ -28,7 +28,7 @@ const sendRequestForm = (form, name, email, phone) => {
         // Send request
         http.post('http://localhost:3000/requests', data)
             .then(data => {
-                console.log('it works');
+                console.log(data);
             })
             .catch(err => console.log(err));
         $('#modalCenter').modal('hide');
@@ -85,7 +85,7 @@ export const renderCard = function (card) {
         newMark.setAttribute('aria-label', 'New item');
     }
 
-    element.querySelector('.card-img-top').src = `img/product-${card.id}.jpg`;
+    element.querySelector('.card-img-top').src = `img/product-${card.image}.jpg`;
     element.querySelector('.card-title').textContent = `${card.brand}`;
     availability.textContent = card.isInStock ? `In Stock` : `Special Order`;
     element.querySelector('.card-text').textContent = `${card.model}`;
