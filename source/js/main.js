@@ -1,3 +1,4 @@
+import DataModel from './data-model';
 import {
     getCurrentYear
 } from './util/current-year';
@@ -7,14 +8,20 @@ import {
 import {
     render
 } from './render';
+import API from './api';
+import { data } from './data-mock';
+
 // Get posts on Dom load
 
-const loadProducts = () => {
-    http.get('http://localhost:3000/products')
-        .then(data => console.log(data))
-        .catch(err => console.error(err));
-};
+const api = new API();
+const dataModel = new DataModel();
 
-// document.addEventListener('DOMContentLoaded', loadProducts);
+api.getProducts()
+    .then((products) => {
+        dataModel.setData(products);
+        render(products);
+    });
+
+    console.log(dataModel.getData());
 
 getCurrentYear();
