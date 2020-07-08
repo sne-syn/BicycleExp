@@ -7,17 +7,22 @@ import {
 } from './data-mock';
 
 const COUNT_CARD_ON_PAGE = 9;
+export const RenderPosition = {
+    AFTERBEGIN: `afterbegin`,
+    BEFOREEND: `beforeend`
+};
+
 const cardsList = document.querySelector('.cards-flow');
 
 let state = {
-     'querySet': data,
-     'page': 1,
-     'cards': 9,
-     'window': 5,
- };
+    'querySet': data,
+    'page': 1,
+    'cards': 9,
+    'window': 5,
+};
 
-const pagination = (obj) => {
-    const {querySet, page, cards} = obj;
+const pagination = (state) => {
+    const {querySet, page, cards} = state;
     let trimStart = (page - 1) * cards;
     let trimEnd = trimStart + cards;
 
@@ -50,18 +55,17 @@ const pageButtons = (pages, state) => {
         }
         maxRight = pages;
     }
-
-
+    
     for (let page = maxLeft; page <= maxRight; page++) {
-        paginationContainer.innerHTML += `<li class="page-item mr-1"><button class="page-link" value="${page}">${page}</button></li>`;
+        paginationContainer.insertAdjacentHTML(RenderPosition.BEFOREEND, `<li class="page-item mr-1"><button class="page-link" value="${page}">${page}</button></li>`);
     }
 
-    if (state.page != 1) {
-        paginationContainer.innerHTML = `<li class="page-item mr-1"><button class="page-link" value=${1}> &#171;</button></li>` + paginationContainer.innerHTML;
+    if (state.page !== 1 && state.page > 3) {
+        paginationContainer.insertAdjacentHTML(RenderPosition.AFTERBEGIN, `<li class="page-item mr-1"><button class="page-link" value=${1}> &#171;</button></li>`);
     }
 
     if (state.page != pages) {
-        paginationContainer.innerHTML += `<li class="page-item mr-1"><button class="page-link" value=${pages}> &#187;</button></li>`; 
+        paginationContainer.insertAdjacentHTML(RenderPosition.BEFOREEND, `<li class="page-item mr-1"><button class="page-link" value=${pages}> &#187;</button></li>`);
     }
 
     const pageButtons = paginationContainer.querySelectorAll('.page-link');
@@ -69,7 +73,6 @@ const pageButtons = (pages, state) => {
         btn.addEventListener('click', (evt) => {
             removeCards();
             state.page = Number(evt.target.value);
-
             render();
         });
     });
@@ -86,4 +89,4 @@ export const render = () => {
     pageButtons(data.pages, state);
 };
 
-render()
+render();
