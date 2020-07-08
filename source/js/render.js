@@ -6,29 +6,35 @@ import {
     pagination,
     pageButtons
 } from './pagination';
-import {
-    data
-} from './data-mock';
 
+let products;
 
-const COUNT_CARD_ON_PAGE = 9;
+fetch('http://localhost:3000/products').then(function (response) {
+    if (response.ok) {
+        response.json().then(function (json) {
+            products = json;
+            render();
+        });
+    } else {
+        console.log('Network request for products.json failed with response ' + response.status + ': ' + response.statusText);
+    }
+});
+
 const cardsList = document.querySelector('.cards-flow');
 let state = {
-    'querySet': data,
     'page': 1,
     'cards': 9,
     'window': 5,
 };
 
 export const render = () => {
+    const querySet = products;
     removeCards();
-    const data = pagination( state );
+    const data = pagination(state, querySet);
     const productsList = data.querySet;
-    const countCardsOnPage = productsList.length > COUNT_CARD_ON_PAGE ? COUNT_CARD_ON_PAGE : productsList.length;
+    const countCardsOnPage = productsList.length > state.cards ? state.cards : productsList.length;
     for (let i = 0; i < countCardsOnPage; i++) {
         cardsList.appendChild(renderCard(productsList[i]));
     }
     pageButtons(data.pages, state);
 };
-
-render();

@@ -16,7 +16,7 @@ const NameLength = {
 const cardTemplate = document.querySelector('#template-card');
 
 const sendRequestForm = (form, name, email, phone) => {
-    const data = {
+    let data = {
         name: name.value,
         emai: email.value,
         phone: phone.value,
@@ -37,6 +37,7 @@ const sendRequestForm = (form, name, email, phone) => {
         checkValidWithRegExp(email);
         checkValidWithRegExp(phone);
         checkLength(name, NameLength.MIN, NameLength.MAX);
+        data = {};
     }
 };
 

@@ -1,6 +1,5 @@
 {
-  "products": [
-    {
+  "products": [{
       "id": 1,
       "image": 1,
       "serial": "XYQEEZSGF3LW7",
@@ -624,7 +623,6 @@
       "isNew": false,
       "isBestseller": false
     },
-  
     {
       "id": 53,
       "image": 10,
