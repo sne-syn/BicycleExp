@@ -1,5 +1,6 @@
 {
-  "products": [{
+  "products": [
+    {
       "id": 1,
       "image": 1,
       "serial": "XYQEEZSGF3LW7",
@@ -829,6 +830,5 @@
     }
   ],
   "requests": [
-
   ]
 }

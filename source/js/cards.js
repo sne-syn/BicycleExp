@@ -15,7 +15,12 @@ const NameLength = {
 };
 const cardTemplate = document.querySelector('#template-card');
 
-const sendRequestForm = (form, name, email, phone) => {
+const sendBtnHandler = (evt, form, name, email, phone) => {
+    evt.preventDefault();
+    sendRequestForm(form, name, email, phone);
+};
+
+const collectValues = (form, name, email, phone) => {
     let data = {
         name: name.value,
         emai: email.value,
@@ -24,24 +29,30 @@ const sendRequestForm = (form, name, email, phone) => {
         date: new Date()
     };
 
+    return data;
+};
+
+const sendRequestForm = (form, name, email, phone) => {
+    const data = collectValues(form, name, email, phone);
     if (checkValidWithRegExp(email) && checkValidWithRegExp(phone) && checkLength(name, NameLength.MIN, NameLength.MAX)) {
         // Send request
         http.post('http://localhost:3000/requests', data)
             .then(data => {
-                console.log(data);
+                $('#modalCenter').modal('hide');
+                document.querySelector('.btn-request').removeEventListener('click', (evt) => {
+                    sendBtnHandler(evt, form, name, email, phone);
+                });
             })
             .catch(err => console.log(err));
-        $('#modalCenter').modal('hide');
     } else {
         // Show error messages
         checkValidWithRegExp(email);
         checkValidWithRegExp(phone);
         checkLength(name, NameLength.MIN, NameLength.MAX);
-        data = {};
     }
 };
 
-const cardBtnClickHandler = (card) => {
+const openRequestForm = (card) => {
     // List inputs
     const form = document.querySelector('#shop-request');
     const name = form.querySelector('#name');
@@ -61,10 +72,10 @@ const cardBtnClickHandler = (card) => {
     // Fill form with serial number
     document.querySelector('#serial').placeholder = card.serial;
 
+
     // Catch button event
     document.querySelector('.btn-request').addEventListener('click', (evt) => {
-        evt.preventDefault();
-        sendRequestForm(form, name, email, phone);
+        sendBtnHandler(evt, form, name, email, phone);
     });
 };
 
@@ -93,7 +104,7 @@ export const renderCard = function (card) {
     element.querySelector('.card-price').textContent = `$ ${formatPrice(card.price)}`;
 
     element.querySelector('.btn').addEventListener('click', () => {
-        cardBtnClickHandler(card);
+        openRequestForm(card);
     });
 
     return element;
