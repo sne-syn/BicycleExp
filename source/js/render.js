@@ -37,4 +37,7 @@ export const render = () => {
         cardsList.appendChild(renderCard(productsList[i]));
     }
     pageButtons(data.pages, state);
+    
+    const paginationTarget = document.querySelector(`.page-link[value="${state.page}"]`);
+    paginationTarget.parentNode.classList.add('active');
 };

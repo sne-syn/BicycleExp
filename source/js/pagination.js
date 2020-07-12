@@ -21,7 +21,7 @@ export const pagination = (state, querySet) => {
 
     let trimmedData = querySet.slice(trimStart, trimEnd);
     const pages = Math.round(querySet.length / cards);
-    
+
     return {
         'querySet': trimmedData,
         'pages': pages
