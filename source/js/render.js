@@ -14,75 +14,76 @@ const filter = document.querySelector('.filter');
 let products = data;
 
 const filterStateMap = {
-  availability: [],
-  categories: [],
-  brands: []
+  availability: new Set(),
+  categories: new Set(),
+  brands: new Set()
 };
 
-// const filterByAvailability = (checkedArr, item) => {
-//   // console.log(checkedArr);
-//   // console.log(item.isInStock);
-//   // evt забирать как массив из handler;
-//   // если [] или [выбраны оба варианта] = показывай все
-//   // если [in-stock] = показывай только isInStock = true
-//   // если [special-order] = показывай только isInStock = false
-//   if (!item.isInStock || checkedArr.length === 0 || checkedArr.length === 2) {
-//     return true;
-//   } else if (checkedArr[0] === 'in-stock' && item.isInStock === true) {
-//     return true;
-//   } else if (checkedArr[0] === 'special-order' && item.isInStock === false) {
-//     return true;
-//   }
-// };
-
-const filterByCategories = (item, checkedArr) => {
-  // if (item.category === 'mountain') {
-  //   return true;
-  // }
-  // console.log(item)
-  for (let i = 0; i < checkedArr.length; i++) {
-    if (item.category == checkedArr[i]) {
-      return true;
-    }
+const filterByAvailability = (item) => {
+  if (filterStateMap.availability.size === 0 || filterStateMap.availability.size === 2) {
+    return true;
+  } else if (filterStateMap.availability.has('in-stock') && item.isInStock === true) {
+    return true;
+  } else if (filterStateMap.availability.has('special-order') && item.isInStock === false) {
+    return true;
   }
-  // evt забирать как массив из handler;
-  // если [] или [выбраны все варианта] = показывай все
-  // если [1 || 2 || 3] = показывай все, что подходит
 };
 
-const filterByBrand = (checkedArr, arrForCheck) => {
-  // evt забирать как массив из handler;
-  // если [] или [выбраны все варианта] = показывай все
-  // если [1 || 2 || 3] = показывай все, что подходит
+const filterByCategories = (item) => {
+  if (filterStateMap.categories.size === 0 || filterStateMap.categories.has(item.category)) {
+    return true;
+  }
+};
+
+const filterByBrand = (item) => {
+  if (filterStateMap.brands.size === 0 || filterStateMap.brands.has(item.brand.toLowerCase().replace(/ /g, '-'))) {
+    return true;
+  }
 };
 
 const filterCards = (item) => {
   let count = 0;
-  if (filterStateMap.categories.includes(item.category) || filterStateMap.categories.length === 0) {
+  if (filterByAvailability(item)) {
     count++;
   }
-  if (filterStateMap.brands.includes(item.brand.toLowerCase().replace(/ /g, '-')) || filterStateMap.brands.length === 0) {
+  if (filterByCategories(item)) {
     count++;
   }
-  return count === 2;
+  if (filterByBrand(item)) {
+    count++;
+  }
+  return count === 3;
 };
 
 const filterChangeHandler = (evt) => {
-
+  let newArr = [];
   const newValue = evt.target.value;
   const clickedFilter = evt.target.name;
+  console.log(clickedFilter);
 
   if (clickedFilter === 'availability') {
-    filterStateMap.availability.push(newValue);
+    if (!filterStateMap.availability.has(newValue)) {
+      filterStateMap.availability.add(newValue);
+    } else {
+      filterStateMap.availability.delete(newValue);
+    }
   } else if (clickedFilter === 'categories') {
-    filterStateMap.categories.push(newValue);
+    if (!filterStateMap.categories.has(newValue)) {
+      filterStateMap.categories.add(newValue);
+    } else {
+      filterStateMap.categories.delete(newValue);
+    }
   } else if (clickedFilter === 'brand') {
-    filterStateMap.brands.push(newValue);
+    if (!filterStateMap.brands.has(newValue)) {
+      filterStateMap.brands.add(newValue);
+    } else {
+      filterStateMap.brands.delete(newValue);
+    }
   }
 
-  // console.log(filterStateMap.availability);
+  //console.log(filterStateMap.availability);
 
-  let newArr = products.filter(filterCards);
+  newArr = products.filter(filterCards);
   console.log(newArr);
 
   // //  filter products by 'availability' => 'categories' => 'brands';
