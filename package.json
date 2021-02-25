@@ -69,7 +69,6 @@
     "node": "8.15"
   },
   "dependencies": {
-    "bootstrap": "^4.4.1",
-    "json-server": "^0.16.1"
+    "bootstrap": "^4.4.1"
   }
 }
