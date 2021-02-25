@@ -3,7 +3,6 @@
 const gulp = require("gulp");
 const plumber = require("gulp-plumber");
 const rename = require("gulp-rename");
-const server = require("browser-sync").create();
 const sass = require("gulp-sass");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
@@ -70,11 +69,6 @@ gulp.task("html", function () {
     .pipe(gulp.dest("build"));
 });
 
-gulp.task("server", function () {
-  server.init({
-    server: "build/"
-  });
-
   gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css"));
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
   gulp.watch('source/js/**/*.js', gulp.series("scripts"));
@@ -93,4 +87,4 @@ gulp.task("build", gulp.series(
   "scripts"
 ));
 
-gulp.task("start", gulp.series("build", "server"));
+gulp.task("start", gulp.series("build"));
