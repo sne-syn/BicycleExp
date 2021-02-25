@@ -10,7 +10,7 @@
     "autoprefixer": "9.5.x",
     "babel-loader": "^8.1.0",
     "browser-sync": "2.26.x",
-    "chokidar": "^3.4.0",
+    "chokidar": "^3.4.0", 
     "deep-extend": "^0.6.0",
     "del": "^4.1.1",
     "eslint": "^7.2.0",
@@ -50,8 +50,7 @@
     "eslint": "eslint source/**/*.js",
     "test": "npm run editorconfig && npm run stylelint",
     "build": "gulp build",
-    "start": "gulp start",
-    "json:server": "json-server --watch api/db.json"
+    "start": "gulp start"
   },
   "browserslist": [
     "last 2 versions",
