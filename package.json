@@ -9,8 +9,8 @@
     "acorn": "6.4.1",
     "autoprefixer": "9.5.x",
     "babel-loader": "^8.1.0",
-    "browser-sync": "2.26.x",
-    "chokidar": "^3.4.0", 
+    "browser-sync": "^2.26.14",
+    "chokidar": "^3.4.0",
     "deep-extend": "^0.6.0",
     "del": "^4.1.1",
     "eslint": "^7.2.0",
@@ -43,6 +43,9 @@
     "stylelint-config-recommended": "^3.0.0",
     "webpack": "4.43.0",
     "webpack-stream": "^5.2.1"
+  },
+  "optionalDependencies": {
+    "fsevents": "*"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
